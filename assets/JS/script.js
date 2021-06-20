@@ -26,11 +26,18 @@ function linkBuilder(linkArray, ulVar, className, openNewTab) {
 const body = document.getElementsByTagName("body")[0];
 const nav = elementBuilder("nav", "navbar", body);
 const containerDiv = elementBuilder("div", "container", nav)
-/* Still need to add navbar toggler button */
 const logoAnchor = elementBuilder("a", "navbar-brand", containerDiv)
 logoAnchor.href = "#";
 const logoImage = elementBuilder("img", "logo", logoAnchor);
 logoImage.src = "#";
+const toggleButton = elementBuilder("button", "navbar-toggler", containerDiv);
+toggleButton.type = "button";
+toggleButton.setAttribute("data-bs-toggle", "collapse");
+toggleButton.setAttribute("data-bs-target", "#navbarNav");
+toggleButton.setAttribute("aria-controls", "navbarNav");
+toggleButton.setAttribute("aria-expanded", "false");
+toggleButton.setAttribute("aria-label", "Toggle navigation");
+const toggleSpan = elementBuilder("span", "navbar-toggler-icon", toggleButton);
 nav.classList.add("navbar-expand-lg", "navbar-dark", "menu", "shadow", "fixed-top");
 const navBar = elementBuilder("div", "collapse", containerDiv);
 navBar.classList.add("navbar-collapse", "justify-content-end");
@@ -39,8 +46,8 @@ const phoneButton = elementBuilder("button", "rounded-pill", containerDiv);
 phoneButton.classList.add("btn-rounded");
 phoneButton.type = "button";
 phoneButton.innerHTML = "+1 (000) 000-0000";
-const span = elementBuilder("span", "span", phoneButton);
-const i = elementBuilder("i", "fas", span);
+const phoneSpan = elementBuilder("span", "span", phoneButton);
+const i = elementBuilder("i", "fas", phoneSpan);
 i.classList.add("fa-phone-alt");
 
 /* NAV LINKS */
@@ -62,4 +69,4 @@ const contact = {
 
 const links = [about, projects, contact];
 
-linkBuilder(links, ul, "nav-links", true);
+linkBuilder(links, ul, "nav-links");
