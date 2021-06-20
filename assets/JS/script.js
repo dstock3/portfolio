@@ -21,9 +21,15 @@ function linkBuilder(linkArray, ulVar, className, openNewTab) {
     };
 };
 
+/* NAV ELEMENTS */
+
 const body = document.getElementsByTagName("body")[0];
 const nav = elementBuilder("nav", "navbar", body);
 const containerDiv = elementBuilder("div", "container", nav)
+const logoAnchor = elementBuilder("a", "navbar-brand", containerDiv)
+logoAnchor.href = "#";
+const logoImage = elementBuilder("img", "logo", logoAnchor);
+logoImage.src = "#";
 nav.classList.add("navbar-expand-lg", "navbar-dark", "menu", "shadow", "fixed-top");
 const navBar = elementBuilder("div", "collapse", containerDiv);
 navBar.classList.add("navbar-collapse", "justify-content-end");
