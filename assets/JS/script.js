@@ -25,8 +25,8 @@ function linkBuilder(linkArray, ulVar, className, openNewTab) {
 
 const body = document.getElementsByTagName("body")[0];
 const nav = elementBuilder("nav", "navbar", body);
-const containerDiv = elementBuilder("div", "container", nav)
-const logoAnchor = elementBuilder("a", "navbar-brand", containerDiv)
+const containerDiv = elementBuilder("div", "container", nav);
+const logoAnchor = elementBuilder("a", "navbar-brand", containerDiv);
 logoAnchor.href = "#";
 const logoImage = elementBuilder("img", "logo", logoAnchor);
 logoImage.src = "#";
@@ -70,3 +70,21 @@ const contact = {
 const links = [about, projects, contact];
 
 linkBuilder(links, ul, "nav-item");
+
+/* ABOUT */
+
+const sectionAbout = elementBuilder("section", "about", body);
+sectionAbout.setAttribute("id", "home");
+const aboutContainer = elementBuilder("div", "container", sectionAbout);
+const rowAbout = elementBuilder("div", "row", aboutContainer);
+rowAbout.classList.add("align-item-center", "text-white");
+const colAbout1 = elementBuilder("div", "col-md-6", rowAbout);
+colAbout1.classList.add("intros", "text-start");
+const aboutHead = elementBuilder("h1", "display-2", colAbout1);
+const headSpan = elementBuilder("span", "display-2--intro", aboutHead);
+const header = "header header header";
+headSpan.innerHTML = header;
+const headSpan2 = elementBuilder("span", "display-2--description", aboutHead);
+headSpan2.classList.add("lh-base");
+const description = "description description description";
+headSpan2.innerHTML = description;
