@@ -1,0 +1,9 @@
+$blue: #2a2dee;
+$purple: #6f00ff;
+
+$white:    #fff;
+
+$primary: $blue;
+$secondary: $purple;
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";

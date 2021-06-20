@@ -9,7 +9,7 @@ function elementBuilder (elType, className, parent) {
 function linkBuilder(linkArray, ulVar, className, openNewTab) {
     for (let i = 0; i < linkArray.length; i++) {
         linkLi = elementBuilder('li', className, ulVar);
-        linkAnchor = elementBuilder('a', 'nav-anchor', linkLi);
+        linkAnchor = elementBuilder('a', 'nav-link', linkLi);
         linkAnchor.textContent = linkArray[i].name;
         linkAnchor.href = linkArray[i].link;
         linkLi.setAttribute("id", `${linkArray[i].name.toLowerCase()}`);
@@ -69,4 +69,4 @@ const contact = {
 
 const links = [about, projects, contact];
 
-linkBuilder(links, ul, "nav-links");
+linkBuilder(links, ul, "nav-item");
