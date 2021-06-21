@@ -133,9 +133,12 @@ const borderSpan = elementBuilder("span", "border-animation", lightboxAnchor);
 borderSpan.classList.add("border-animation--border-1");
 const borderSpan2 = elementBuilder("span", "border-animation", lightboxAnchor);
 borderSpan2.classList.add("border-animation--border-2");
+const zigBorder = elementBuilder("svg", "zig-border", sectionAbout);
+zigBorder.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+zigBorder.setAttribute("viewBox", "0 0 1440 320");
+zigBorder.innerHTML = `<path fill="#ffffff" fill-opacity="1" d="M0,32L48,64C96,96,192,160,288,186.7C384,213,480,203,576,170.7C672,139,768,85,864,101.3C960,117,1056,203,1152,213.3C1248,224,1344,160,1392,128L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>`;
 
 /* PROJECTS */
-
 const projectElements = sectionBuilder("projects");
 const sectionProject = projectElements[0];
 const projectContainer = projectElements[1];

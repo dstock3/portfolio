@@ -10809,4 +10809,11 @@ textarea.form-control-lg {
   animation-delay: 1.5s;
 }
 
+.projects {
+  padding: 4rem 0;
+}
+.projects button {
+  text-transform: capitalize;
+}
+
 /*# sourceMappingURL=style.css.map */
