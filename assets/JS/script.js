@@ -21,6 +21,14 @@ function linkBuilder(linkArray, ulVar, className, openNewTab) {
     };
 };
 
+function buttonBuilder(buttonClass, spanClass, parent) {
+    let button = elementBuilder("button", buttonClass, parent);
+    button.type = "button";
+    let span = elementBuilder("span", spanClass, button);
+    let buttonBuild = [button, span];
+    return buttonBuild;
+}
+
 /* NAV ELEMENTS */
 
 const body = document.getElementsByTagName("body")[0];
@@ -30,14 +38,16 @@ const logoAnchor = elementBuilder("a", "navbar-brand", containerDiv);
 logoAnchor.href = "#";
 const logoImage = elementBuilder("img", "logo", logoAnchor);
 logoImage.src = "#";
-const toggleButton = elementBuilder("button", "navbar-toggler", containerDiv);
-toggleButton.type = "button";
+
+const buttonArray = buttonBuilder("navbar-toggler", "navbar-toggler-icon", containerDiv);
+const toggleButton = buttonArray[0];
 toggleButton.setAttribute("data-bs-toggle", "collapse");
 toggleButton.setAttribute("data-bs-target", "#navbarNav");
 toggleButton.setAttribute("aria-controls", "navbarNav");
 toggleButton.setAttribute("aria-expanded", "false");
 toggleButton.setAttribute("aria-label", "Toggle navigation");
-const toggleSpan = elementBuilder("span", "navbar-toggler-icon", toggleButton);
+const toggleSpan = buttonArray[1];
+
 nav.classList.add("navbar-expand-lg", "navbar-dark", "menu", "shadow", "fixed-top");
 const navBar = elementBuilder("div", "collapse", containerDiv);
 navBar.classList.add("navbar-collapse", "justify-content-end");
