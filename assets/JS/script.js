@@ -21,13 +21,22 @@ function linkBuilder(linkArray, ulVar, className, openNewTab) {
     };
 };
 
+function sectionBuilder(sectionName) {
+    let section = elementBuilder("section", sectionName, body);
+    section.setAttribute("id", sectionName);
+    let sectionContainer = elementBuilder("div", "container", section);
+    let sectionRow = elementBuilder("div", "row", sectionContainer);
+    let sectionElements = [section, sectionContainer, sectionRow];
+    return sectionElements;
+};
+
 function buttonBuilder(buttonClass, spanClass, parent) {
     let button = elementBuilder("button", buttonClass, parent);
     button.type = "button";
     let span = elementBuilder("span", spanClass, button);
     let buttonBuild = [button, span];
     return buttonBuild;
-}
+};
 
 /* NAV ELEMENTS */
 
@@ -85,10 +94,13 @@ linkBuilder(links, ul, "nav-item");
 
 /* ABOUT */
 
-const sectionAbout = elementBuilder("section", "about", body);
-sectionAbout.setAttribute("id", "home");
-const aboutContainer = elementBuilder("div", "container", sectionAbout);
-const rowAbout = elementBuilder("div", "row", aboutContainer);
+
+
+const aboutSectionElements = sectionBuilder("about");
+const sectionAbout = aboutSectionElements[0];
+const aboutContainer = aboutSectionElements[1];
+const rowAbout = aboutSectionElements[2];
+
 rowAbout.classList.add("align-item-center", "text-white");
 const colAbout1 = elementBuilder("div", "col-md-6", rowAbout);
 colAbout1.classList.add("intros", "text-start");
