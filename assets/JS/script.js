@@ -108,3 +108,18 @@ const touchIcon = elementBuilder("i", "fas", touchSpan);
 touchIcon.classList.add("fa-arrow-right");
 touchButton.innerHTML = "Get In Touch";
 
+/* VIDEO */
+const vidDiv = elementBuilder("div", "col-md-6", rowAbout);
+const vidBox = elementBuilder("div", "video-box", vidDiv);
+const vidIllus = elementBuilder("img", "img-fluid", vidBox);
+vidIllus.alt = "video illustration";
+vidIllus.src = "#";
+const lightboxAnchor = elementBuilder("a", "glightbox", vidBox);
+lightboxAnchor.classList.add("position-absolute", "top-50", "start-50", "translate-middle");
+const anchorSpan = elementBuilder("span", "span", lightboxAnchor);
+const anchorIcon = elementBuilder("i", "fas", anchorSpan);
+anchorIcon.classList.add("fa-play-circle");
+const borderSpan = elementBuilder("span", "border-animation", lightboxAnchor);
+borderSpan.classList.add("border-animation--border-1");
+const borderSpan2 = elementBuilder("span", "border-animation", lightboxAnchor);
+borderSpan2.classList.add("border-animation--border-2");
