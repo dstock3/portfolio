@@ -52,13 +52,15 @@ nav.classList.add("navbar-expand-lg", "navbar-dark", "menu", "shadow", "fixed-to
 const navBar = elementBuilder("div", "collapse", containerDiv);
 navBar.classList.add("navbar-collapse", "justify-content-end");
 const ul = elementBuilder("ul", "navbar-nav", navBar);
-const phoneButton = elementBuilder("button", "rounded-pill", containerDiv);
+
+const phoneButtonArray = buttonBuilder("rounded-pill", "span", containerDiv);
+const phoneButton = phoneButtonArray[0];
 phoneButton.classList.add("btn-rounded");
-phoneButton.type = "button";
-phoneButton.innerHTML = "+1 (000) 000-0000";
-const phoneSpan = elementBuilder("span", "span", phoneButton);
+const phoneSpan = phoneButtonArray[1];
 const i = elementBuilder("i", "fas", phoneSpan);
 i.classList.add("fa-phone-alt");
+phoneButton.innerHTML = "+1 (000) 000-0000";
+
 
 /* NAV LINKS */
 
@@ -98,3 +100,11 @@ const headSpan2 = elementBuilder("span", "display-2--description", aboutHead);
 headSpan2.classList.add("lh-base");
 const description = "description description description";
 headSpan2.innerHTML = description;
+const touchButtonArray = buttonBuilder("rounded-pill", "span", rowAbout);
+const touchButton = touchButtonArray[0];
+touchButton.classList.add("btn-rounded");
+const touchSpan = touchButtonArray[1];
+const touchIcon = elementBuilder("i", "fas", touchSpan);
+touchIcon.classList.add("fa-arrow-right");
+touchButton.innerHTML = "Get In Touch";
+
