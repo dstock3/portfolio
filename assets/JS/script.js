@@ -83,12 +83,17 @@ const projects = {
     link: "#",
 }
 
+const blog = {
+    name: "Blog",
+    link: "#",
+}
+
 const contact = {
     name: "Contact",
     link: "#",
 }
 
-const links = [about, projects, contact];
+const links = [about, projects, blog, contact];
 
 linkBuilder(links, ul, "nav-item");
 
