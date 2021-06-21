@@ -94,8 +94,6 @@ linkBuilder(links, ul, "nav-item");
 
 /* ABOUT */
 
-
-
 const aboutSectionElements = sectionBuilder("about");
 const sectionAbout = aboutSectionElements[0];
 const aboutContainer = aboutSectionElements[1];
@@ -135,3 +133,17 @@ const borderSpan = elementBuilder("span", "border-animation", lightboxAnchor);
 borderSpan.classList.add("border-animation--border-1");
 const borderSpan2 = elementBuilder("span", "border-animation", lightboxAnchor);
 borderSpan2.classList.add("border-animation--border-2");
+
+/* PROJECTS */
+
+const projectElements = sectionBuilder("projects");
+const sectionProject = projectElements[0];
+const projectContainer = projectElements[1];
+const projectRow = projectElements[2];
+projectRow.classList.add("text-center", "mt-5");
+const projectHead = elementBuilder("h1", "display-3", projectRow);
+projectHead.classList.add("fw-bold", "text-capitalize");
+projectHead.innerHTML = "Latest Work";
+const headLine = elementBuilder("div", "heading-line", projectRow);
+const paraProject = elementBuilder("p", "lead", projectRow);
+paraProject.innerHTML = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid quo vitae impedit.";
