@@ -38,6 +38,18 @@ function buttonBuilder(buttonClass, spanClass, parent) {
     return buttonBuild;
 };
 
+function buttonBuilderJr(buttonArray, parent) {
+    let buttonElementArray = [];
+    for (i = 0; i < buttonArray.length; i++) {
+        let projectButton = elementBuilder("button", "btn", parent);
+        projectButton.type = "button";
+        projectButton.classList.add("btn-outline-primary");
+        projectButton.innerHTML = buttonArray[i];
+        buttonElementArray.push(projectButton);
+    };
+    return buttonElementArray;
+};
+
 /* NAV ELEMENTS */
 
 const body = document.getElementsByTagName("body")[0];
@@ -162,20 +174,30 @@ const buttonCol = elementBuilder("div", "col-md-12", buttonRow);
 
 const projectButtonArray = ["All", "Websites", "Design", "Mockups"];
 
-function buttonBuilderJr(buttonArray, parent) {
-    let buttonElementArray = [];
-    for (i = 0; i < buttonArray.length; i++) {
-        let projectButton = elementBuilder("button", "btn", parent);
-        projectButton.type = "button";
-        projectButton.classList.add("btn-outline-primary");
-        projectButton.innerHTML = buttonArray[i];
-        buttonElementArray.push(projectButton);
-    };
-    return buttonElementArray;
-};
-
 const projectButtonElements = buttonBuilderJr(projectButtonArray, buttonCol);
 const allButton = projectButtonElements[0];
 const websitesButton = projectButtonElements[1];
 const designButton = projectButtonElements[2];
 const mockupsButton = projectButtonElements[3];
+
+const projectBodyRow = elementBuilder("div", "row", );
+
+function projectBoxBuilder(imgSrc, imgAlt, projectTitle, description, parent) {
+    let projectBodyCol = elementBuilder("div", "col-lg-4", parent);
+    let projectBox = elementBuilder("div", "project-box", projectBodyCol);
+    projectBox.classList.add("shadow");
+    let projectImage = elementBuilder("img", "img-fluid", projectBox);
+    projectImage.alt = imgAlt;
+    projectImage.src = imgSrc;
+    projectImage.title = projectTitle;
+    let projectInfo = elementBuilder("div", "project-info", projectBox);
+    let caption = elementBuilder("div", "caption", projectInfo);
+    let captionHead = elementBuilder("h4", "caption-head", projectInfo);
+    captionHead.innerHTML = projectTitle;
+    let captionDesc = elementBuilder("p", "caption-description", caption);
+    captionDesc.innerHTML = description;
+    let projectElements = [projectBodyCol, projectBox, projectImage, projectInfo, caption, captionHead, captionDesc];
+    return projectElements;
+}
+
+
