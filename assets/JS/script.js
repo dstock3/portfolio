@@ -66,8 +66,8 @@ const phoneButtonArray = buttonBuilder("rounded-pill", "span", containerDiv);
 const phoneButton = phoneButtonArray[0];
 phoneButton.classList.add("btn-rounded");
 const phoneSpan = phoneButtonArray[1];
-const i = elementBuilder("i", "fas", phoneSpan);
-i.classList.add("fa-phone-alt");
+const icon = elementBuilder("i", "fas", phoneSpan);
+icon.classList.add("fa-phone-alt");
 phoneButton.innerHTML = "+1 (000) 000-0000";
 
 
@@ -109,7 +109,7 @@ const colAbout1 = elementBuilder("div", "col-md-6", rowAbout);
 colAbout1.classList.add("intros", "text-start");
 const aboutHead = elementBuilder("h1", "display-2", colAbout1);
 const headSpan = elementBuilder("span", "display-2--intro", aboutHead);
-const header = "header header header";
+const header = "Hi, I'm Dave!";
 headSpan.innerHTML = header;
 const headSpan2 = elementBuilder("span", "display-2--description", aboutHead);
 headSpan2.classList.add("lh-base");
@@ -155,3 +155,27 @@ projectHead.innerHTML = "Latest Work";
 const headLine = elementBuilder("div", "heading-line", projectRow);
 const paraProject = elementBuilder("p", "lead", projectRow);
 paraProject.innerHTML = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid quo vitae impedit.";
+
+const buttonRow = elementBuilder("div", "row", projectContainer);
+buttonRow.classList.add("text-center", "mt-5", "g-3");
+const buttonCol = elementBuilder("div", "col-md-12", buttonRow);
+
+const projectButtonArray = ["All", "Websites", "Design", "Mockups"];
+
+function buttonBuilderJr(buttonArray) {
+    let buttonElementArray = [];
+    for (i = 0; i < buttonArray.length; i++) {
+        let projectButton = elementBuilder("button", "btn", buttonCol);
+        projectButton.type = "button";
+        projectButton.classList.add("btn-outline-primary");
+        projectButton.innerHTML = buttonArray[i];
+        buttonElementArray.push(projectButton);
+    };
+    return buttonElementArray;
+};
+
+const projectButtonElements = buttonBuilderJr(projectButtonArray);
+const allButton = projectButtonElements[0];
+const websitesButton = projectButtonElements[1];
+const designButton = projectButtonElements[2];
+const mockupsButton = projectButtonElements[3];
