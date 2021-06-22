@@ -162,10 +162,10 @@ const buttonCol = elementBuilder("div", "col-md-12", buttonRow);
 
 const projectButtonArray = ["All", "Websites", "Design", "Mockups"];
 
-function buttonBuilderJr(buttonArray) {
+function buttonBuilderJr(buttonArray, parent) {
     let buttonElementArray = [];
     for (i = 0; i < buttonArray.length; i++) {
-        let projectButton = elementBuilder("button", "btn", buttonCol);
+        let projectButton = elementBuilder("button", "btn", parent);
         projectButton.type = "button";
         projectButton.classList.add("btn-outline-primary");
         projectButton.innerHTML = buttonArray[i];
@@ -174,7 +174,7 @@ function buttonBuilderJr(buttonArray) {
     return buttonElementArray;
 };
 
-const projectButtonElements = buttonBuilderJr(projectButtonArray);
+const projectButtonElements = buttonBuilderJr(projectButtonArray, buttonCol);
 const allButton = projectButtonElements[0];
 const websitesButton = projectButtonElements[1];
 const designButton = projectButtonElements[2];
