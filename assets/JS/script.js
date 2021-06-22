@@ -158,18 +158,20 @@ const description = "description description description";
 headSpan2.innerHTML = description;
 const touchButtonArray = buttonBuilder("rounded-pill", "span", rowAbout);
 const touchButton = touchButtonArray[0];
+const touchText = document.createTextNode("Get In Touch");
+touchButton.appendChild(touchText);
 touchButton.classList.add("btn-rounded");
 const touchSpan = touchButtonArray[1];
 const touchIcon = elementBuilder("i", "fas", touchSpan);
 touchIcon.classList.add("fa-arrow-right");
-touchButton.innerHTML = "Get In Touch";
 
 /* VIDEO */
 const vidDiv = elementBuilder("div", "col-md-6", rowAbout);
+vidDiv.classList.add("intros", "text-end");
 const vidBox = elementBuilder("div", "video-box", vidDiv);
 const vidIllus = elementBuilder("img", "img-fluid", vidBox);
 vidIllus.alt = "video illustration";
-vidIllus.src = "#";
+vidIllus.src = "https://dummyimage.com/600x400/000/0011ff.png";
 const lightboxAnchor = elementBuilder("a", "glightbox", vidBox);
 lightboxAnchor.classList.add("position-absolute", "top-50", "start-50", "translate-middle");
 const anchorSpan = elementBuilder("span", "span", lightboxAnchor);
@@ -256,13 +258,3 @@ const projectSix = {
 
 const dummyProjectArray = [projectOne, projectTwo, projectThree, projectFour, projectFive, projectSix];
 const projectElementsArray = projectIterator(dummyProjectArray, projectBodyRow);
-
-/* G Light Box Script */
-
-const lightbox = GLightbox ({
-    'href': 'https://www.youtube.com/watch?v=OrxdxuayEPU',
-    'type': 'video',
-    'source': 'youtube', //vimeo, youtube or local
-    'width': 900,
-    'autoPlayVideos': 'true',
-  });
