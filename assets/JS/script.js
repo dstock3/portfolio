@@ -198,7 +198,7 @@ const paraProject = elementBuilder("p", "lead", projectRow);
 paraProject.innerHTML = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid quo vitae impedit.";
 
 const buttonRow = elementBuilder("div", "row", projectContainer);
-buttonRow.classList.add("text-center", "mt-5", "g-3");
+buttonRow.classList.add("text-center", "mt-5", "g-3", "mb-4");
 const buttonCol = elementBuilder("div", "col-md-12", buttonRow);
 
 const projectButtonArray = ["All", "Websites", "Design", "Mockups"];
