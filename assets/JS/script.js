@@ -180,24 +180,75 @@ const websitesButton = projectButtonElements[1];
 const designButton = projectButtonElements[2];
 const mockupsButton = projectButtonElements[3];
 
-const projectBodyRow = elementBuilder("div", "row", );
+const projectBodyRow = elementBuilder("div", "row", projectContainer);
 
-function projectBoxBuilder(imgSrc, imgAlt, projectTitle, description, parent) {
+function projectBoxBuilder(imgSrc, projectTitle, description, parent) {
     let projectBodyCol = elementBuilder("div", "col-lg-4", parent);
     let projectBox = elementBuilder("div", "project-box", projectBodyCol);
     projectBox.classList.add("shadow");
     let projectImage = elementBuilder("img", "img-fluid", projectBox);
-    projectImage.alt = imgAlt;
+    projectImage.alt = description;
     projectImage.src = imgSrc;
     projectImage.title = projectTitle;
     let projectInfo = elementBuilder("div", "project-info", projectBox);
     let caption = elementBuilder("div", "caption", projectInfo);
-    let captionHead = elementBuilder("h4", "caption-head", projectInfo);
+    let captionHead = elementBuilder("h4", "caption-head", caption);
     captionHead.innerHTML = projectTitle;
     let captionDesc = elementBuilder("p", "caption-description", caption);
     captionDesc.innerHTML = description;
     let projectElements = [projectBodyCol, projectBox, projectImage, projectInfo, caption, captionHead, captionDesc];
     return projectElements;
-}
+};
 
+const projectOne = {
+    title: "project one title",
+    description: "description one",
+    source: "https://dummyimage.com/600x400/000/0011ff.png",
+    alt: "image one alt"
+};
 
+const projectTwo = {
+    title: "project two title",
+    description: "description two",
+    source: "https://dummyimage.com/600x400/000/0011ff.png",
+    alt: "image two alt"
+};
+
+const projectThree = {
+    title: "project three title",
+    description: "description three",
+    source: "https://dummyimage.com/600x400/000/0011ff.png",
+    alt: "image three alt"
+};
+
+const projectFour = {
+    title: "project four title",
+    description: "description four",
+    source: "https://dummyimage.com/600x400/000/0011ff.png",
+    alt: "image four alt"
+};
+
+const projectFive = {
+    title: "project five title",
+    description: "description five",
+    source: "https://dummyimage.com/600x400/000/0011ff.png",
+    alt: "image five alt"
+};
+
+const projectSix = {
+    title: "project six title",
+    description: "description six",
+    source: "https://dummyimage.com/600x400/000/0011ff.png",
+    alt: "image six alt"
+};
+
+const dummyProjectArray = [projectOne, projectTwo, projectThree, projectFour, projectFive, projectSix];
+
+function projectIterator(projectArray, parent) {
+    for (i = 0; i < projectArray.length; i++) {
+        let newProject = projectArray[i];
+        projectBoxBuilder(newProject.source, newProject.title, newProject.description, parent)
+    };
+};
+
+projectIterator(dummyProjectArray, projectBodyRow);
