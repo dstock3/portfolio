@@ -50,6 +50,35 @@ function buttonBuilderJr(buttonArray, parent) {
     return buttonElementArray;
 };
 
+function projectBoxBuilder(imgSrc, projectTitle, description, parent) {
+    let projectBodyCol = elementBuilder("div", "col-lg-4", parent);
+    let projectBox = elementBuilder("div", "project-box", projectBodyCol);
+    projectBox.classList.add("shadow");
+    let projectImage = elementBuilder("img", "img-fluid", projectBox);
+    projectImage.alt = description;
+    projectImage.src = imgSrc;
+    projectImage.title = projectTitle;
+    let projectInfo = elementBuilder("div", "project-info", projectBox);
+    let caption = elementBuilder("div", "caption", projectInfo);
+    let captionHead = elementBuilder("h4", "caption-head", caption);
+    captionHead.innerHTML = projectTitle;
+    let captionDesc = elementBuilder("p", "caption-description", caption);
+    captionDesc.innerHTML = description;
+    let projectElements = [projectBodyCol, projectBox, projectImage, projectInfo, caption, captionHead, captionDesc];
+    return projectElements;
+};
+
+function projectIterator(projectArray, parent) {
+    let projectElementsArray = [];
+    for (i = 0; i < projectArray.length; i++) {
+        let newProject = projectArray[i];
+        let newProjectElements = projectBoxBuilder(newProject.source, newProject.title, newProject.description, parent);
+        projectElementsArray.push(newProjectElements);
+    };
+    return projectElementsArray;
+};
+
+
 /* NAV ELEMENTS */
 
 const body = document.getElementsByTagName("body")[0];
@@ -182,23 +211,6 @@ const mockupsButton = projectButtonElements[3];
 
 const projectBodyRow = elementBuilder("div", "row", projectContainer);
 
-function projectBoxBuilder(imgSrc, projectTitle, description, parent) {
-    let projectBodyCol = elementBuilder("div", "col-lg-4", parent);
-    let projectBox = elementBuilder("div", "project-box", projectBodyCol);
-    projectBox.classList.add("shadow");
-    let projectImage = elementBuilder("img", "img-fluid", projectBox);
-    projectImage.alt = description;
-    projectImage.src = imgSrc;
-    projectImage.title = projectTitle;
-    let projectInfo = elementBuilder("div", "project-info", projectBox);
-    let caption = elementBuilder("div", "caption", projectInfo);
-    let captionHead = elementBuilder("h4", "caption-head", caption);
-    captionHead.innerHTML = projectTitle;
-    let captionDesc = elementBuilder("p", "caption-description", caption);
-    captionDesc.innerHTML = description;
-    let projectElements = [projectBodyCol, projectBox, projectImage, projectInfo, caption, captionHead, captionDesc];
-    return projectElements;
-};
 
 const projectOne = {
     title: "project one title",
@@ -243,12 +255,4 @@ const projectSix = {
 };
 
 const dummyProjectArray = [projectOne, projectTwo, projectThree, projectFour, projectFive, projectSix];
-
-function projectIterator(projectArray, parent) {
-    for (i = 0; i < projectArray.length; i++) {
-        let newProject = projectArray[i];
-        projectBoxBuilder(newProject.source, newProject.title, newProject.description, parent)
-    };
-};
-
-projectIterator(dummyProjectArray, projectBodyRow);
+const projectElementsArray = projectIterator(dummyProjectArray, projectBodyRow);
