@@ -256,3 +256,13 @@ const projectSix = {
 
 const dummyProjectArray = [projectOne, projectTwo, projectThree, projectFour, projectFive, projectSix];
 const projectElementsArray = projectIterator(dummyProjectArray, projectBodyRow);
+
+/* G Light Box Script */
+
+const lightbox = GLightbox ({
+    'href': 'https://www.youtube.com/watch?v=OrxdxuayEPU',
+    'type': 'video',
+    'source': 'youtube', //vimeo, youtube or local
+    'width': 900,
+    'autoPlayVideos': 'true',
+  });
