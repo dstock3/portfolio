@@ -10903,8 +10903,6 @@ textarea.form-control-lg {
 
 .hidden {
   visibility: collapse;
-  width: 0;
-  height: 0;
 }
 
 .active {

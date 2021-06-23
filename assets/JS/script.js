@@ -52,6 +52,7 @@ function buttonBuilderJr(buttonArray, parent) {
 
 function projectBoxBuilder(imgSrc, projectTitle, description, parent, category) {
     let projectBodyCol = elementBuilder("div", "col-lg-4", parent);
+    projectBodyCol.classList.add("active");
     let projectBox = elementBuilder("div", "project-box", projectBodyCol);
     projectBox.classList.add("shadow");
     let projectImage = elementBuilder("img", "img-fluid", projectBox);
@@ -257,7 +258,32 @@ const projectSix = {
     category: "Design"
 };
 
-const dummyProjectArray = [projectOne, projectTwo, projectThree, projectFour, projectFive, projectSix];
+const projectSeven = {
+    title: "project seven title",
+    description: "description seven",
+    source: "https://dummyimage.com/600x400/000/0011ff.png",
+    alt: "image seven alt",
+    category: "Mockups"
+};
+
+const projectEight = {
+    title: "project eight title",
+    description: "description eight",
+    source: "https://dummyimage.com/600x400/000/0011ff.png",
+    alt: "image eight alt",
+    category: "Websites"
+};
+
+const projectNine = {
+    title: "project nine title",
+    description: "description nine",
+    source: "https://dummyimage.com/600x400/000/0011ff.png",
+    alt: "image nine alt",
+    category: "Design"
+};
+
+
+const dummyProjectArray = [projectOne, projectTwo, projectThree, projectFour, projectFive, projectSix, projectSeven, projectEight, projectNine];
 let projectElementsArray = projectIterator(dummyProjectArray, projectBodyRow);
 
 const allButton = projectButtonElements[0];
@@ -265,18 +291,22 @@ const websitesButton = projectButtonElements[1];
 const designButton = projectButtonElements[2];
 const mockupsButton = projectButtonElements[3];
 
-function projectButtonFilter(buttonElement, projectElementsArray) {
-    for (i = 0; i < projectElementsArray.length; i++){
-        if (buttonElement.innerHTML === projectElementsArray[i][7]) {
-            projectElementsArray[i][1].classList.remove("hidden");
-            projectElementsArray[i][1].classList.add("active");
-        } else {
-            projectElementsArray[i][1].classList.remove("active");
-            projectElementsArray[i][1].classList.add("hidden");
-        }
-    };
+
+function buttonFilter(projectButton) {
+    projectButton.addEventListener('click', () => {
+        for (i = 0; i < projectElementsArray.length; i++){
+            if (projectButton.innerHTML === projectElementsArray[i][7]) {
+                projectElementsArray[i][0].classList.remove("hidden");
+                projectElementsArray[i][0].classList.add("active");
+            } else {
+                projectElementsArray[i][0].classList.remove("active");
+                projectElementsArray[i][0].classList.add("hidden");
+            }
+        };
+    });
 };
 
-websitesButton.addEventListener("click", projectButtonFilter(websitesButton, projectElementsArray));
-designButton.addEventListener("click", projectButtonFilter(designButton, projectElementsArray));
-mockupsButton.addEventListener("click", projectButtonFilter(mockupsButton, projectElementsArray));
+for (i = 1; i < projectButtonElements.length; i++) {
+    buttonFilter(projectButtonElements[i]);
+}
+
