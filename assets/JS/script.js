@@ -43,7 +43,7 @@ function buttonBuilderJr(buttonArray, parent) {
     for (i = 0; i < buttonArray.length; i++) {
         let projectButton = elementBuilder("button", "btn", parent);
         projectButton.type = "button";
-        projectButton.classList.add("btn-outline-primary");
+        projectButton.classList.add("btn-outline-primary", "m-1");
         projectButton.innerHTML = buttonArray[i];
         buttonElementArray.push(projectButton);
     };
@@ -192,7 +192,7 @@ const sectionProject = projectElements[0];
 const projectContainer = projectElements[1];
 const projectRow = projectElements[2];
 projectRow.classList.add("text-center", "mt-5");
-const projectHead = elementBuilder("h1", "display-3", projectRow);
+const projectHead = elementBuilder("h1", "display-2", projectRow);
 projectHead.classList.add("fw-bold", "text-capitalize");
 projectHead.innerHTML = "Latest Work";
 const headLine = elementBuilder("div", "heading-line", projectRow);
@@ -200,61 +200,82 @@ const paraProject = elementBuilder("p", "lead", projectRow);
 paraProject.innerHTML = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid quo vitae impedit.";
 
 const buttonRow = elementBuilder("div", "row", projectContainer);
-buttonRow.classList.add("text-center", "mt-5", "g-3", "mb-4");
+buttonRow.classList.add("text-center", "mt-3", "mb-4");
 const buttonCol = elementBuilder("div", "col-md-12", buttonRow);
 
 const projectButtonArray = ["All", "Websites", "Design", "Mockups"];
 
 const projectButtonElements = buttonBuilderJr(projectButtonArray, buttonCol);
-const allButton = projectButtonElements[0];
-const websitesButton = projectButtonElements[1];
-const designButton = projectButtonElements[2];
-const mockupsButton = projectButtonElements[3];
 
 const projectBodyRow = elementBuilder("div", "row", projectContainer);
-
 
 const projectOne = {
     title: "project one title",
     description: "description one",
     source: "https://dummyimage.com/600x400/000/0011ff.png",
-    alt: "image one alt"
+    alt: "image one alt",
+    category: "Websites"
 };
 
 const projectTwo = {
     title: "project two title",
     description: "description two",
     source: "https://dummyimage.com/600x400/000/0011ff.png",
-    alt: "image two alt"
+    alt: "image two alt",
+    category: "design"
 };
 
 const projectThree = {
     title: "project three title",
     description: "description three",
     source: "https://dummyimage.com/600x400/000/0011ff.png",
-    alt: "image three alt"
+    alt: "image three alt",
+    category: "Mockups"
 };
 
 const projectFour = {
     title: "project four title",
     description: "description four",
     source: "https://dummyimage.com/600x400/000/0011ff.png",
-    alt: "image four alt"
+    alt: "image four alt",
+    category: "Websites"
 };
 
 const projectFive = {
     title: "project five title",
     description: "description five",
     source: "https://dummyimage.com/600x400/000/0011ff.png",
-    alt: "image five alt"
+    alt: "image five alt",
+    category: "Websites"
 };
 
 const projectSix = {
     title: "project six title",
     description: "description six",
     source: "https://dummyimage.com/600x400/000/0011ff.png",
-    alt: "image six alt"
+    alt: "image six alt",
+    category: "Design"
 };
 
-const dummyProjectArray = [projectOne, projectTwo, projectThree, projectFour, projectFive, projectSix];
+let dummyProjectArray = [projectOne, projectTwo, projectThree, projectFour, projectFive, projectSix];
 const projectElementsArray = projectIterator(dummyProjectArray, projectBodyRow);
+
+const allButton = projectButtonElements[0];
+const websitesButton = projectButtonElements[1];
+const designButton = projectButtonElements[2];
+const mockupsButton = projectButtonElements[3];
+
+function projectButtonFilter(buttonElement, projectArray) {
+    newProjectArray = [];
+    for (i = 0; i < projectArray.length; i++){
+        if (buttonElement.innerHTML === projectArray[i].category) {
+            newProjectArray.push(projectArray[i]);
+        } else {
+            newProjectArray.pop(projectArray[i]);
+        };
+    };
+    let newProjectsElementsArray = projectIterator(newProjectArray, projectBodyRow);
+    return newProjectsElementsArray;
+};
+
+websitesButton.addEventListener("click", projectButtonFilter(websitesButton, dummyProjectArray));
