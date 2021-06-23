@@ -50,7 +50,7 @@ function buttonBuilderJr(buttonArray, parent) {
     return buttonElementArray;
 };
 
-function projectBoxBuilder(imgSrc, projectTitle, description, parent) {
+function projectBoxBuilder(imgSrc, projectTitle, description, parent, category) {
     let projectBodyCol = elementBuilder("div", "col-lg-4", parent);
     let projectBox = elementBuilder("div", "project-box", projectBodyCol);
     projectBox.classList.add("shadow");
@@ -64,7 +64,7 @@ function projectBoxBuilder(imgSrc, projectTitle, description, parent) {
     captionHead.innerHTML = projectTitle;
     let captionDesc = elementBuilder("p", "caption-description", caption);
     captionDesc.innerHTML = description;
-    let projectElements = [projectBodyCol, projectBox, projectImage, projectInfo, caption, captionHead, captionDesc];
+    let projectElements = [projectBodyCol, projectBox, projectImage, projectInfo, caption, captionHead, captionDesc, category];
     return projectElements;
 };
 
@@ -72,7 +72,7 @@ function projectIterator(projectArray, parent) {
     let projectElementsArray = [];
     for (i = 0; i < projectArray.length; i++) {
         let newProject = projectArray[i];
-        let newProjectElements = projectBoxBuilder(newProject.source, newProject.title, newProject.description, parent);
+        let newProjectElements = projectBoxBuilder(newProject.source, newProject.title, newProject.description, parent, newProject.category);
         projectElementsArray.push(newProjectElements);
     };
     return projectElementsArray;
@@ -257,25 +257,26 @@ const projectSix = {
     category: "Design"
 };
 
-let dummyProjectArray = [projectOne, projectTwo, projectThree, projectFour, projectFive, projectSix];
-const projectElementsArray = projectIterator(dummyProjectArray, projectBodyRow);
+const dummyProjectArray = [projectOne, projectTwo, projectThree, projectFour, projectFive, projectSix];
+let projectElementsArray = projectIterator(dummyProjectArray, projectBodyRow);
 
 const allButton = projectButtonElements[0];
 const websitesButton = projectButtonElements[1];
 const designButton = projectButtonElements[2];
 const mockupsButton = projectButtonElements[3];
 
-function projectButtonFilter(buttonElement, projectArray) {
-    newProjectArray = [];
-    for (i = 0; i < projectArray.length; i++){
-        if (buttonElement.innerHTML === projectArray[i].category) {
-            newProjectArray.push(projectArray[i]);
+function projectButtonFilter(buttonElement, projectElementsArray) {
+    for (i = 0; i < projectElementsArray.length; i++){
+        if (buttonElement.innerHTML === projectElementsArray[i][7]) {
+            projectElementsArray[i][1].classList.remove("hidden");
+            projectElementsArray[i][1].classList.add("active");
         } else {
-            newProjectArray.pop(projectArray[i]);
-        };
+            projectElementsArray[i][1].classList.remove("active");
+            projectElementsArray[i][1].classList.add("hidden");
+        }
     };
-    let newProjectsElementsArray = projectIterator(newProjectArray, projectBodyRow);
-    return newProjectsElementsArray;
 };
 
-websitesButton.addEventListener("click", projectButtonFilter(websitesButton, dummyProjectArray));
+websitesButton.addEventListener("click", projectButtonFilter(websitesButton, projectElementsArray));
+designButton.addEventListener("click", projectButtonFilter(designButton, projectElementsArray));
+mockupsButton.addEventListener("click", projectButtonFilter(mockupsButton, projectElementsArray));

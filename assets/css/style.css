@@ -10901,4 +10901,14 @@ textarea.form-control-lg {
   transition-property: all;
 }
 
+.hidden {
+  visibility: collapse;
+  width: 0;
+  height: 0;
+}
+
+.active {
+  visibility: visible;
+}
+
 /*# sourceMappingURL=style.css.map */

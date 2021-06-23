@@ -57,8 +57,12 @@
     }
 }
 
-.hide {
-    visibility: hidden;
+.hidden {
+    visibility: collapse;
     width: 0;
     height: 0;
+}
+
+.active {
+    visibility: visible;
 }
