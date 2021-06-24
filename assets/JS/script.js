@@ -76,8 +76,10 @@ function projectIterator(projectArray, parent) {
         let newProjectElements = projectBoxBuilder(newProject.source, newProject.title, newProject.description, parent, newProject.category);
         projectElementsArray.push(newProjectElements);
     };
-    return projectElementsArray;
+    let projectsArray = [projectElementsArray, projectArray];
+    return projectsArray;
 };
+
 
 
 /* NAV ELEMENTS */
@@ -289,6 +291,10 @@ const websitesButton = projectButtonElements[1];
 const designButton = projectButtonElements[2];
 const mockupsButton = projectButtonElements[3];
 
+const newProjects = projectIterator(dummyProjectArray, projectBodyRow);
+
+
+/*
 
 function projectButtonListener(projectButton, projectArray) {
     
@@ -298,14 +304,14 @@ function projectButtonListener(projectButton, projectArray) {
                 projectArray.splice(i, 1);
             };
         };
-        console.log(projectArray);
+        return projectArray;
     });
 }
 
 function projectButtonCompiler(projectButtonArray, projectArray, parent) {
     for (i = projectButtonArray.length-1; i >= 0 ; i--) {
         if (i === 0) {
-            let projectElementsArray = projectIterator(projectArray, parent);  /* in the case of the "All" button at index 0 */
+            let projectElementsArray = projectIterator(projectArray, parent);  /* in the case of the "All" button at index 0 
             return projectElementsArray;
         } else {
             let newProjectArray = projectButtonListener(projectButtonArray[i], projectArray);
@@ -315,9 +321,9 @@ function projectButtonCompiler(projectButtonArray, projectArray, parent) {
     };
 };
 
+
 const projectElementsArray = projectButtonCompiler(projectButtonElements, dummyProjectArray, projectBodyRow);
 
-/*
 
 function buttonFilter(projectButton) {
     projectButton.addEventListener('click', () => {
