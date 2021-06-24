@@ -285,6 +285,7 @@ const projectNine = {
 
 
 
+let dummyProjectArray = [projectOne, projectTwo, projectThree, projectFour, projectFive, projectSix, projectSeven, projectEight, projectNine];
 
 const allButton = projectButtonElements[0];
 const websitesButton = projectButtonElements[1];
@@ -292,10 +293,10 @@ const designButton = projectButtonElements[2];
 const mockupsButton = projectButtonElements[3];
 
 
-function projectButtonListener(projectButton) {
-    let projectArray = [projectOne, projectTwo, projectThree, projectFour, projectFive, projectSix, projectSeven, projectEight, projectNine];
+function projectButtonListener(projectButton, projectArray) {
+    
     projectButton.addEventListener('click', () => {
-        for (i = 1; i < projectArray.length; i++) {
+        for (i = 0; i < projectArray.length; i++) {
             if (projectArray[i].category !== projectButton.innerHTML) {
                 projectArray.splice(projectArray[i], 1);
             };
@@ -304,21 +305,20 @@ function projectButtonListener(projectButton) {
     });
 }
 
-function projectButtonCompiler(projectButtonArray, parent) {
+function projectButtonCompiler(projectButtonArray, projectArray, parent) {
     for (i = 0; i < projectButtonArray.length; i++) {
         if (i = 0) {
-            let projectElementsArray = projectIterator(projectArray, parent);  
+            let projectElementsArray = projectIterator(projectArray, parent);  /* in the case of the "All" button at index 0 */
             return projectElementsArray;
-        }
-        else {
-            let newProjectArray = projectButtonListener(projectButtonArray[i]);
+        } else {
+            let newProjectArray = projectButtonListener(projectButtonArray[i], projectArray);
             let projectElementsArray = projectIterator(newProjectArray, parent);  
             return projectElementsArray;
         };
     };
 };
 
-const projectElementsArray = projectButtonCompiler(projectButtonElements, projectBodyRow);
+const projectElementsArray = projectButtonCompiler(projectButtonElements, dummyProjectArray, projectBodyRow);
 
 /*
 
