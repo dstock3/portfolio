@@ -223,7 +223,7 @@ const projectTwo = {
     description: "description two",
     source: "https://dummyimage.com/600x400/000/0011ff.png",
     alt: "image two alt",
-    category: "design"
+    category: "Design"
 };
 
 const projectThree = {
@@ -298,13 +298,13 @@ function projectButtonListener(projectButton, projectArray) {
                 projectArray.splice(i, 1);
             };
         };
-        return projectArray
+        console.log(projectArray);
     });
 }
 
 function projectButtonCompiler(projectButtonArray, projectArray, parent) {
-    for (i = 0; i < projectButtonArray.length; i++) {
-        if (i = 0) {
+    for (i = projectButtonArray.length-1; i >= 0 ; i--) {
+        if (i === 0) {
             let projectElementsArray = projectIterator(projectArray, parent);  /* in the case of the "All" button at index 0 */
             return projectElementsArray;
         } else {
