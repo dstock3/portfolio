@@ -282,9 +282,6 @@ const projectNine = {
     category: "Design"
 };
 
-
-
-
 let dummyProjectArray = [projectOne, projectTwo, projectThree, projectFour, projectFive, projectSix, projectSeven, projectEight, projectNine];
 
 const allButton = projectButtonElements[0];
@@ -298,7 +295,7 @@ function projectButtonListener(projectButton, projectArray) {
     projectButton.addEventListener('click', () => {
         for (i = 0; i < projectArray.length; i++) {
             if (projectArray[i].category !== projectButton.innerHTML) {
-                projectArray.splice(projectArray[i], 1);
+                projectArray.splice(i, 1);
             };
         };
         return projectArray
