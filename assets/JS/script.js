@@ -291,22 +291,44 @@ const websitesButton = projectButtonElements[1];
 const designButton = projectButtonElements[2];
 const mockupsButton = projectButtonElements[3];
 
+function projectArraySorter(projectArray, category) {
+    let newProjectArray = []
+    for (i = 0; i < projectArray.length; i++)
+        if (category === projectArray[i].category) {
+            newProjectArray.push(projectArray[i]);
+        };
+        return newProjectArray
+
+}
+
 const newProjects = projectIterator(dummyProjectArray, projectBodyRow);
 
 
 /*
 
 function projectButtonListener(projectButton, projectArray) {
-    
+    let newProjectArray = projectArraySorter(projectArray, projectButton.innerHTML);
     projectButton.addEventListener('click', () => {
-        for (i = 0; i < projectArray.length; i++) {
-            if (projectArray[i].category !== projectButton.innerHTML) {
-                projectArray.splice(i, 1);
-            };
-        };
-        return projectArray;
+
+        
+        return projectIterator(newProjectArray, projectBodyRow);;
+
     });
-}
+};
+
+projectButtonListener(websitesButton, dummyProjectArray);
+projectButtonListener(designButton, dummyProjectArray);
+projectButtonListener(mockupsButton, dummyProjectArray);
+
+/*
+function projectButtonLooper(projectButtonElementsArray, projectArray) {
+    for (i = 1; i < projectButtonElementsArray.length; i++) {
+        projectButtonListener(projectButtonElementsArray[i], projectArray);
+    };
+};
+
+projectButtonLooper(projectButtonElements, dummyProjectArray);
+
 
 function projectButtonCompiler(projectButtonArray, projectArray, parent) {
     for (i = projectButtonArray.length-1; i >= 0 ; i--) {
@@ -323,6 +345,7 @@ function projectButtonCompiler(projectButtonArray, projectArray, parent) {
 
 
 const projectElementsArray = projectButtonCompiler(projectButtonElements, dummyProjectArray, projectBodyRow);
+
 
 
 function buttonFilter(projectButton) {
