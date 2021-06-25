@@ -76,8 +76,10 @@ function projectIterator(projectArray, parent) {
         let newProjectElements = projectBoxBuilder(newProject.source, newProject.title, newProject.description, parent, newProject.category);
         projectElementsArray.push(newProjectElements);
     };
-    return projectElementsArray;
+    let projectsArray = [projectElementsArray, projectArray];
+    return projectsArray;
 };
+
 
 
 /* NAV ELEMENTS */
@@ -299,11 +301,18 @@ function projectArraySorter(projectArray, category) {
 
 }
 
+const newProjects = projectIterator(dummyProjectArray, projectBodyRow);
+
+
+/*
+
 function projectButtonListener(projectButton, projectArray) {
     let newProjectArray = projectArraySorter(projectArray, projectButton.innerHTML);
     projectButton.addEventListener('click', () => {
+
         
         return projectIterator(newProjectArray, projectBodyRow);;
+
     });
 };
 
@@ -319,6 +328,23 @@ function projectButtonLooper(projectButtonElementsArray, projectArray) {
 };
 
 projectButtonLooper(projectButtonElements, dummyProjectArray);
+
+
+function projectButtonCompiler(projectButtonArray, projectArray, parent) {
+    for (i = projectButtonArray.length-1; i >= 0 ; i--) {
+        if (i === 0) {
+            let projectElementsArray = projectIterator(projectArray, parent);  /* in the case of the "All" button at index 0 
+            return projectElementsArray;
+        } else {
+            let newProjectArray = projectButtonListener(projectButtonArray[i], projectArray);
+            let projectElementsArray = projectIterator(newProjectArray, parent);  
+            return projectElementsArray;
+        };
+    };
+};
+
+
+const projectElementsArray = projectButtonCompiler(projectButtonElements, dummyProjectArray, projectBodyRow);
 
 
 
