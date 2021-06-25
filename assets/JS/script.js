@@ -290,37 +290,37 @@ const designButton = projectButtonElements[2];
 const mockupsButton = projectButtonElements[3];
 
 function projectArraySorter(projectArray, category) {
-    let newProjectArray = [];
-    for (i = 0; i < projectArray.length; i++) {
+    let newProjectArray = []
+    for (i = 0; i < projectArray.length; i++)
         if (category === projectArray[i].category) {
             newProjectArray.push(projectArray[i]);
         };
         return newProjectArray
-    };
-};
+
+}
 
 function projectButtonListener(projectButton, projectArray) {
-    let category = projectButton.innerHTML;
-    let newProjectArray = projectArraySorter(projectArray, category);
+    let newProjectArray = projectArraySorter(projectArray, projectButton.innerHTML);
     projectButton.addEventListener('click', () => {
-        if (category === "All") {
-            return projectIterator(projectArray, projectBodyRow);
-        };
-
-        return projectIterator(newProjectArray, projectBodyRow);
+        
+        return projectIterator(newProjectArray, projectBodyRow);;
     });
 };
-
 
 projectButtonListener(websitesButton, dummyProjectArray);
 projectButtonListener(designButton, dummyProjectArray);
 projectButtonListener(mockupsButton, dummyProjectArray);
-projectButtonListener(allButton, dummyProjectArray);
-
-
-
 
 /*
+function projectButtonLooper(projectButtonElementsArray, projectArray) {
+    for (i = 1; i < projectButtonElementsArray.length; i++) {
+        projectButtonListener(projectButtonElementsArray[i], projectArray);
+    };
+};
+
+projectButtonLooper(projectButtonElements, dummyProjectArray);
+
+
 
 function buttonFilter(projectButton) {
     projectButton.addEventListener('click', () => {
