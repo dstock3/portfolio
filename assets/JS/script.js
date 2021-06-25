@@ -301,24 +301,23 @@ function projectArraySorter(projectArray, category) {
 
 }
 
-const newProjects = projectIterator(dummyProjectArray, projectBodyRow);
-
-
-/*
-
 function projectButtonListener(projectButton, projectArray) {
     let newProjectArray = projectArraySorter(projectArray, projectButton.innerHTML);
     projectButton.addEventListener('click', () => {
-
-        
         return projectIterator(newProjectArray, projectBodyRow);;
+    });
+};
 
+function allButtonListener(projectArray) {
+    allButton.addEventListener('click', () => {
+        return projectIterator(projectArray, projectBodyRow);
     });
 };
 
 projectButtonListener(websitesButton, dummyProjectArray);
 projectButtonListener(designButton, dummyProjectArray);
 projectButtonListener(mockupsButton, dummyProjectArray);
+allButtonListener(dummyProjectArray);
 
 /*
 function projectButtonLooper(projectButtonElementsArray, projectArray) {
