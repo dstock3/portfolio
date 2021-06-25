@@ -298,7 +298,6 @@ function projectArraySorter(projectArray, category) {
             newProjectArray.push(projectArray[i]);
         };
         return newProjectArray
-
 }
 
 function projectColRemover() {
@@ -323,6 +322,7 @@ function allButtonListener(projectArray) {
     });
 };
 
+projectIterator(dummyProjectArray, projectBodyRow);
 projectButtonListener(websitesButton, dummyProjectArray);
 projectButtonListener(designButton, dummyProjectArray);
 projectButtonListener(mockupsButton, dummyProjectArray);
