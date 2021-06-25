@@ -301,15 +301,24 @@ function projectArraySorter(projectArray, category) {
 
 }
 
+function projectColRemover() {
+    let existingProjectCols = document.getElementsByClassName('col-lg-4');
+    for (i = existingProjectCols.length - 1; i >= 0; i--) {
+        existingProjectCols[i].remove();
+    }
+}
+
 function projectButtonListener(projectButton, projectArray) {
     let newProjectArray = projectArraySorter(projectArray, projectButton.innerHTML);
     projectButton.addEventListener('click', () => {
+        projectColRemover();
         return projectIterator(newProjectArray, projectBodyRow);;
     });
 };
 
 function allButtonListener(projectArray) {
     allButton.addEventListener('click', () => {
+        projectColRemover();
         return projectIterator(projectArray, projectBodyRow);
     });
 };
@@ -318,6 +327,7 @@ projectButtonListener(websitesButton, dummyProjectArray);
 projectButtonListener(designButton, dummyProjectArray);
 projectButtonListener(mockupsButton, dummyProjectArray);
 allButtonListener(dummyProjectArray);
+
 
 /*
 function projectButtonLooper(projectButtonElementsArray, projectArray) {
