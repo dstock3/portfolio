@@ -50,6 +50,8 @@ function buttonBuilderJr(buttonArray, parent) {
     return buttonElementArray;
 };
 
+/* Project Section */
+
 function projectBoxBuilder(imgSrc, projectTitle, description, parent, category) {
     let projectBodyCol = elementBuilder("div", "col-lg-4", parent);
     projectBodyCol.classList.add("active");
@@ -80,7 +82,36 @@ function projectIterator(projectArray, parent) {
     return projectsArray;
 };
 
+function projectArraySorter(projectArray, category) {
+    let newProjectArray = []
+    for (i = 0; i < projectArray.length; i++)
+        if (category === projectArray[i].category) {
+            newProjectArray.push(projectArray[i]);
+        };
+        return newProjectArray
+}
 
+function projectColRemover() {
+    let existingProjectCols = document.getElementsByClassName('col-lg-4');
+    for (i = existingProjectCols.length - 1; i >= 0; i--) {
+        existingProjectCols[i].remove();
+    }
+}
+
+function projectButtonListener(projectButton, projectArray) {
+    let newProjectArray = projectArraySorter(projectArray, projectButton.innerHTML);
+    projectButton.addEventListener('click', () => {
+        projectColRemover();
+        return projectIterator(newProjectArray, projectBodyRow);;
+    });
+};
+
+function allButtonListener(projectArray) {
+    allButton.addEventListener('click', () => {
+        projectColRemover();
+        return projectIterator(projectArray, projectBodyRow);
+    });
+};
 
 /* NAV ELEMENTS */
 
@@ -206,11 +237,14 @@ const buttonRow = elementBuilder("div", "row", projectContainer);
 buttonRow.classList.add("text-center", "mt-3", "mb-4");
 const buttonCol = elementBuilder("div", "col-md-12", buttonRow);
 
-const projectButtonArray = ["All", "Websites", "Design", "Mockups"];
-
-const projectButtonElements = buttonBuilderJr(projectButtonArray, buttonCol);
-
 const projectBodyRow = elementBuilder("div", "row", projectContainer);
+
+const projectButtonArray = ["All", "Websites", "Design", "Mockups"];
+const projectButtonElements = buttonBuilderJr(projectButtonArray, buttonCol);
+const allButton = projectButtonElements[0];
+const websitesButton = projectButtonElements[1];
+const designButton = projectButtonElements[2];
+const mockupsButton = projectButtonElements[3];
 
 const projectOne = {
     title: "project one title",
@@ -286,92 +320,9 @@ const projectNine = {
 
 let dummyProjectArray = [projectOne, projectTwo, projectThree, projectFour, projectFive, projectSix, projectSeven, projectEight, projectNine];
 
-const allButton = projectButtonElements[0];
-const websitesButton = projectButtonElements[1];
-const designButton = projectButtonElements[2];
-const mockupsButton = projectButtonElements[3];
-
-function projectArraySorter(projectArray, category) {
-    let newProjectArray = []
-    for (i = 0; i < projectArray.length; i++)
-        if (category === projectArray[i].category) {
-            newProjectArray.push(projectArray[i]);
-        };
-        return newProjectArray
-}
-
-function projectColRemover() {
-    let existingProjectCols = document.getElementsByClassName('col-lg-4');
-    for (i = existingProjectCols.length - 1; i >= 0; i--) {
-        existingProjectCols[i].remove();
-    }
-}
-
-function projectButtonListener(projectButton, projectArray) {
-    let newProjectArray = projectArraySorter(projectArray, projectButton.innerHTML);
-    projectButton.addEventListener('click', () => {
-        projectColRemover();
-        return projectIterator(newProjectArray, projectBodyRow);;
-    });
-};
-
-function allButtonListener(projectArray) {
-    allButton.addEventListener('click', () => {
-        projectColRemover();
-        return projectIterator(projectArray, projectBodyRow);
-    });
-};
-
 projectIterator(dummyProjectArray, projectBodyRow);
 projectButtonListener(websitesButton, dummyProjectArray);
 projectButtonListener(designButton, dummyProjectArray);
 projectButtonListener(mockupsButton, dummyProjectArray);
 allButtonListener(dummyProjectArray);
 
-
-/*
-function projectButtonLooper(projectButtonElementsArray, projectArray) {
-    for (i = 1; i < projectButtonElementsArray.length; i++) {
-        projectButtonListener(projectButtonElementsArray[i], projectArray);
-    };
-};
-
-projectButtonLooper(projectButtonElements, dummyProjectArray);
-
-
-function projectButtonCompiler(projectButtonArray, projectArray, parent) {
-    for (i = projectButtonArray.length-1; i >= 0 ; i--) {
-        if (i === 0) {
-            let projectElementsArray = projectIterator(projectArray, parent);  /* in the case of the "All" button at index 0 
-            return projectElementsArray;
-        } else {
-            let newProjectArray = projectButtonListener(projectButtonArray[i], projectArray);
-            let projectElementsArray = projectIterator(newProjectArray, parent);  
-            return projectElementsArray;
-        };
-    };
-};
-
-
-const projectElementsArray = projectButtonCompiler(projectButtonElements, dummyProjectArray, projectBodyRow);
-
-
-
-function buttonFilter(projectButton) {
-    projectButton.addEventListener('click', () => {
-        for (i = 0; i < projectElementsArray.length; i++){
-            if (projectButton.innerHTML === projectElementsArray[i][7]) {
-                projectElementsArray[i][0].classList.remove("hidden");
-                projectElementsArray[i][0].classList.add("active");
-            } else {
-                projectElementsArray[i][0].classList.remove("active");
-                projectElementsArray[i][0].classList.add("hidden");
-            }
-        };
-    });
-};
-
-for (i = 1; i < projectButtonElements.length; i++) {
-    buttonFilter(projectButtonElements[i]);
-}
-*/
