@@ -298,24 +298,15 @@ function projectButtonListener(projectButton, projectArray) {
                 projectArray.splice(i, 1);
             };
         };
-        console.log(projectArray);
+        return projectArray;
     });
 }
 
-function projectButtonCompiler(projectButtonArray, projectArray, parent) {
-    for (i = projectButtonArray.length-1; i >= 0 ; i--) {
-        if (i === 0) {
-            let projectElementsArray = projectIterator(projectArray, parent);  /* in the case of the "All" button at index 0 */
-            return projectElementsArray;
-        } else {
-            let newProjectArray = projectButtonListener(projectButtonArray[i], projectArray);
-            let projectElementsArray = projectIterator(newProjectArray, parent);  
-            return projectElementsArray;
-        };
-    };
-};
+const websiteArray = projectButtonListener(websitesButton, dummyProjectArray);
+const designArray = projectButtonListener(designButton, dummyProjectArray);
+const mockupsArray = projectButtonListener(mockupsButton, dummyProjectArray);
 
-const projectElementsArray = projectButtonCompiler(projectButtonElements, dummyProjectArray, projectBodyRow);
+projectIterator(websiteArray, projectBodyCol);
 
 /*
 
