@@ -52,10 +52,14 @@ function buttonBuilderJr(buttonArray, parent) {
 
 /* Project Section */
 
-function projectBoxBuilder(imgSrc, projectTitle, description, parent, category) {
+function projectBoxBuilder(imgSrc, projectTitle, description, parent, category, link) {
     let projectBodyCol = elementBuilder("div", "col-lg-4", parent);
     projectBodyCol.classList.add("active");
-    let projectBox = elementBuilder("div", "project-box", projectBodyCol);
+    let projectLink = elementBuilder("a", "project-link", projectBodyCol);
+    projectLink.href = link;
+    projectLink.rel = "noreferrer noopener";
+    projectLink.target = "blank";
+    let projectBox = elementBuilder("div", "project-box", projectLink);
     projectBox.classList.add("shadow");
     let projectImage = elementBuilder("img", "img-fluid", projectBox);
     projectImage.alt = description;
@@ -75,7 +79,7 @@ function projectIterator(projectArray, parent) {
     let projectElementsArray = [];
     for (i = 0; i < projectArray.length; i++) {
         let newProject = projectArray[i];
-        let newProjectElements = projectBoxBuilder(newProject.source, newProject.title, newProject.description, parent, newProject.category);
+        let newProjectElements = projectBoxBuilder(newProject.source, newProject.title, newProject.description, parent, newProject.category, newProject.link);
         projectElementsArray.push(newProjectElements);
     };
     let projectsArray = [projectElementsArray, projectArray];
@@ -251,7 +255,8 @@ const projectOne = {
     description: "description one",
     source: "https://dummyimage.com/600x400/000/0011ff.png",
     alt: "image one alt",
-    category: "Websites"
+    category: "Websites",
+    link: "https://www.google.com/"
 };
 
 const projectTwo = {
@@ -259,7 +264,8 @@ const projectTwo = {
     description: "description two",
     source: "https://dummyimage.com/600x400/000/0011ff.png",
     alt: "image two alt",
-    category: "Design"
+    category: "Design",
+    link: "#"
 };
 
 const projectThree = {
@@ -267,7 +273,8 @@ const projectThree = {
     description: "description three",
     source: "https://dummyimage.com/600x400/000/0011ff.png",
     alt: "image three alt",
-    category: "Mockups"
+    category: "Mockups",
+    link: "#"
 };
 
 const projectFour = {
@@ -275,7 +282,8 @@ const projectFour = {
     description: "description four",
     source: "https://dummyimage.com/600x400/000/0011ff.png",
     alt: "image four alt",
-    category: "Websites"
+    category: "Websites",
+    link: "#"
 };
 
 const projectFive = {
@@ -283,7 +291,8 @@ const projectFive = {
     description: "description five",
     source: "https://dummyimage.com/600x400/000/0011ff.png",
     alt: "image five alt",
-    category: "Websites"
+    category: "Websites",
+    link: "#"
 };
 
 const projectSix = {
@@ -291,7 +300,8 @@ const projectSix = {
     description: "description six",
     source: "https://dummyimage.com/600x400/000/0011ff.png",
     alt: "image six alt",
-    category: "Design"
+    category: "Design",
+    link: "#"
 };
 
 const projectSeven = {
@@ -299,7 +309,8 @@ const projectSeven = {
     description: "description seven",
     source: "https://dummyimage.com/600x400/000/0011ff.png",
     alt: "image seven alt",
-    category: "Mockups"
+    category: "Mockups",
+    link: "#"
 };
 
 const projectEight = {
@@ -307,7 +318,8 @@ const projectEight = {
     description: "description eight",
     source: "https://dummyimage.com/600x400/000/0011ff.png",
     alt: "image eight alt",
-    category: "Websites"
+    category: "Websites",
+    link: "#"
 };
 
 const projectNine = {
@@ -315,7 +327,8 @@ const projectNine = {
     description: "description nine",
     source: "https://dummyimage.com/600x400/000/0011ff.png",
     alt: "image nine alt",
-    category: "Design"
+    category: "Design",
+    link: "#"
 };
 
 let dummyProjectArray = [projectOne, projectTwo, projectThree, projectFour, projectFive, projectSix, projectSeven, projectEight, projectNine];
