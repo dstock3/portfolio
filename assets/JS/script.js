@@ -289,24 +289,36 @@ const websitesButton = projectButtonElements[1];
 const designButton = projectButtonElements[2];
 const mockupsButton = projectButtonElements[3];
 
+function projectArraySorter(projectArray, category) {
+    let newProjectArray = [];
+    for (i = 0; i < projectArray.length; i++) {
+        if (category === projectArray[i].category) {
+            newProjectArray.push(projectArray[i]);
+        };
+        return newProjectArray
+    };
+};
 
 function projectButtonListener(projectButton, projectArray) {
-    
+    let category = projectButton.innerHTML;
+    let newProjectArray = projectArraySorter(projectArray, category);
     projectButton.addEventListener('click', () => {
-        for (i = 0; i < projectArray.length; i++) {
-            if (projectArray[i].category !== projectButton.innerHTML) {
-                projectArray.splice(i, 1);
-            };
+        if (category === "All") {
+            return projectIterator(projectArray, projectBodyRow);
         };
-        return projectArray;
+
+        return projectIterator(newProjectArray, projectBodyRow);
     });
-}
+};
 
-const websiteArray = projectButtonListener(websitesButton, dummyProjectArray);
-const designArray = projectButtonListener(designButton, dummyProjectArray);
-const mockupsArray = projectButtonListener(mockupsButton, dummyProjectArray);
 
-projectIterator(websiteArray, projectBodyCol);
+projectButtonListener(websitesButton, dummyProjectArray);
+projectButtonListener(designButton, dummyProjectArray);
+projectButtonListener(mockupsButton, dummyProjectArray);
+projectButtonListener(allButton, dummyProjectArray);
+
+
+
 
 /*
 
