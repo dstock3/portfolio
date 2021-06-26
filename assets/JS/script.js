@@ -339,3 +339,15 @@ projectButtonListener(designButton, dummyProjectArray);
 projectButtonListener(mockupsButton, dummyProjectArray);
 allButtonListener(dummyProjectArray);
 
+/* CONTACT PAGE */
+const contactElements = sectionBuilder("contact");
+const contactSection = contactElements[0];
+const contactSectionContainer = contactElements[1];
+const contactRow = contactElements[2];
+contactRow.classList.add("text-center");
+const contactHead = elementBuilder("h1", "display-3", contactRow);
+contactHead.classList.add("fw-bold");
+contactHead.innerHTML = "Contact Me";
+const contactHeadLine = elementBuilder("div", "heading-line", contactRow);
+const contactPara = elementBuilder("p", "lh-lg", contactHeadLine);
+contactPara.innerHTML = "Lorem ipsum, dolor sit amet consectetur adipisicing elit.";
