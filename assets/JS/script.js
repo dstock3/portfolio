@@ -372,3 +372,127 @@ const listItem2 = elementBuilder("li", "list-item", contactList);
 listItem2.innerHTML = "We'll discuss it together.";
 const listItem3 = elementBuilder("li", "list-item", contactList);
 listItem3.innerHTML = "Let's get going!";
+
+
+
+//Form
+const contactCol2 = elementBuilder("div", "col-12", contactSectionContainer);
+contactCol2.classList.add("col-lg-6", "bg-white", "shadow", "p-3");
+const contactFormDiv = elementBuilder("div", "form", contactCol2);
+contactFormDiv.classList.add("w-100", "pb-2");
+const contactHead4 = elementBuilder("h4", "display-3--title", contactFormDiv);
+contactHead4.classList.add("mb-5");
+contactHead4.innerHTML = "Get in Touch";
+const contactForm = elementBuilder("form", "row", contactFormDiv);
+contactForm.setAttribute("action", "#") //Will need to use PHP to add functionality here
+
+const firstName = {
+    placeholder: "First Name",
+    elementd: "inputFirstName",
+}
+
+const lastName = {
+    placeholder: "Last Name",
+    id: "inputLastName"
+}
+
+const email = {
+    placeholder: "E-mail Address",
+    id: "inputEmail"
+}
+
+const message = {
+    name: "message",
+    placeholder: "Enter your message here.",
+    id: "message",
+    rows: "8"
+}
+
+const formArray = [firstName, lastName, email, message]
+
+function formHelper(contactFormArray, parent) {
+    let firstName = contactFormArray[0];
+    let lastName = contactFormArray[1];
+    let email = contactFormArray[2];
+    let message = contactFormArray[3];
+    for (i = 0; i < contactFormArray.length; i++) {
+
+        if (i <= 1) {
+            let formInfoDiv = elementBuilder("div", "col-lg-6", parent);
+            formInfoDiv.classList.add("col-md-6", "mb-3", "form-elements");
+        } 
+        if (i > 1) {
+            let formInfoDiv = elementBuilder("div", "col-lg-12", parent);
+            formInfoDiv.classList.add("mb-3", "form-elements");
+        };
+    };
+
+    let formDivArray = document.getElementsByClassName("form-elements");
+    let firstNameDiv = formDivArray[0];
+    let lastNameDiv = formDivArray[1];
+    let emailDiv = formDivArray[2];
+    let messageDiv = formDivArray[3];
+
+    let firstNameInput = elementBuilder("input", "shadow", firstNameDiv);
+    firstNameInput.classList.add("form-control", "form-control-lg");
+    firstNameInput.type = "text";
+    firstNameInput.setAttribute("placeholder", firstName.placeholder);
+    firstNameInput.setAttribute("id", firstName.id);
+
+    let lastNameInput = elementBuilder("input", "shadow", lastNameDiv);
+    lastNameInput.classList.add("form-control", "form-control-lg");
+    lastNameInput.type = "text";
+    lastNameInput.setAttribute("placeholder", lastName.placeholder);
+    lastNameInput.setAttribute("id", lastName.id);
+
+    let emailInput = elementBuilder("input", "shadow", emailDiv);
+    emailInput.classList.add("form-control", "form-control-lg");
+    emailInput.type = "text";
+    emailInput.setAttribute("placeholder", email.placeholder);
+    emailInput.setAttribute("id", email.id);
+
+    let messageInput = elementBuilder("input", "shadow", messageDiv);
+    messageInput.classList.add("form-control", "form-control-lg");
+    messageInput.setAttribute("name", message.name);
+    messageInput.setAttribute("placeholder", message.placeholder);
+    messageInput.setAttribute("id", message.id);
+    messageInput.setAttribute("rows", message.rows);
+
+    let contactButtonDiv = elementBuilder("textarea", "text-center", parent);
+    let contactButton = elementBuilder("button", "btn", contactButtonDiv);
+    contactButton.type = "button";
+    contactButton.classList.add("btn-primary", "rounded-pill", "pt-3", "pb-3");
+    contactButton.innerHTML = "Send Message";
+    let contactButtonIcon = elementBuilder("i", "fas", contactButton);
+    contactButtonIcon.classList.add("fa-paper-plane");
+};
+
+formHelper(formArray, contactForm);
+
+/*
+            <div class="col-12 col-lg-6 bg-white shadow p-3">
+              <div class="form w-100 pb-2">
+                <h4 class="display-3--title mb-5">Start Your Project</h4>
+                <form action="#" class="row">
+                  <div class="col-lg-6 col-md-6 mb-3">
+                    <input type="text" placeholder="First Name" id="inputFirstName" class="shadow form-control form-control-lg">
+                  </div>
+                  <div class="col-lg-6 col-md-6 mb-3">
+                    <input type="text" placeholder="Last Name" id="inputLastName" class="shadow form-control form-control-lg">
+                  </div>
+                  <div class="col-lg-12 mb-3">
+                    <input type="text" placeholder="E-mail Address" id="inputEmail" class="shadow form-control form-control-lg">
+                  </div>
+                  <div class="col-lg-12 mb-3">
+                    <textarea name="message" placeholder="Enter your message here." id="message" rows="8" class="shadow form-control form-control-lg"></textarea>
+                  </div>
+                  <div class="text-center d-grid mt-1">
+                    <button type="button" class="btn btn-primary rounded-pill pt-3 pb-3">
+                      Submit
+                      <i class="fas fa-paper-plane"></i>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+*/
