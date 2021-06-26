@@ -50,7 +50,7 @@ function buttonBuilderJr(buttonArray, parent) {
     return buttonElementArray;
 };
 
-/* Project Section */
+    /* Project Section */
 
 function projectBoxBuilder(imgSrc, projectTitle, description, parent, category, link) {
     let projectBodyCol = elementBuilder("div", "col-lg-4", parent);
@@ -331,7 +331,7 @@ const projectNine = {
     link: "#"
 };
 
-let dummyProjectArray = [projectOne, projectTwo, projectThree, projectFour, projectFive, projectSix, projectSeven, projectEight, projectNine];
+const dummyProjectArray = [projectOne, projectTwo, projectThree, projectFour, projectFive, projectSix, projectSeven, projectEight, projectNine];
 
 projectIterator(dummyProjectArray, projectBodyRow);
 projectButtonListener(websitesButton, dummyProjectArray);
@@ -372,5 +372,3 @@ const listItem2 = elementBuilder("li", "list-item", contactList);
 listItem2.innerHTML = "We'll discuss it together.";
 const listItem3 = elementBuilder("li", "list-item", contactList);
 listItem3.innerHTML = "Let's get going!";
-
-
