@@ -409,7 +409,7 @@ const contactHead = elementBuilder("h1", "display-3", contactRow);
 contactHead.classList.add("fw-bold");
 contactHead.innerHTML = "Contact Me";
 const contactHeadLine = elementBuilder("div", "heading-line", contactRow);
-const contactPara = elementBuilder("p", "lh-lg", contactHeadLine);
+const contactPara = elementBuilder("p", "lh-lg", contactRow);
 contactPara.innerHTML = "Lorem ipsum, dolor sit amet consectetur adipisicing elit.";
 
 const contactRow2 = elementBuilder("div", "row", contactSectionContainer);
@@ -432,8 +432,6 @@ const listItem2 = elementBuilder("li", "list-item", contactList);
 listItem2.innerHTML = "We'll discuss it together.";
 const listItem3 = elementBuilder("li", "list-item", contactList);
 listItem3.innerHTML = "Let's get going!";
-
-
 
 //Form
 const contactCol2 = elementBuilder("div", "col-12", contactSectionContainer);
@@ -471,3 +469,11 @@ const message = {
 const formArray = [firstName, lastName, email, message]
 
 formHelper(formArray, contactForm);
+
+//BACK TO TOP BUTTON
+
+const topButtonAnchor = elementBuilder("a", "shadow", body);
+topButtonAnchor.classList.add("btn-primary", "rounded-circle", "back-to-top");
+topButtonAnchor.href = "#";
+const topButtonIcon = elementBuilder("i", "fas", topButtonAnchor);
+topButtonIcon.classList.add("fa-chevron-up");
