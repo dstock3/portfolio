@@ -451,14 +451,15 @@ function formHelper(contactFormArray, parent) {
     emailInput.setAttribute("placeholder", email.placeholder);
     emailInput.setAttribute("id", email.id);
 
-    let messageInput = elementBuilder("input", "shadow", messageDiv);
+    let messageInput = elementBuilder("textarea", "shadow", messageDiv);
     messageInput.classList.add("form-control", "form-control-lg");
     messageInput.setAttribute("name", message.name);
     messageInput.setAttribute("placeholder", message.placeholder);
     messageInput.setAttribute("id", message.id);
     messageInput.setAttribute("rows", message.rows);
 
-    let contactButtonDiv = elementBuilder("textarea", "text-center", parent);
+    let contactButtonDiv = elementBuilder("div", "text-center", parent);
+    contactButtonDiv.classList.add("d-grid", "mt-1");
     let contactButton = elementBuilder("button", "btn", contactButtonDiv);
     contactButton.type = "button";
     contactButton.classList.add("btn-primary", "rounded-pill", "pt-3", "pb-3");
@@ -468,31 +469,3 @@ function formHelper(contactFormArray, parent) {
 };
 
 formHelper(formArray, contactForm);
-
-/*
-            <div class="col-12 col-lg-6 bg-white shadow p-3">
-              <div class="form w-100 pb-2">
-                <h4 class="display-3--title mb-5">Start Your Project</h4>
-                <form action="#" class="row">
-                  <div class="col-lg-6 col-md-6 mb-3">
-                    <input type="text" placeholder="First Name" id="inputFirstName" class="shadow form-control form-control-lg">
-                  </div>
-                  <div class="col-lg-6 col-md-6 mb-3">
-                    <input type="text" placeholder="Last Name" id="inputLastName" class="shadow form-control form-control-lg">
-                  </div>
-                  <div class="col-lg-12 mb-3">
-                    <input type="text" placeholder="E-mail Address" id="inputEmail" class="shadow form-control form-control-lg">
-                  </div>
-                  <div class="col-lg-12 mb-3">
-                    <textarea name="message" placeholder="Enter your message here." id="message" rows="8" class="shadow form-control form-control-lg"></textarea>
-                  </div>
-                  <div class="text-center d-grid mt-1">
-                    <button type="button" class="btn btn-primary rounded-pill pt-3 pb-3">
-                      Submit
-                      <i class="fas fa-paper-plane"></i>
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </div>
-*/
