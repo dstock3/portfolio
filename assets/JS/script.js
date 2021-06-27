@@ -128,7 +128,7 @@ function formHelper(contactFormArray, parent) {
 
         if (i <= 1) {
             let formInfoDiv = elementBuilder("div", "col-lg-6", parent);
-            formInfoDiv.classList.add("col-md-6", "mb-3", "form-elements");
+            formInfoDiv.classList.add("col-md", "mb-3", "form-elements");
         } 
         if (i > 1) {
             let formInfoDiv = elementBuilder("div", "col-lg-12", parent);
@@ -434,7 +434,7 @@ const listItem3 = elementBuilder("li", "list-item", contactList);
 listItem3.innerHTML = "Let's get going!";
 
 //Form
-const contactCol2 = elementBuilder("div", "col-12", contactSectionContainer);
+const contactCol2 = elementBuilder("div", "col-12", contactRow2);
 contactCol2.classList.add("col-lg-6", "bg-white", "shadow", "p-3");
 const contactFormDiv = elementBuilder("div", "form", contactCol2);
 contactFormDiv.classList.add("w-100", "pb-2");
@@ -446,7 +446,7 @@ contactForm.setAttribute("action", "#") //Will need to use PHP to add functional
 
 const firstName = {
     placeholder: "First Name",
-    elementd: "inputFirstName",
+    id: "inputFirstName",
 }
 
 const lastName = {
