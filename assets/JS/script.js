@@ -472,9 +472,9 @@ formHelper(formArray, contactForm);
 
 //FOOTER
 const footerElements = sectionBuilder("footer");
-const footerSection = contactElements[0];
-const footerSectionContainer = contactElements[1];
-const footerRow = contactElements[2];
+const footerSection = footerElements[0];
+const footerSectionContainer = footerElements[1];
+const footerRow = footerElements[2];
 
 /*
 const footerDiv = elementBuilder("div", "col-md-4", footerRow);
@@ -525,7 +525,7 @@ function contactBoxBuilder(contactBoxArray, parent) {
         let contactBoxInfo = elementBuilder("div", "contact-box__info", footerDiv);
         let contactBoxAnchor = elementBuilder("a", "contact-box__info--title", contactBoxInfo);
         contactBoxAnchor.innerHTML = contactBoxArray[i].title;
-        let contactBoxPara = elementBuilder("p", "contact-box__info--subtitle", footerDiv);
+        let contactBoxPara = elementBuilder("p", "contact-box__info--subtitle", contactBoxInfo);
         contactBoxPara.innerHTML = contactBoxArray[i].subtitle;
     };
 };
