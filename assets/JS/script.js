@@ -476,6 +476,7 @@ const footerSection = contactElements[0];
 const footerSectionContainer = contactElements[1];
 const footerRow = contactElements[2];
 
+/*
 const footerDiv = elementBuilder("div", "col-md-4", footerRow);
 footerDiv.classList.add("col-lg-4", "contact-box", "pt-1", "d-md-block", "d-lg-flex", "d-flex")
 const contactBoxIcon = elementBuilder("div", "contact-box__icon", footerDiv);
@@ -487,8 +488,9 @@ contactBoxIcon.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="icon 
 const contactBoxInfo = elementBuilder("div", "contact-box__info", footerDiv);
 const contactBoxAnchor = elementBuilder("a", "contact-box__info--title", contactBoxInfo);
 const contactBoxPara = elementBuilder("p", "contact-box__info--subtitle", footerDiv);
+*/
 
-const basicInfo = {
+const phoneInfo = {
     title: `+0 (000) 000-0000`,
     subtitle: `Mon-Fri 9am-6pm (CST)`,
     icon: `icon-tabler-phone-call`
@@ -506,26 +508,29 @@ const locationInfo = {
     icon: `icon-tabler-map-2`
 }
 
-const contactBoxArray = [basicInfo, emailInfo, locationInfo];
+const contactBoxArray = [phoneInfo, emailInfo, locationInfo];
 
 function contactBoxBuilder(contactBoxArray, parent) {
     for (i = 0; i < contactBoxArray.length; i++) {
         let footerDiv = elementBuilder("div", "col-md-4", parent);
         footerDiv.classList.add("col-lg-4", "contact-box", "pt-1", "d-md-block", "d-lg-flex", "d-flex");
         let contactBoxIcon = elementBuilder("div", "contact-box__icon", footerDiv);
-        contactBoxIcon.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-phone-call" viewBox="0 0 24 24" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        let contactBoxContent = `<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler ${contactBoxArray[i].icon} " viewBox="0 0 24 24" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
         <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
         <path d="M15 7a2 2 0 0 1 2 2" />
         <path d="M15 3a6 6 0 0 1 6 6" />`;
+
+        contactBoxIcon.innerHTML = contactBoxContent;
         let contactBoxInfo = elementBuilder("div", "contact-box__info", footerDiv);
         let contactBoxAnchor = elementBuilder("a", "contact-box__info--title", contactBoxInfo);
+        contactBoxAnchor.innerHTML = contactBoxArray[i].title;
         let contactBoxPara = elementBuilder("p", "contact-box__info--subtitle", footerDiv);
-
+        contactBoxPara.innerHTML = contactBoxArray[i].subtitle;
     };
 };
 
-
+contactBoxBuilder(contactBoxArray, footerRow);
 
 //BACK TO TOP BUTTON
 
