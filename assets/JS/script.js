@@ -489,15 +489,21 @@ const contactBoxAnchor = elementBuilder("a", "contact-box__info--title", contact
 const contactBoxPara = elementBuilder("p", "contact-box__info--subtitle", footerDiv);
 
 const basicInfo = {
-
+    title: `+0 (000) 000-0000`,
+    subtitle: `Mon-Fri 9am-6pm (CST)`,
+    icon: `icon-tabler-phone-call`
 }
 
 const emailInfo = {
-
+    title: `info@company.com`,
+    subtitle: `Online Support`,
+    icon: `icon-tabler-mail-opened`
 }
 
 const locationInfo = {
-
+    title: `Chicago, IL`,
+    subtitle: `United States`,
+    icon: `icon-tabler-map-2`
 }
 
 const contactBoxArray = [basicInfo, emailInfo, locationInfo];
