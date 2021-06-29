@@ -551,7 +551,8 @@ const copyrightRow = elementBuilder("div", "row", copyrightContainer);
 copyrightRow.classList.add("text-center", "text-white");
 const copyrightCol = elementBuilder("div", "col-12", copyrightRow);
 const copyrightContent = elementBuilder("div", "footer-bottom__copyright", copyrightCol);
-copyrightContent.innerHTML = `Copyright &COPY; 2021 by <a href="#">David Stockdale</a>`;
+const date = new Date();
+copyrightContent.innerHTML = `Copyright &COPY; ${date.getFullYear()} by David Stockdale.`;
 
 //BACK TO TOP BUTTON
 
