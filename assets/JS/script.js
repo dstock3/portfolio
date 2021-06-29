@@ -544,9 +544,14 @@ linkedAnchor.href = "" //Need to enter my linkedin when complete
 const linkedIcon = elementBuilder("i", "fab", linkedAnchor);
 linkedIcon.classList.add("fa-linkedin");
 
-
-
-
+const copyrightDiv = elementBuilder("div", "footer-bottom", body);
+copyrightDiv.classList.add("pt-5", "pb-5");
+const copyrightContainer = elementBuilder("div", "container", copyrightDiv);
+const copyrightRow = elementBuilder("div", "row", copyrightContainer);
+copyrightRow.classList.add("text-center", "text-white");
+const copyrightCol = elementBuilder("div", "col-12", copyrightRow);
+const copyrightContent = elementBuilder("div", "footer-bottom__copyright", copyrightCol);
+copyrightContent.innerHTML = `Copyright &COPY; 2021 by <a href="#">David Stockdale</a>`;
 
 //BACK TO TOP BUTTON
 
