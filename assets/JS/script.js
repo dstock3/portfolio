@@ -276,7 +276,7 @@ const headSpan2 = elementBuilder("span", "display-2--description", aboutHead);
 headSpan2.classList.add("lh-base");
 const description = "description description description";
 headSpan2.innerHTML = description;
-const touchButtonArray = buttonBuilder("rounded-pill", "span", rowAbout);
+const touchButtonArray = buttonBuilder("rounded-pill", "span", colAbout1);
 const touchButton = touchButtonArray[0];
 const touchText = document.createTextNode("Get In Touch");
 touchButton.appendChild(touchText);
