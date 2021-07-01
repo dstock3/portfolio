@@ -32,6 +32,7 @@ vidIllus.alt = "video illustration";
 vidIllus.src = "https://dummyimage.com/600x400/000/0011ff.png";
 const lightboxAnchor = elementBuilder("a", "glightbox", vidBox);
 lightboxAnchor.classList.add("position-absolute", "top-50", "start-50", "translate-middle");
+lightboxAnchor.href = "#";
 const anchorSpan = elementBuilder("span", "span", lightboxAnchor);
 const anchorIcon = elementBuilder("i", "fas", anchorSpan);
 anchorIcon.classList.add("fa-play-circle");
