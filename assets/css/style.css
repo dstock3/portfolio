@@ -10994,6 +10994,9 @@ textarea.form-control-lg {
   text-decoration: none;
   text-transform: capitalize;
 }
+.form button i {
+  padding-left: 3%;
+}
 
 .footer {
   padding-top: 1rem;
@@ -11058,11 +11061,11 @@ textarea.form-control-lg {
   background-color: #000;
 }
 .footer-bottom__copyright {
-  color: #6c757d;
+  color: #fff;
   font-weight: 400;
 }
 .footer-bottom__copyright a {
-  color: #dee2e6;
+  color: #fff;
   text-decoration: none;
 }
 .footer-bottom__copyright a:hover {

@@ -74,12 +74,11 @@
     background-color: $black;
 
     &__copyright {
-        color: $gray-600;
+        color: $white;
         font-weight: 400;
         
-
         a {
-            color: $gray-300;
+            color: $white;
             text-decoration: none;
 
             &:hover {
