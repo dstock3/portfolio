@@ -1,0 +1,45 @@
+const aboutSectionElements = sectionBuilder("about");
+const sectionAbout = aboutSectionElements[0];
+const aboutContainer = aboutSectionElements[1];
+const rowAbout = aboutSectionElements[2];
+
+rowAbout.classList.add("align-item-center", "text-white");
+const colAbout1 = elementBuilder("div", "col-md-6", rowAbout);
+colAbout1.classList.add("intros", "text-start");
+const aboutHead = elementBuilder("h1", "display-2", colAbout1);
+const headSpan = elementBuilder("span", "display-2--intro", aboutHead);
+const header = "Hi, I'm Dave!";
+headSpan.innerHTML = header;
+const headSpan2 = elementBuilder("span", "display-2--description", aboutHead);
+headSpan2.classList.add("lh-base");
+const description = "description description description";
+headSpan2.innerHTML = description;
+const touchButtonArray = buttonBuilder("rounded-pill", "span", colAbout1);
+const touchButton = touchButtonArray[0];
+const touchText = document.createTextNode("Get In Touch");
+touchButton.appendChild(touchText);
+touchButton.classList.add("btn-rounded");
+const touchSpan = touchButtonArray[1];
+const touchIcon = elementBuilder("i", "fas", touchSpan);
+touchIcon.classList.add("fa-arrow-right");
+
+/* VIDEO */
+const vidDiv = elementBuilder("div", "col-md-6", rowAbout);
+vidDiv.classList.add("intros", "text-end");
+const vidBox = elementBuilder("div", "video-box", vidDiv);
+const vidIllus = elementBuilder("img", "img-fluid", vidBox);
+vidIllus.alt = "video illustration";
+vidIllus.src = "https://dummyimage.com/600x400/000/0011ff.png";
+const lightboxAnchor = elementBuilder("a", "glightbox", vidBox);
+lightboxAnchor.classList.add("position-absolute", "top-50", "start-50", "translate-middle");
+const anchorSpan = elementBuilder("span", "span", lightboxAnchor);
+const anchorIcon = elementBuilder("i", "fas", anchorSpan);
+anchorIcon.classList.add("fa-play-circle");
+const borderSpan = elementBuilder("span", "border-animation", lightboxAnchor);
+borderSpan.classList.add("border-animation--border-1");
+const borderSpan2 = elementBuilder("span", "border-animation", lightboxAnchor);
+borderSpan2.classList.add("border-animation--border-2");
+const zigBorder = elementBuilder("svg", "zig-border", sectionAbout);
+zigBorder.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+zigBorder.setAttribute("viewBox", "0 0 1440 320");
+zigBorder.innerHTML = `<path fill="#ffffff" fill-opacity="1" d="M0,32L48,64C96,96,192,160,288,186.7C384,213,480,203,576,170.7C672,139,768,85,864,101.3C960,117,1056,203,1152,213.3C1248,224,1344,160,1392,128L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>`;
