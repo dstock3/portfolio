@@ -2,7 +2,7 @@
 
 const article = {
     title: "Blog 1 Example Title",
-    preview: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam."
+    preview: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem..."
 }
 
 //Blog Elements
@@ -10,7 +10,8 @@ const blogElements = sectionBuilder("blog");
 const blogSection = blogElements[0];
 const blogSectionContainer = blogElements[1];
 const blogRow = blogElements[2];
-blogRow.classList.add("text-center");
+
+blogSectionContainer.classList.add("text-center");
 
 const blogHead = elementBuilder("h1", "display-3", blogRow);
 blogHead.innerHTML = "Blog"
@@ -38,5 +39,6 @@ const blogCol2 = elementBuilder("div", "col-md-5", blogRow2);
 blogCol2.classList.add ("border-right");
 const blogImage = elementBuilder("img", "img-fluid", blogCol2);
 blogImage.src = "https://dummyimage.com/600x400/000/0011ff.png";
+blogImage.classList.add("shadow");
 
 
