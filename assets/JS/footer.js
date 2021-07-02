@@ -30,7 +30,7 @@ const socialContainer = elementBuilder("div", "container", social);
 const socialRow = elementBuilder("div", "row", socialContainer);
 socialRow.classList.add("py-4", "text-center", "text-white");
 const socialCol = elementBuilder("div", "col-lg-5", socialRow);
-socialCol.classList.add("col-md-6", "mb-3", "mb-0");
+socialCol.classList.add("col-md-5", "mb-3", "mb-0");
 socialCol.innerHTML = "Connect with Me on Social Media";
 const socialIcons = elementBuilder("div", "col-lg-6", socialRow);
 
