@@ -29,7 +29,8 @@ blogTitle.classList.add("text-center");
 blogTitle.innerHTML = article.title;
 const blogBodyBkg = elementBuilder("div", "bg-white", blogCol);
 blogBodyBkg.classList.add ("p-4", "text-start");
-const blogBody = elementBuilder("p", "fw-light", blogBodyBkg);
+const blogBody = elementBuilder("p", "blog__content", blogBodyBkg);
+blogBody.classList.add("fw-light");
 blogBody.innerHTML = article.preview;
 const blogLink = elementBuilder("a", "float-end", blogCol);
 blogLink.classList.add("me-4");
@@ -37,7 +38,8 @@ blogLink.href = "#"; //Need to insert link once this is built out
 blogLink.innerHTML = "Read More"
 const blogCol2 = elementBuilder("div", "col-md-5", blogRow2);
 blogCol2.classList.add ("border-right");
-const blogImage = elementBuilder("img", "img-fluid", blogCol2);
+const imageDiv = elementBuilder("div", "blog__pic", blogCol2);
+const blogImage = elementBuilder("img", "img-fluid", imageDiv);
 blogImage.src = "https://dummyimage.com/600x400/000/0011ff.png";
 blogImage.classList.add("shadow");
 
