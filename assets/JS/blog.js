@@ -19,18 +19,22 @@ blogLine.classList.add("mb-1");
 
 const blogRow2 = elementBuilder("div", "row", blogSectionContainer);
 blogRow2.classList.add("pt-2", "pb-2", "mt-0", "mb-3");
-const blogCol = elementBuilder("div", "col-md-6", blogRow2);
+const blogCol = elementBuilder("div", "col-md-7", blogRow2);
 blogCol.classList.add("border-right");
 const blogTitleBkg = elementBuilder("div", "bg-white", blogCol);
-blogTitleBkg.classList.add("p-3");
+blogTitleBkg.classList.add("p-2");
 const blogTitle = elementBuilder("h2", "text-capitalize", blogTitleBkg);
 blogTitle.classList.add("text-center");
 blogTitle.innerHTML = article.title;
-const blogCol2 = elementBuilder("div", "col-md-6", blogRow2);
-const blogBodyBkg = elementBuilder("div", "bg-white", blogCol2);
+const blogBodyBkg = elementBuilder("div", "bg-white", blogCol);
 blogBodyBkg.classList.add ("p-4", "text-start");
 const blogBody = elementBuilder("p", "fw-light", blogBodyBkg);
 blogBody.innerHTML = article.body;
+const blogLink = elementBuilder("a", "float-end", blogCol);
+blogLink.classList.add("me-4");
+blogLink.href = "#"; //Need to insert link once this is built out
+blogLink.innerHTML = "Read More"
 
+const blogCol2 = elementBuilder("div", "col-md-6", blogRow2);
 
 
