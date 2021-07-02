@@ -10957,6 +10957,31 @@ textarea.form-control-lg {
   visibility: visible;
 }
 
+.blog {
+  position: relative;
+  padding: 1.25rem 0;
+}
+.blog__content {
+  padding: 0.25em;
+  margin-top: 0;
+}
+.blog__content p {
+  font-size: 0.8rem;
+}
+@media (min-width: 992px) {
+  .blog__content p {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 992px) {
+  .blog__content {
+    margin-top: 2rem;
+  }
+}
+.blog__pic {
+  max-width: 100%;
+}
+
 .contact {
   padding: 4rem 0;
   background-color: #e9ecef;

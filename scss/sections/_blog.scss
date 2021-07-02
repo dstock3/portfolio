@@ -2,11 +2,12 @@
 
 .blog {
     position: relative;
-    padding: 1rem 0;
+    padding: 1.25rem 0;
 
     &__content {
-        padding: 1rem;
+        padding: .25em;
         margin-top: 0;
+        
 
         p {
             font-size: 0.8rem;
@@ -17,11 +18,13 @@
         }
 
         @include media-breakpoint-up(lg) {
-            margin-top: 5rem;
+            margin-top: 2rem;
         }
     }
 
     &__pic {
         max-width: 100%;
+
+
     }
 }
