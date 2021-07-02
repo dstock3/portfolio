@@ -34,8 +34,8 @@ const blogLink = elementBuilder("a", "float-end", blogCol);
 blogLink.classList.add("me-4");
 blogLink.href = "#"; //Need to insert link once this is built out
 blogLink.innerHTML = "Read More"
-
 const blogCol2 = elementBuilder("div", "col-md-5", blogRow2);
+blogCol2.classList.add ("border-right");
 const blogImage = elementBuilder("img", "img-fluid", blogCol2);
 blogImage.src = "https://dummyimage.com/600x400/000/0011ff.png";
 

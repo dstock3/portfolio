@@ -49,6 +49,11 @@ linkedAnchor.href = "https://www.linkedin.com/in/stockdale/" //Need to enter my 
 const linkedIcon = elementBuilder("i", "fab", linkedAnchor);
 linkedIcon.classList.add("fa-linkedin");
 
+const youtubeAnchor = elementBuilder("a", "social-media-links", socialIcons);
+youtubeAnchor.href = "" //Need to enter my linkedin when complete
+const youtubeIcon = elementBuilder("i", "fab", youtubeAnchor);
+youtubeIcon.classList.add("fa-youtube");
+
 const copyrightDiv = elementBuilder("div", "footer-bottom", body);
 copyrightDiv.classList.add("pt-5", "pb-5");
 const copyrightContainer = elementBuilder("div", "container", copyrightDiv);
