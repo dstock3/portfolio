@@ -38,6 +38,11 @@ const projects = {
     link: "#projects",
 }
 
+const videos = {
+    name: "Videos",
+    link: "#videos",
+}
+
 const blog = {
     name: "Blog",
     link: "#blog",
@@ -48,6 +53,6 @@ const contact = {
     link: "#contact",
 }
 
-const links = [about, projects, blog, contact];
+const links = [about, projects, videos, blog, contact];
 
 linkBuilder(links, ul, "nav-item");
