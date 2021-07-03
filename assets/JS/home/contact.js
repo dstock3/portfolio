@@ -40,7 +40,8 @@ const contactHead4 = elementBuilder("h4", "display-3--title", contactFormDiv);
 contactHead4.classList.add("mb-5");
 contactHead4.innerHTML = "Get in Touch";
 const contactForm = elementBuilder("form", "row", contactFormDiv);
-contactForm.setAttribute("action", "#") //Will need to use PHP to add functionality here
+contactForm.setAttribute("action", 'contact-form.php');
+contactForm.setAttribute('method', 'POST');
 
 const firstName = {
     placeholder: "First Name",
