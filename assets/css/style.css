@@ -10870,6 +10870,9 @@ textarea.form-control-lg {
   width: 100%;
   height: 100%;
 }
+.about .get-in-touch {
+  text-decoration: none;
+}
 
 .intros .video-box {
   position: relative;
