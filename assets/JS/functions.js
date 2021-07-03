@@ -11,12 +11,6 @@ function linkBuilder(linkArray, ulVar, className, openNewTab) {
         linkAnchor = elementBuilder('a', 'nav-link', linkLi);
         linkAnchor.textContent = linkArray[i].name;
         linkAnchor.href = linkArray[i].link;
-        let name = linkArray[i].name.toLowerCase();
-        linkLi.setAttribute("id", `${name}`);
-        linkAnchor.addEventListener('click', () => {
-            document.getElementById(`${name}`).scrollIntoView();
-        });
-
         if (openNewTab === true) {
             linkAnchor.rel = "noreferrer noopener";
             linkAnchor.target = "blank";
