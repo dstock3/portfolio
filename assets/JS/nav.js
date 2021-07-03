@@ -30,22 +30,22 @@ phoneButton.innerHTML = "+1 (000) 000-0000";
 
 const about = {
     name: "About",
-    link: "#",
+    link: "#about",
 }
 
 const projects = {
     name: "Projects",
-    link: "#",
+    link: "#projects",
 }
 
 const blog = {
     name: "Blog",
-    link: "#",
+    link: "#blog",
 }
 
 const contact = {
     name: "Contact",
-    link: "#",
+    link: "#contact",
 }
 
 const links = [about, projects, blog, contact];
