@@ -26,9 +26,7 @@ wavePath.setAttribute("d", "M0,160L48,160C96,160,192,160,288,170.7C384,181,480,2
 const blogHead = elementBuilder("h1", "display-3", blogRow);
 blogHead.classList.add("text-white", "mt-4");
 blogHead.innerHTML = "Blog"
-const blogLine = elementBuilder("div", "heading-line", blogRow);
-blogLine.classList.add("text-white");
-
+const blogLine = elementBuilder("hr", "mx-auto", blogRow);
 const blogRow2 = elementBuilder("div", "row", blogSectionContainer);
 blogRow2.classList.add("pt-2", "pb-2", "mt-5", "mb-4");
 const blogCol = elementBuilder("div", "col-md-7", blogRow2);

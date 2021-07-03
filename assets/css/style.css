@@ -10961,6 +10961,11 @@ textarea.form-control-lg {
   position: relative;
   padding: 1.25rem 0;
 }
+.blog hr {
+  width: 100px;
+  height: 3px;
+  color: #fff;
+}
 .blog__content {
   padding: 0.25em;
   margin-top: 0;

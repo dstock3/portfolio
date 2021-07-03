@@ -4,6 +4,12 @@
     position: relative;
     padding: 1.25rem 0;
 
+    hr {
+        width: 100px;
+        height: 3px;
+        color: $white;
+    };
+
     &__content {
         padding: .25em;
         margin-top: 0;
