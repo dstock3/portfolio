@@ -10,18 +10,19 @@ const blogElements = sectionBuilder("blog");
 const blogSection = blogElements[0];
 const blogSectionContainer = blogElements[1];
 const blogRow = blogElements[2];
-blogSection.classList.add("gradient");
-blogSectionContainer.classList.add("text-center");
 
 /*
 const waveElement = elementBuilder("svg", "wave-border", blogSection);
 waveElement.setAttribute("xmlns", "http://www.w3.org/2000/svg");
 waveElement.setAttribute("viewBox", "0 0 1440 320");
 const wavePath = elementBuilder("path", "wave-path", waveElement);
-wavePath.setAttribute("fill", "#ffffff");
+wavePath.setAttribute("fill", "#fff");
 wavePath.setAttribute("fill-opacity", "1");
 wavePath.setAttribute("d", "M0,160L48,160C96,160,192,160,288,170.7C384,181,480,203,576,192C672,181,768,139,864,149.3C960,160,1056,224,1152,229.3C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z");
 */
+
+blogSection.classList.add("gradient");
+blogSectionContainer.classList.add("text-center");
 
 const blogHead = elementBuilder("h1", "display-3", blogRow);
 blogHead.classList.add("text-white", "mt-4");
