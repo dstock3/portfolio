@@ -1,6 +1,6 @@
 const article = {
     title: "Blog 1 Example Title",
-    preview: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem..."
+    preview: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
 }
 
 const blogElements = sectionBuilder("blog-page");
@@ -11,27 +11,28 @@ const blogRow = blogElements[2];
 blogSection.classList.add("gradient");
 blogSectionContainer.classList.add("text-center");
 
-const blogHead = elementBuilder("h1", "display-3", blogRow);
+const blogHead = elementBuilder("h1", "display-2", blogRow);
 blogHead.classList.add("text-white", "mt-5", "pt-5");
 blogHead.innerHTML = "Blog"
 const blogLine = elementBuilder("hr", "mx-auto", blogRow);
 const blogRow2 = elementBuilder("div", "row", blogSectionContainer);
-blogRow2.classList.add("pt-2", "pb-2", "mt-5", "mb-4");
-const blogCol = elementBuilder("div", "col-md-7", blogRow2);
-blogCol.classList.add("border-right");
+blogRow2.classList.add("pt-2", "pb-1", "mt-5", "mb-2");
+const blogCol = elementBuilder("div", "col-md-10", blogRow2);
+blogCol.classList.add("mx-auto");
 const blogTitleBkg = elementBuilder("div", "text-white", blogCol);
 blogTitleBkg.classList.add("p-1");
 const blogTitle = elementBuilder("h2", "text-capitalize", blogTitleBkg);
 blogTitle.classList.add("text-center");
 blogTitle.innerHTML = article.title;
+
 const blogBodyBkg = elementBuilder("div", "text-white", blogCol);
-blogBodyBkg.classList.add ("p-2", "text-start");
+blogBodyBkg.classList.add ("p-1", "text-start");
 const blogBody = elementBuilder("p", "blog__content", blogBodyBkg);
 blogBody.classList.add("fw-light");
 blogBody.innerHTML = article.preview;
 
-const blogCol2 = elementBuilder("div", "col-md-5", blogRow2);
-const imageDiv = elementBuilder("div", "blog__pic", blogCol2);
+const imageDiv = elementBuilder("div", "blog__pic", blogCol);
 const blogImage = elementBuilder("img", "img-fluid", imageDiv);
 blogImage.src = "https://dummyimage.com/600x400/000/0011ff.png";
 blogImage.classList.add("shadow");
+
