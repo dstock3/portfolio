@@ -2,7 +2,7 @@ const body = document.getElementsByTagName("body")[0];
 const nav = elementBuilder("nav", "navbar", body);
 const containerDiv = elementBuilder("div", "container", nav);
 const logoAnchor = elementBuilder("a", "navbar-brand", containerDiv);
-logoAnchor.href = "#";
+logoAnchor.href = "index.html";
 const logoImage = elementBuilder("img", "logo", logoAnchor);
 logoImage.src = "#";
 
@@ -45,7 +45,7 @@ const videos = {
 
 const blog = {
     name: "Blog",
-    link: "#blog",
+    link: "blog.html",
 }
 
 const contact = {

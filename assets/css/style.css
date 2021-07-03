@@ -11123,4 +11123,10 @@ textarea.form-control-lg {
   transform: translate(-50%, -50%);
 }
 
+.blog-page hr {
+  width: 200px;
+  height: 4px;
+  color: #fff;
+}
+
 /*# sourceMappingURL=style.css.map */

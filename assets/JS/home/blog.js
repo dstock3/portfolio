@@ -44,7 +44,7 @@ blogBody.classList.add("fw-light");
 blogBody.innerHTML = article.preview;
 const blogLink = elementBuilder("a", "float-end", blogCol);
 blogLink.classList.add("me-4", "text-white", "mb-4");
-blogLink.href = "#"; //Need to insert link once this is built out
+blogLink.href = "blog.html"; 
 blogLink.innerHTML = "Read More"
 const blogCol2 = elementBuilder("div", "col-md-5", blogRow2);
 const imageDiv = elementBuilder("div", "blog__pic", blogCol2);
