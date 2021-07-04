@@ -1,0 +1,29 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+.tech {
+    .tech-row {
+        padding-inline: 15%;
+    }
+
+    img {
+        max-width: 75px;
+
+
+    }
+
+    &:hover {
+
+        img {
+            transform: scale(1.2);
+            @include transitionProperty;
+        }
+    }
+
+    .tech-border {
+        width: 5%;
+        height: 4px;
+        color: $primary;
+    }
+
+}

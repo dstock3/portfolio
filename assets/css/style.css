@@ -10899,6 +10899,23 @@ textarea.form-control-lg {
   animation-delay: 1.5s;
 }
 
+.tech .tech-row {
+  padding-inline: 15%;
+}
+.tech img {
+  max-width: 75px;
+}
+.tech:hover img {
+  transform: scale(1.2);
+  transition-duration: 1s;
+  transition-property: all;
+}
+.tech .tech-border {
+  width: 5%;
+  height: 4px;
+  color: #1c1fbb;
+}
+
 .projects {
   padding: 4rem 0;
 }
@@ -11126,7 +11143,6 @@ textarea.form-control-lg {
 .blog-page hr {
   width: 200px;
   height: 4px;
-  color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */
