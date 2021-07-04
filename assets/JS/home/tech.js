@@ -60,19 +60,6 @@ const git = {
 
 const techArray = [html, css, js, sass, bootstrap, linux, ubuntu, python, git];
 
-function techBuilder(techArray) {
-    for (i = 0; i < techArray.length; i++) {
-        let techCol = elementBuilder("div", "col-md-4", rowTech2);
-        techCol.classList.add("col-lg-1", "mx-auto");
-        let techDiv =  elementBuilder("div", "tech__logo-box", techCol);
-        techDiv.classList.add("shadow-sm");
-        let techImage = elementBuilder("img", "img-fluid", techDiv);
-        techImage.setAttribute("src", `${techArray[i].source}`);
-        techImage.setAttribute("alt", `${techArray[i].alt}`);
-        techImage.setAttribute("title", `${techArray[i].title}`);
-    };
-};
-
 techBuilder(techArray);
 
 const techLine2 = elementBuilder("hr", "tech-border", sectionTech);
