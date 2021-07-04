@@ -181,17 +181,27 @@ function contactBoxBuilder(contactBoxArray, parent) {
         let footerDiv = elementBuilder("div", "col-md-4", parent);
         footerDiv.classList.add("col-lg-4", "contact-box", "pt-1", "d-md-block", "d-lg-flex", "d-flex");
         let contactBoxIcon = elementBuilder("div", "contact-box__icon", footerDiv);
-        let contactBoxContent = `<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler ${contactBoxArray[i].icon}" viewBox="0 0 24 24" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round">
-        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-        <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
-        <path d="M15 7a2 2 0 0 1 2 2" />
-        <path d="M15 3a6 6 0 0 1 6 6" />`;
-    
+        let contactBoxContent = contactBoxArray[i].icon;
         contactBoxIcon.innerHTML = contactBoxContent;
         let contactBoxInfo = elementBuilder("div", "contact-box__info", footerDiv);
         let contactBoxAnchor = elementBuilder("a", "contact-box__info--title", contactBoxInfo);
         contactBoxAnchor.innerHTML = contactBoxArray[i].title;
         let contactBoxPara = elementBuilder("p", "contact-box__info--subtitle", contactBoxInfo);
         contactBoxPara.innerHTML = contactBoxArray[i].subtitle;
+        };
+    };
+
+    //Technologies Builder
+
+    function techBuilder(techArray) {
+        for (i = 0; i < techArray.length; i++) {
+            let techCol = elementBuilder("div", "col-md-4", rowTech2);
+            techCol.classList.add("col-lg-1", "mx-auto");
+            let techDiv =  elementBuilder("div", "tech__logo-box", techCol);
+            techDiv.classList.add("shadow-sm");
+            let techImage = elementBuilder("img", "img-fluid", techDiv);
+            techImage.setAttribute("src", `${techArray[i].source}`);
+            techImage.setAttribute("alt", `${techArray[i].alt}`);
+            techImage.setAttribute("id", `${techArray[i].id}`);
         };
     };

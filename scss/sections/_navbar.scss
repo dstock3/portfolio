@@ -5,6 +5,7 @@
     @include gradient;
 
     li {
+      
       padding: 0 0.7rem;
 
       a {
@@ -15,7 +16,7 @@
 
       }
       &:hover {
-        color: $primary;
+        color: $white;
       }
   
     }

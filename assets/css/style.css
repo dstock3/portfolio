@@ -10861,7 +10861,7 @@ textarea.form-control-lg {
   font-weight: 600;
 }
 .menu li:hover {
-  color: #1c1fbb;
+  color: #fff;
 }
 
 .about {
@@ -10901,17 +10901,27 @@ textarea.form-control-lg {
 
 .tech {
   background-color: #fff;
+  padding: 0 0 5rem 0;
+}
+.tech__logo-box {
+  max-width: 100%;
+  height: 3rem;
+  margin-bottom: 2rem;
+  padding: 0.5rem;
+  text-align: center;
+  position: relative;
 }
 .tech .tech-row {
-  padding-inline: 15%;
+  padding-inline: 10%;
 }
 .tech img {
   max-width: 75px;
 }
-.tech:hover img {
+.tech img:hover {
   transform: scale(1.2);
   transition-duration: 1s;
   transition-property: all;
+  filter: grayscale(120);
 }
 .tech .tech-border {
   width: 5%;
@@ -10970,14 +10980,6 @@ textarea.form-control-lg {
   visibility: visible;
   transition-duration: 1s;
   transition-property: all;
-}
-
-.hidden {
-  visibility: collapse;
-}
-
-.active {
-  visibility: visible;
 }
 
 .blog {
