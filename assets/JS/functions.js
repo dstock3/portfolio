@@ -202,6 +202,6 @@ function contactBoxBuilder(contactBoxArray, parent) {
             let techImage = elementBuilder("img", "img-fluid", techDiv);
             techImage.setAttribute("src", `${techArray[i].source}`);
             techImage.setAttribute("alt", `${techArray[i].alt}`);
-            techImage.setAttribute("title", `${techArray[i].title}`);
+            techImage.setAttribute("id", `${techArray[i].id}`);
         };
     };

@@ -17,7 +17,7 @@ wavePath.setAttribute("d", "M0,160L48,160C96,160,192,160,288,170.7C384,181,480,2
 blogSection.classList.add("gradient");
 blogSectionContainer.classList.add("text-center");
 
-const blogHead = elementBuilder("h1", "display-3", blogRow);
+const blogHead = elementBuilder("h1", "display-2", blogRow);
 blogHead.classList.add("text-white", "mt-4");
 blogHead.innerHTML = "Blog"
 const blogLine = elementBuilder("hr", "mx-auto", blogRow);
