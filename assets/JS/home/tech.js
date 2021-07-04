@@ -53,7 +53,12 @@ const bootstrap = {
     alt: `Bootstrap logo`,
 };
 
-const techArray = [html, css, js, sass, bootstrap, linux, ubuntu, python];
+const git = {
+    source: `/assets/images/tech/git.png`,
+    alt: `Git logo`,
+}
+
+const techArray = [html, css, js, sass, bootstrap, linux, ubuntu, python, git];
 
 function techBuilder(techArray) {
     for (i = 0; i < techArray.length; i++) {
