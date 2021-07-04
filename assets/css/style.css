@@ -10899,6 +10899,9 @@ textarea.form-control-lg {
   animation-delay: 1.5s;
 }
 
+.tech {
+  background-color: #fff;
+}
 .tech .tech-row {
   padding-inline: 15%;
 }

@@ -2,14 +2,13 @@
 @use '../components/mixins' as *;
 
 .tech {
+    background-color: $white;
     .tech-row {
         padding-inline: 15%;
     }
 
     img {
         max-width: 75px;
-
-
     }
 
     &:hover {
