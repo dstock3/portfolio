@@ -4,7 +4,7 @@ const vidContainer = vidElements[1];
 const vidRow = vidElements[2];
 vidRow.classList.add("text-center", "text-white");
 const vidHead = elementBuilder("h1", "display-3", vidRow);
-vidHead.classList.add("fw-bold");
+vidHead.classList.add("fw-bold", "mt-4");
 vidHead.innerHTML = "Videos";
 const vidLine = elementBuilder("hr", "mx-auto", vidRow);
 vidLine.setAttribute("style", "width: 100px; height: 3px; ");
@@ -13,6 +13,7 @@ vidPara.classList.add("pt-1");
 vidPara.innerHTML = "lorem ipsum lorem ipsum lorem ipsum";
 
 const vidRow2 = elementBuilder("div", "row", vidContainer);
+vidRow2.classList.add("align-items-center");
 
 const buttonDiv = elementBuilder("div", "text-center", vidRow2);
 const prevButton =  elementBuilder("button", "btn", buttonDiv);
