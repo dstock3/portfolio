@@ -69,7 +69,7 @@ const git = {
 
 const techArray = [html, css, js, sass, bootstrap, linux, ubuntu, python, git];
 
-techBuilder(techArray);
+const techImageArray = techBuilder(techArray);
 
 const techLine2 = elementBuilder("hr", "tech-border", sectionTech);
 techLine2.classList.add("mx-auto");

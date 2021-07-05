@@ -194,6 +194,7 @@ function contactBoxBuilder(contactBoxArray, parent) {
     //Technologies Builder
 
     function techBuilder(techArray) {
+        let imageElementArray = [];
         for (i = 0; i < techArray.length; i++) {
             let techCol = elementBuilder("div", "col-md-4", rowTech2);
             techCol.classList.add("col-lg-1", "mx-auto");
@@ -203,5 +204,9 @@ function contactBoxBuilder(contactBoxArray, parent) {
             techImage.setAttribute("src", `${techArray[i].source}`);
             techImage.setAttribute("alt", `${techArray[i].alt}`);
             techImage.setAttribute("id", `${techArray[i].id}`);
+            imageElementArray.push(techImage);
+             
         };
+
+        return imageElementArray;
     };
