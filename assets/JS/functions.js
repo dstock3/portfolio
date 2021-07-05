@@ -6,6 +6,7 @@ function elementBuilder (elType, className, parent) {
 };
 
 function linkBuilder(linkArray, ulVar, className, openNewTab) {
+    let linkElementArray = [];
     for (let i = 0; i < linkArray.length; i++) {
         linkLi = elementBuilder('li', className, ulVar);
         linkAnchor = elementBuilder('a', 'nav-link', linkLi);
@@ -15,7 +16,10 @@ function linkBuilder(linkArray, ulVar, className, openNewTab) {
             linkAnchor.rel = "noreferrer noopener";
             linkAnchor.target = "blank";
         };
+        linkElementArray.push(linkAnchor);
     };
+    return linkElementArray;
+
 };
 
 function sectionBuilder(sectionName) {

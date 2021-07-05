@@ -55,4 +55,8 @@ const contact = {
 
 const links = [about, projects, videos, blog, contact];
 
-linkBuilder(links, ul, "nav-item");
+const linkElementArray = linkBuilder(links, ul, "nav-item");
+
+for (i = 0; i < linkElementArray.length; i++) {
+    linkElementArray[i].classList.add("text-white");
+}

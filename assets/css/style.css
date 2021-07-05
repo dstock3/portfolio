@@ -10855,13 +10855,12 @@ textarea.form-control-lg {
   padding: 0 0.7rem;
 }
 .menu li a {
-  color: #fff;
   padding: 0 0.7rem;
   text-transform: uppercase;
   font-weight: 600;
 }
 .menu li:hover {
-  color: #fff;
+  text-decoration: underline;
 }
 
 .about {
@@ -10897,6 +10896,12 @@ textarea.form-control-lg {
 }
 .border-animation--border-2 {
   animation-delay: 1.5s;
+}
+
+.videos {
+  position: relative;
+  padding: 0;
+  background: linear-gradient(to right, rgba(28, 31, 187, 0.95), rgba(83, 22, 252, 0.95));
 }
 
 .tech {
