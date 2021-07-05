@@ -19,17 +19,17 @@
     }
 
     img {
-        max-width: 75px;
+        max-height: 85px;
 
         &:hover {
             transform: scale(1.2);
             @include transitionProperty;
-            filter: grayscale(120);
+            filter: grayscale(110);
         }
     }
 
     .tech-border {
-        width: 5%;
+        width: 75%;
         height: 4px;
         color: $primary;
     }

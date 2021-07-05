@@ -10915,16 +10915,16 @@ textarea.form-control-lg {
   padding-inline: 10%;
 }
 .tech img {
-  max-width: 75px;
+  max-height: 85px;
 }
 .tech img:hover {
   transform: scale(1.2);
   transition-duration: 1s;
   transition-property: all;
-  filter: grayscale(120);
+  filter: grayscale(110);
 }
 .tech .tech-border {
-  width: 5%;
+  width: 75%;
   height: 4px;
   color: #1c1fbb;
 }

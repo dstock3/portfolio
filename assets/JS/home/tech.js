@@ -11,7 +11,7 @@ techLine.classList.add("mb-5");
 
 const techContainer2 = elementBuilder("div", "tech-container", sectionTech);
 const rowTech2 = elementBuilder("div", "row", techContainer2);
-rowTech2.classList.add("tech-row");
+rowTech2.classList.add("tech-row", "mb-5", "pb-4");
 
 const html = {
     source: `/assets/images/tech/HTML5.svg`,
