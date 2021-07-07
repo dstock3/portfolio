@@ -10903,6 +10903,13 @@ textarea.form-control-lg {
   padding: 0;
   background: linear-gradient(to right, rgba(28, 31, 187, 0.95), rgba(83, 22, 252, 0.95));
 }
+.videos__card {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 2rem 1.25rem;
+  border-radius: 0.625rem;
+  height: auto;
+  text-align: center;
+}
 
 .tech {
   background-color: #fff;
