@@ -25,9 +25,10 @@ carouselInnerDiv.setAttribute("id", "carouselExampleCaptions");
 carouselInnerDiv.setAttribute("data-bs-ride", "carousel");
 const carouselActive = elementBuilder("div", "carousel-item", carouselInnerDiv);
 carouselActive.classList.add("active");
-
-
-
+const vidCard = elementBuilder("div", "videos__card", carouselActive);
+const vidContainer2 = elementBuilder("div", "vid-container", vidCard);
+const vidDescription = elementBuilder("p", "lh-lg", vidCard);
+vidDescription.innerHTML = `Placeat aut consequatur illo animi optio exercitationem doloribus eligendi iusto atque repudiandae. Distinctio.`
 
 
 //Buttons
