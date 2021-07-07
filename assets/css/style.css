@@ -10917,6 +10917,14 @@ textarea.form-control-lg {
 .videos .button-container {
   padding: 1.5%;
 }
+.videos .button-container .fa-long-arrow-alt-left {
+  position: relative;
+  right: 0.25%;
+}
+.videos .button-container .fa-long-arrow-alt-right {
+  position: relative;
+  left: 0.25%;
+}
 .videos .button-container .btn {
   padding: 15px;
 }

@@ -18,11 +18,21 @@
             width: 100%;
         }
 
-
     }
 
     .button-container {
         padding: 1.5%;
+
+        .fa-long-arrow-alt-left {
+            position: relative;
+            right: .25%;   
+        }
+
+        .fa-long-arrow-alt-right {
+            position: relative;
+            left: .25%;
+        }
+
         .btn {
             padding: 15px;
         }
