@@ -31,7 +31,6 @@ vidContainer2.innerHTML = `<iframe width="560" height="315" src="https://www.you
 const vidDescription = elementBuilder("p", "lh-lg", vidCard);
 vidDescription.innerHTML = `Placeat aut consequatur illo animi optio exercitationem doloribus eligendi iusto atque repudiandae. Distinctio.`
 
-
 //Buttons
 const buttonDiv = elementBuilder("div", "text-center", vidRow2);
 const prevButton =  elementBuilder("button", "btn", buttonDiv);
