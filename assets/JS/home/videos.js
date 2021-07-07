@@ -22,7 +22,7 @@ const carouselDiv = elementBuilder("div", "carousel", vidRow2);
 carouselDiv.classList.add("slide");
 carouselDiv.setAttribute("id", "carouselExampleCaptions");
 carouselDiv.setAttribute("data-bs-ride", "carousel");
-const carouselInnerDiv = elementBuilder("div", "carousel-inner",carouselDiv);
+const carouselInnerDiv = elementBuilder("div", "carousel-inner", carouselDiv);
 
 carouselBuilder(carouselVidArray, carouselInnerDiv);
 
