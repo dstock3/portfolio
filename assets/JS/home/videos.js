@@ -18,6 +18,16 @@ vidPara.innerHTML = "lorem ipsum lorem ipsum lorem ipsum";
 //Videos
 const vidRow2 = elementBuilder("div", "row", vidContainer);
 vidRow2.classList.add("align-items-center");
+const carouselDiv = elementBuilder("div", "carousel", vidRow2);
+carouselDiv.classList.add("slide");
+const carouselInnerDiv = elementBuilder("div", "carousel-inner",carouselDiv);
+carouselInnerDiv.setAttribute("id", "carouselExampleCaptions");
+carouselInnerDiv.setAttribute("data-bs-ride", "carousel");
+const carouselActive = elementBuilder("div", "carousel-item", carouselInnerDiv);
+carouselActive.classList.add("active");
+
+
+
 
 
 //Buttons
