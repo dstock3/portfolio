@@ -10914,6 +10914,14 @@ textarea.form-control-lg {
 .videos__vid .vid-container {
   width: 100%;
 }
+.videos__vid .vid-title {
+  padding-inline: 10%;
+  padding-bottom: 2%;
+}
+.videos__vid p {
+  padding-top: 2%;
+  padding-inline: 15%;
+}
 .videos .button-container {
   padding: 1.5%;
 }
