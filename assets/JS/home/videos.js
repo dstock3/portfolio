@@ -37,6 +37,20 @@ const vidDescription = elementBuilder("p", "text-start", vidCard);
 vidDescription.innerHTML = `Placeat aut consequatur illo animi optio exercitationem doloribus eligendi iusto atque repudiandae. Distinctio. Placeat aut consequatur illo animi optio exercitationem doloribus eligendi iusto atque repudiandae. Distinctio.`
 */
 
+const vidOne = {
+
+}
+
+const vidTwo = {
+    
+}
+
+const vidThree = {
+
+}
+
+const carouselVidArray = [vidOne, vidTwo, vidThree];
+
 function carouselBuilder(carouselArray, parent) {
     for (i = 0; i < carouselArray.length; i++) {
         let carouselActive = elementBuilder("div", "carousel-item", parent);
@@ -53,6 +67,8 @@ function carouselBuilder(carouselArray, parent) {
         vidDescription.innerHTML = carouselArray[i].description;
     };
 };
+
+carouselBuilder(carouselVidArray, carouselInnerDiv);
 
 //Buttons
 const buttonDiv = elementBuilder("div", "text-center", vidRow2);
