@@ -6,12 +6,13 @@
     padding: 0;
     @include gradient;
 
-    &__desc {
+    &__vid {
         background-color: rgba($white, 0.8);
         padding: 2rem 1.25rem;
         border-radius: 0.625rem;
         height: auto;
         text-align: center;
+        width: 100%;
 
         .vid-container {
             width: 100%;

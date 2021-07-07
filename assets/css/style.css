@@ -10903,14 +10903,15 @@ textarea.form-control-lg {
   padding: 0;
   background: linear-gradient(to right, rgba(28, 31, 187, 0.95), rgba(83, 22, 252, 0.95));
 }
-.videos__desc {
+.videos__vid {
   background-color: rgba(255, 255, 255, 0.8);
   padding: 2rem 1.25rem;
   border-radius: 0.625rem;
   height: auto;
   text-align: center;
+  width: 100%;
 }
-.videos__desc .vid-container {
+.videos__vid .vid-container {
   width: 100%;
 }
 
@@ -10930,6 +10931,7 @@ textarea.form-control-lg {
   padding-inline: 10%;
 }
 .tech img {
+  min-width: 100px;
   max-height: 85px;
 }
 .tech img:hover {
