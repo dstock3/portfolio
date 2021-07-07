@@ -26,6 +26,8 @@ carouselInnerDiv.setAttribute("data-bs-ride", "carousel");
 const carouselActive = elementBuilder("div", "carousel-item", carouselInnerDiv);
 carouselActive.classList.add("active");
 const vidCard = elementBuilder("div", "videos__vid", carouselActive);
+const vidTitle = elementBuilder("h2", "vid-title", vidCard);
+vidTitle.innerHTML = "Video 1 Title";
 const vidContainer2 = elementBuilder("div", "vid-container", vidCard);
 vidContainer2.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/iJKCj8uAHz8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
 const vidDescription = elementBuilder("p", "lh-lg", vidCard);
