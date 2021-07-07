@@ -43,28 +43,4 @@ const contactForm = elementBuilder("form", "row", contactFormDiv);
 contactForm.setAttribute("action", 'contact-form.php');
 contactForm.setAttribute('method', 'POST');
 
-const firstName = {
-    placeholder: "First Name",
-    id: "inputFirstName",
-}
-
-const lastName = {
-    placeholder: "Last Name",
-    id: "inputLastName"
-}
-
-const email = {
-    placeholder: "E-mail Address",
-    id: "inputEmail"
-}
-
-const message = {
-    name: "message",
-    placeholder: "Enter your message here.",
-    id: "message",
-    rows: "8"
-}
-
-const formArray = [firstName, lastName, email, message]
-
 formHelper(formArray, contactForm);

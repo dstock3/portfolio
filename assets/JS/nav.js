@@ -28,33 +28,6 @@ const icon = elementBuilder("i", "fas", phoneSpan);
 icon.classList.add("fa-phone-alt");
 phoneButton.innerHTML = "+1 (000) 000-0000";
 
-const about = {
-    name: "About",
-    link: "#about",
-}
-
-const projects = {
-    name: "Projects",
-    link: "#projects",
-}
-
-const videos = {
-    name: "Videos",
-    link: "#videos",
-}
-
-const blog = {
-    name: "Blog",
-    link: "blog.html",
-}
-
-const contact = {
-    name: "Contact",
-    link: "#contact",
-}
-
-const links = [about, projects, videos, blog, contact];
-
 const linkElementArray = linkBuilder(links, ul, "nav-item");
 
 for (i = 0; i < linkElementArray.length; i++) {

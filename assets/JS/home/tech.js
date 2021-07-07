@@ -13,62 +13,6 @@ const techContainer2 = elementBuilder("div", "tech-container", sectionTech);
 const rowTech2 = elementBuilder("div", "row", techContainer2);
 rowTech2.classList.add("tech-row", "mb-5", "pb-4");
 
-const html = {
-    source: `/assets/images/tech/HTML5.svg`,
-    alt: `HTML logo`,
-    id: `html`,
-};
-
-const css = {
-    source: `/assets/images/tech/CSS3.svg`,
-    alt: `CSS logo`,
-    id: `css`,
-};
-
-const linux = {
-    source:`/assets/images/tech/Linux.svg`,
-    alt: `Linux logo`,
-    id: `linux`,
-};
-
-const ubuntu = {
-    source: `/assets/images/tech/ubuntu.png`,
-    alt: `Ubuntu logo`,
-    id: `ubuntu`,
-};
-
-const python = {
-    source: `/assets/images/tech/Python.svg`,
-    alt: `Python logo`,
-    id: `python`,
-};
-
-const sass = {
-    source: `/assets/images/tech/Sass.svg`,
-    alt: `Sass logo`,
-    id: `sass`
-};
-
-const js = {
-    source: `/assets/images/tech/JS.svg`,
-    alt: `Javascript logo`,
-    id: `javascript`,
-};
-
-const bootstrap = {
-    source: `/assets/images/tech/Bootstrap.svg`,
-    alt: `Bootstrap logo`,
-    id: `bootstrap`,
-};
-
-const git = {
-    source: `/assets/images/tech/git.png`,
-    alt: `Git logo`,
-    id: `git`,
-}
-
-const techArray = [html, css, js, sass, bootstrap, linux, ubuntu, python, git];
-
 const techImageArray = techBuilder(techArray);
 
 const techLine2 = elementBuilder("hr", "tech-border", sectionTech);
