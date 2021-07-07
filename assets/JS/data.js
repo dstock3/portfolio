@@ -170,6 +170,29 @@ const git = {
 
 const techArray = [html, css, js, sass, bootstrap, linux, ubuntu, python, git];
 
+//Video Carousel
+
+const vidOne = {
+    title: `Learn Bootstrap 5 and SASS by Building a Portfolio Website - Full Course`,
+    iframe: `<iframe width="560" height="315" src="https://www.youtube.com/embed/iJKCj8uAHz8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`,
+    description: `Learn Bootstrap 5 and Sass by building a portfolio website. Bootstrap is one of the most popular CSS frameworks and Sass is one of the most popular preprocessors for CSS.`,
+}
+
+const vidTwo = {
+    title: `JavaScript Programming - Full Course`,
+    iframe: `<iframe width="560" height="315" src="https://www.youtube.com/embed/jS4aFq5-91M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`,
+    description: `Learn JavaScript from scratch by solving over a hundred different coding challenges.`,
+    
+}
+
+const vidThree = {
+    title: `Python Backend Web Development Course (with Django)`,
+    iframe: `<iframe width="560" height="315" src="https://www.youtube.com/embed/jBzwzrDvZ18" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`,
+    description: `This video is a full backend web development course with python. In the course, you will learn everything you need to know to start your web development journey with Python and Django.`,
+}
+
+const carouselVidArray = [vidOne, vidTwo, vidThree];
+
 //Contact Form Info
 const firstName = {
     placeholder: "First Name",

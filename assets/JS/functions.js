@@ -214,3 +214,23 @@ function contactBoxBuilder(contactBoxArray, parent) {
 
         return imageElementArray;
     };
+
+    //Video Carousel 
+
+    function carouselBuilder(carouselArray, parent) {
+        for (i = 0; i < carouselArray.length; i++) {
+            let carouselActive = elementBuilder("div", "carousel-item", parent);
+            if (i <= 0) {
+                carouselActive.classList.add("active"); 
+            };
+            let vidCard = elementBuilder("div", "videos__vid", carouselActive);
+            vidCard.classList.add("mx-auto");
+            let vidTitle = elementBuilder("h2", "vid-title", vidCard);
+            vidTitle.innerHTML = carouselArray[i].title;
+            let vidContainer2 = elementBuilder("div", "vid-container", vidCard);
+            vidContainer2.innerHTML = carouselArray[i].iframe;
+            let vidDescription = elementBuilder("p", "text-start", vidCard);
+            vidDescription.innerHTML = carouselArray[i].description;
+        };
+    };
+    
