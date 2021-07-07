@@ -10914,6 +10914,12 @@ textarea.form-control-lg {
 .videos__vid .vid-container {
   width: 100%;
 }
+.videos .button-container {
+  padding: 1.5%;
+}
+.videos .button-container .btn {
+  padding: 15px;
+}
 
 .tech {
   background-color: #fff;

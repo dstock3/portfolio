@@ -80,6 +80,7 @@ carouselBuilder(carouselVidArray, carouselInnerDiv);
 
 //Buttons
 const buttonDiv = elementBuilder("div", "text-center", vidRow2);
+buttonDiv.classList.add("button-container");
 const prevButton =  elementBuilder("button", "btn", buttonDiv);
 prevButton.classList.add("btn-outline-light", "fas", "fa-long-arrow-alt-left");
 prevButton.type = "button";
