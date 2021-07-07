@@ -23,8 +23,7 @@ carouselDiv.classList.add("slide");
 carouselDiv.setAttribute("id", "carouselExampleCaptions");
 carouselDiv.setAttribute("data-bs-ride", "carousel");
 const carouselInnerDiv = elementBuilder("div", "carousel-inner", carouselDiv);
-
-carouselBuilder(carouselVidArray, carouselInnerDiv);
+const carouselElementArray = carouselBuilder(carouselVidArray, carouselInnerDiv);
 
 //Buttons
 const buttonDiv = elementBuilder("div", "text-center", vidRow2);

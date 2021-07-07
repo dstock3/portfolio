@@ -181,7 +181,7 @@ const vidOne = {
 const vidTwo = {
     title: `JavaScript Programming - Full Course`,
     iframe: `<iframe width="560" height="315" src="https://www.youtube.com/embed/jS4aFq5-91M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`,
-    description: `Learn JavaScript from scratch by solving over a hundred different coding challenges.`,
+    description: `Learn JavaScript from scratch by solving over a hundred different coding challenges. Go here for the interactive browser version: https://scrimba.com/learn/learnjavascript`,
     
 }
 

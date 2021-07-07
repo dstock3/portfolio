@@ -218,12 +218,13 @@ function contactBoxBuilder(contactBoxArray, parent) {
     //Video Carousel 
 
     function carouselBuilder(carouselArray, parent) {
+        let carouselElementArray = [];
         for (i = 0; i < carouselArray.length; i++) {
-            let carouselActive = elementBuilder("div", "carousel-item", parent);
-            if (i <= 0) {
-                carouselActive.classList.add("active"); 
+            let carousel = elementBuilder("div", "carousel-item", parent);
+            if (i === 0) {
+                carousel.classList.add("active"); 
             };
-            let vidCard = elementBuilder("div", "videos__vid", carouselActive);
+            let vidCard = elementBuilder("div", "videos__vid", carousel);
             vidCard.classList.add("mx-auto");
             let vidTitle = elementBuilder("h2", "vid-title", vidCard);
             vidTitle.innerHTML = carouselArray[i].title;
@@ -231,6 +232,9 @@ function contactBoxBuilder(contactBoxArray, parent) {
             vidContainer2.innerHTML = carouselArray[i].iframe;
             let vidDescription = elementBuilder("p", "text-start", vidCard);
             vidDescription.innerHTML = carouselArray[i].description;
+            let carouselIndexArray = [carousel, vidCard, vidTitle, vidContainer2, vidDescription];
+            carouselElementArray.push(carouselIndexArray);
         };
+        return carouselElementArray
     };
     
