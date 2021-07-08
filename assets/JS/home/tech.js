@@ -11,6 +11,6 @@ techLine.classList.add("mb-5");
 
 const techContainer2 = elementBuilder("div", "tech-container", sectionTech);
 const rowTech2 = elementBuilder("div", "row", techContainer2);
-rowTech2.classList.add("tech-row", "mb-5", "pb-4");
+rowTech2.classList.add("tech-row", "mb-0", "pb-4");
 
 const techImageArray = techBuilder(techArray);
