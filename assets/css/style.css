@@ -10962,11 +10962,6 @@ textarea.form-control-lg {
   transition-property: all;
   filter: grayscale(110);
 }
-.tech .tech-border {
-  width: 15%;
-  height: 4px;
-  color: #1c1fbb;
-}
 
 .projects {
   padding: 4rem 0;

@@ -14,6 +14,3 @@ const rowTech2 = elementBuilder("div", "row", techContainer2);
 rowTech2.classList.add("tech-row", "mb-5", "pb-4");
 
 const techImageArray = techBuilder(techArray);
-
-const techLine2 = elementBuilder("hr", "tech-border", sectionTech);
-techLine2.classList.add("mx-auto");
