@@ -2,27 +2,27 @@
 
 const about = {
     name: "About",
-    link: "#about",
+    link: "/index.html#about",
 }
 
 const projects = {
     name: "Projects",
-    link: "#projects",
+    link: "index.html#projects",
 }
 
 const videos = {
     name: "Videos",
-    link: "#videos",
+    link: "/index.html#videos",
 }
 
 const blog = {
     name: "Blog",
-    link: "blog.html",
+    link: "/blog.html",
 }
 
 const contact = {
     name: "Contact",
-    link: "#contact",
+    link: "/index.html#contact",
 }
 
 const links = [about, projects, videos, blog, contact];
