@@ -51,6 +51,22 @@ function buttonBuilderJr(buttonArray, parent) {
     return buttonElementArray;
 };
 
+//Wave Border Generator
+
+function waveGenerator(dPath, fillColor, parent) {
+    let waveBorder = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    waveBorder.setAttributeNS('http://www.w3.org/2000/xmlns/', 'xmlns', 'http://www.w3.org/2000/svg');
+    waveBorder.setAttributeNS(null, "viewBox", "0 0 1440 320");
+    waveBorder.classList.add("wave-border");
+    let wavePath =  document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    wavePath.setAttribute("fill", fillColor);
+    wavePath.setAttribute("fill-opacity", "1");
+    wavePath.setAttribute("d", dPath);
+    waveBorder.appendChild(wavePath);
+    parent.appendChild(waveBorder);
+    return [waveBorder, wavePath];
+};
+
     /* Project Section */
 
 function projectBoxBuilder(imgSrc, projectTitle, description, parent, category, link) {
