@@ -7,6 +7,12 @@ const blogRow = blogElements[2];
 blogSection.classList.add("gradient");
 blogSectionContainer.classList.add("text-center");
 
+const blogWaveArrayTop = waveGenerator(
+    "M0,160L48,144C96,128,192,96,288,106.7C384,117,480,171,576,197.3C672,224,768,224,864,218.7C960,213,1056,203,1152,186.7C1248,171,1344,149,1392,138.7L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z",
+    "#ffffff",
+    blogSection
+)
+
 const blogHead = elementBuilder("h1", "display-2", blogRow);
 blogHead.classList.add("text-white", "mt-4");
 blogHead.innerHTML = "Blog"
@@ -35,7 +41,7 @@ const blogImage = elementBuilder("img", "img-fluid", imageDiv);
 blogImage.src = "https://dummyimage.com/600x400/000/0011ff.png";
 blogImage.classList.add("shadow");
 
-const blogWaveArray = waveGenerator(
+const blogWaveArrayBottom = waveGenerator(
     "M0,160L48,176C96,192,192,224,288,208C384,192,480,128,576,133.3C672,139,768,213,864,202.7C960,192,1056,96,1152,74.7C1248,53,1344,107,1392,133.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z",
     "#e9ecef",
     blogSection
