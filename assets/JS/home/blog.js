@@ -8,10 +8,13 @@ blogSection.classList.add("gradient");
 blogSectionContainer.classList.add("text-center");
 
 const blogWaveArrayTop = waveGenerator(
-    "M0,160L48,144C96,128,192,96,288,106.7C384,117,480,171,576,197.3C672,224,768,224,864,218.7C960,213,1056,203,1152,186.7C1248,171,1344,149,1392,138.7L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z",
+    "M0,192L48,181.3C96,171,192,149,288,122.7C384,96,480,64,576,69.3C672,75,768,117,864,160C960,203,1056,245,1152,229.3C1248,213,1344,139,1392,101.3L1440,64L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z",
     "#ffffff",
     blogSection
 )
+
+const blogWaveTop = blogWaveArrayTop[0];
+blogSection.insertBefore(blogWaveTop, blogSection.childNodes[0]);
 
 const blogHead = elementBuilder("h1", "display-2", blogRow);
 blogHead.classList.add("text-white", "mt-4");
