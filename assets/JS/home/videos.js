@@ -23,12 +23,15 @@ carouselDiv.classList.add("slide");
 carouselDiv.setAttribute("id", "carouselExampleCaptions");
 carouselDiv.setAttribute("data-bs-ride", "carousel");
 const carouselInnerDiv = elementBuilder("div", "carousel-inner", carouselDiv);
-const carouselElementArray = carouselBuilder(carouselVidArray, carouselInnerDiv);
+const carouselElementArray = carouselBuilder(
+  carouselVidArray,
+  carouselInnerDiv
+);
 
 //Buttons
 const buttonDiv = elementBuilder("div", "text-center", vidRow2);
 buttonDiv.classList.add("button-container");
-const prevButton =  elementBuilder("button", "btn", buttonDiv);
+const prevButton = elementBuilder("button", "btn", buttonDiv);
 prevButton.classList.add("btn-outline-light", "fas", "fa-long-arrow-alt-left");
 prevButton.type = "button";
 prevButton.setAttribute("data-bs-target", "#carouselExampleCaptions");
@@ -38,4 +41,3 @@ nextButton.classList.add("btn-outline-light", "fas", "fa-long-arrow-alt-right");
 nextButton.type = "button";
 nextButton.setAttribute("data-bs-target", "#carouselExampleCaptions");
 nextButton.setAttribute("data-bs-slide", "next");
-

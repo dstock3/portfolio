@@ -1,23 +1,19 @@
-@use '../custom' as *;
-@use '../components/mixins' as *;
+@use "../custom" as *;
+@use "../components/mixins" as *;
 
 .menu {
-    @include gradient;
+  @include gradient;
 
-    li {
-      
+  li {
+    padding: 0 0.7rem;
+
+    a {
       padding: 0 0.7rem;
-
-      a {
-        padding: 0 0.7rem;
-        text-transform: uppercase;
-        font-weight: 600;      
-
-      }
-      &:hover {
-        text-decoration: underline;
-      }
-  
+      text-transform: uppercase;
+      font-weight: 600;
     }
-    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }

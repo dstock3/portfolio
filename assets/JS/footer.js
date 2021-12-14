@@ -15,22 +15,22 @@ socialCol.innerHTML = "Connect with Me on Social Media";
 const socialIcons = elementBuilder("div", "col-lg-6", socialRow);
 
 const facebookAnchor = elementBuilder("a", "social-media-links", socialIcons);
-facebookAnchor.href = "" //Need to enter my facebook when complete
+facebookAnchor.href = ""; //Need to enter my facebook when complete
 const facebookIcon = elementBuilder("i", "fab", facebookAnchor);
 facebookIcon.classList.add("fa-facebook");
 
 const githubAnchor = elementBuilder("a", "social-media-links", socialIcons);
-githubAnchor.href = "https://github.com/dstock3" //Need to enter my github when complete
+githubAnchor.href = "https://github.com/dstock3"; //Need to enter my github when complete
 const githubIcon = elementBuilder("i", "fab", githubAnchor);
 githubIcon.classList.add("fa-github");
 
 const linkedAnchor = elementBuilder("a", "social-media-links", socialIcons);
-linkedAnchor.href = "https://www.linkedin.com/in/stockdale/" //Need to enter my linkedin when complete
+linkedAnchor.href = "https://www.linkedin.com/in/stockdale/"; //Need to enter my linkedin when complete
 const linkedIcon = elementBuilder("i", "fab", linkedAnchor);
 linkedIcon.classList.add("fa-linkedin");
 
 const youtubeAnchor = elementBuilder("a", "social-media-links", socialIcons);
-youtubeAnchor.href = "" //Need to enter my linkedin when complete
+youtubeAnchor.href = ""; //Need to enter my linkedin when complete
 const youtubeIcon = elementBuilder("i", "fab", youtubeAnchor);
 youtubeIcon.classList.add("fa-youtube");
 
@@ -40,7 +40,11 @@ const copyrightContainer = elementBuilder("div", "container", copyrightDiv);
 const copyrightRow = elementBuilder("div", "row", copyrightContainer);
 copyrightRow.classList.add("text-center", "text-white");
 const copyrightCol = elementBuilder("div", "col-12", copyrightRow);
-const copyrightContent = elementBuilder("div", "footer-bottom__copyright", copyrightCol);
+const copyrightContent = elementBuilder(
+  "div",
+  "footer-bottom__copyright",
+  copyrightCol
+);
 const date = new Date();
 copyrightContent.innerHTML = `Copyright &COPY; ${date.getFullYear()} by David Stockdale.`;
 
