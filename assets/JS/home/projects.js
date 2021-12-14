@@ -17,7 +17,7 @@ const buttonCol = elementBuilder("div", "col-md-12", buttonRow);
 
 const projectBodyRow = elementBuilder("div", "row", projectContainer);
 
-const projectButtonArray = ["All", "Websites", "Design", "Mockups"];
+const projectButtonArray = ["All", "Vanilla JS", "React", "Mockups"];
 const projectButtonElements = buttonBuilderJr(projectButtonArray, buttonCol);
 const allButton = projectButtonElements[0];
 const websitesButton = projectButtonElements[1];

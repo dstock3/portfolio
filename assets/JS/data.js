@@ -29,49 +29,49 @@ const links = [about, projects, videos, blog, contact];
 
 //Project Info
 
-const projectOne = {
-  title: "project one title",
+const ticTacToe = {
+  title: "Tic Tac Toe",
   description: "description one",
   source: "https://dummyimage.com/600x400/000/0011ff.png",
   alt: "image one alt",
-  category: "Websites",
-  link: "https://www.google.com/",
+  category: "Vanilla JS",
+  link: "https://dstock3.github.io/ticTacToe/",
 };
 
-const projectTwo = {
-  title: "project two title",
+const calculator = {
+  title: "Calculator",
   description: "description two",
   source: "https://dummyimage.com/600x400/000/0011ff.png",
   alt: "image two alt",
-  category: "Design",
-  link: "#",
+  category: "Vanilla JS",
+  link: "https://dstock3.github.io/calc/",
 };
 
-const projectThree = {
-  title: "project three title",
+const battleship = {
+  title: "Battleship",
   description: "description three",
   source: "https://dummyimage.com/600x400/000/0011ff.png",
   alt: "image three alt",
-  category: "Mockups",
-  link: "#",
+  category: "Vanilla JS",
+  link: "https://dstock3.github.io/battleship/",
 };
 
-const projectFour = {
-  title: "project four title",
-  description: "description four",
+const onTask = {
+  title: "OnTask",
+  description: "A Personal Project Management Application",
   source: "https://dummyimage.com/600x400/000/0011ff.png",
   alt: "image four alt",
-  category: "Websites",
-  link: "#",
+  category: "Vanilla JS",
+  link: "https://dstock3.github.io/toDoList/",
 };
 
-const projectFive = {
-  title: "project five title",
+const weatherApp = {
+  title: "Weather App",
   description: "description five",
   source: "https://dummyimage.com/600x400/000/0011ff.png",
   alt: "image five alt",
-  category: "Websites",
-  link: "#",
+  category: "Vanilla JS",
+  link: "https://dstock3.github.io/weatherApp/",
 };
 
 const projectSix = {
@@ -111,11 +111,11 @@ const projectNine = {
 };
 
 const dummyProjectArray = [
-  projectOne,
-  projectTwo,
-  projectThree,
-  projectFour,
-  projectFive,
+  ticTacToe,
+  calculator,
+  battleship,
+  onTask,
+  weatherApp,
   projectSix,
   projectSeven,
   projectEight,
@@ -180,7 +180,7 @@ const git = {
 
 const react = {
   source: `/assets/images/tech/react.svg`,
-  alt: `React Logo`,
+  alt: `React`,
   id: `react`,
 }
 
