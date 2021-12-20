@@ -24,8 +24,8 @@ const websitesButton = projectButtonElements[1];
 const designButton = projectButtonElements[2];
 const mockupsButton = projectButtonElements[3];
 
-projectIterator(dummyProjectArray, projectBodyRow);
-projectButtonListener(websitesButton, dummyProjectArray);
-projectButtonListener(designButton, dummyProjectArray);
-projectButtonListener(mockupsButton, dummyProjectArray);
-allButtonListener(dummyProjectArray);
+projectIterator(projectArray, projectBodyRow);
+projectButtonListener(websitesButton, projectArray);
+projectButtonListener(designButton, projectArray);
+projectButtonListener(mockupsButton, projectArray);
+allButtonListener(projectArray);

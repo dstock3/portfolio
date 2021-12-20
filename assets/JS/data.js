@@ -74,22 +74,22 @@ const weatherApp = {
   link: "https://dstock3.github.io/weatherApp/",
 };
 
-const projectSix = {
-  title: "project six title",
-  description: "description six",
+const scape95 = {
+  title: "Scape 95",
+  description: "A Windows 95 Nostalgia Trip",
   source: "https://dummyimage.com/600x400/000/0011ff.png",
   alt: "image six alt",
-  category: "Design",
-  link: "#",
+  category: "React",
+  link: "https://dstock3.github.io/scape-95/",
 };
 
-const projectSeven = {
-  title: "project seven title",
+const resumeBuilder = {
+  title: "Resume Builder",
   description: "description seven",
   source: "https://dummyimage.com/600x400/000/0011ff.png",
   alt: "image seven alt",
-  category: "Mockups",
-  link: "#",
+  category: "React",
+  link: "https://dstock3.github.io/cv-app/",
 };
 
 const projectEight = {
@@ -110,14 +110,14 @@ const projectNine = {
   link: "#",
 };
 
-const dummyProjectArray = [
+const projectArray = [
   ticTacToe,
   calculator,
   battleship,
   onTask,
   weatherApp,
-  projectSix,
-  projectSeven,
+  scape95,
+  resumeBuilder,
   projectEight,
   projectNine,
 ];
