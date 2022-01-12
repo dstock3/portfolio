@@ -180,11 +180,17 @@ const git = {
 
 const react = {
   source: `/assets/images/tech/react.svg`,
-  alt: `React`,
+  alt: `React logo`,
   id: `react`,
 }
 
-const techArray = [html, css, js, react, sass, bootstrap, linux, ubuntu, python, git];
+const xd = {
+  source: `/assets/images/tech/xd.svg`,
+  alt: "Adobe XD logo",
+  id: "xd",
+}
+
+const techArray = [html, css, js, react, sass, bootstrap, linux, ubuntu, python, git, xd];
 
 //Video Carousel
 
