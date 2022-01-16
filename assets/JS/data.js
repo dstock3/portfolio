@@ -31,7 +31,7 @@ const links = [about, projects, videos, blog, contact];
 
 const ticTacToe = {
   title: "Tic Tac Toe",
-  description: "description one",
+  description: "One of my first exercises using Vanilla JS.",
   source: "https://dummyimage.com/600x400/000/0011ff.png",
   alt: "image one alt",
   category: "Vanilla JS",
@@ -40,16 +40,25 @@ const ticTacToe = {
 
 const calculator = {
   title: "Calculator",
-  description: "description two",
+  description: "A simple calculator application made in JavaScript.",
   source: "https://dummyimage.com/600x400/000/0011ff.png",
   alt: "image two alt",
   category: "Vanilla JS",
   link: "https://dstock3.github.io/calc/",
 };
 
+const restaurant = {
+  title: "Chef Vito's Pizzeria",
+  description: "A restaurant page built using ES6 modules in JavaScript",
+  source: "https://dummyimage.com/600x400/000/0011ff.png",
+  alt: "image two alt",
+  category: "Vanilla JS",
+  link: "https://dstock3.github.io/restaurant/",
+}
+
 const battleship = {
   title: "Battleship",
-  description: "description three",
+  description: "A web-based Battleship game built in JavaScript with a focus on unit testing",
   source: "https://dummyimage.com/600x400/000/0011ff.png",
   alt: "image three alt",
   category: "Vanilla JS",
@@ -58,7 +67,7 @@ const battleship = {
 
 const onTask = {
   title: "OnTask",
-  description: "A Personal Project Management Application",
+  description: "A Project Management Application built entirely in JavaScript",
   source: "https://dummyimage.com/600x400/000/0011ff.png",
   alt: "image four alt",
   category: "Vanilla JS",
@@ -67,7 +76,7 @@ const onTask = {
 
 const weatherApp = {
   title: "Weather App",
-  description: "description five",
+  description: "A weather forecasting app that connects to the OpenWeatherMap API",
   source: "https://dummyimage.com/600x400/000/0011ff.png",
   alt: "image five alt",
   category: "Vanilla JS",
@@ -76,7 +85,7 @@ const weatherApp = {
 
 const scape95 = {
   title: "Scape 95",
-  description: "A Windows 95 Nostalgia Trip",
+  description: "A Windows 95 nostalgia trip built in React primarily using functional components and custom hooks",
   source: "https://dummyimage.com/600x400/000/0011ff.png",
   alt: "image six alt",
   category: "React",
@@ -85,41 +94,42 @@ const scape95 = {
 
 const resumeBuilder = {
   title: "Resume Builder",
-  description: "description seven",
+  description: "A resume application built using class-based components in React",
   source: "https://dummyimage.com/600x400/000/0011ff.png",
   alt: "image seven alt",
   category: "React",
   link: "https://dstock3.github.io/cv-app/",
 };
 
-const projectEight = {
-  title: "project eight title",
-  description: "description eight",
+const shoppingCart = {
+  title: "Shopping Cart",
+  description: "A simple shopping cart demo built using router and custom hooks in React",
   source: "https://dummyimage.com/600x400/000/0011ff.png",
   alt: "image eight alt",
-  category: "Websites",
-  link: "#",
+  category: "React",
+  link: "https://dstock3.github.io/shopping-cart/",
 };
 
-const projectNine = {
-  title: "project nine title",
-  description: "description nine",
+const roarBikes = {
+  title: "Roar Bikes",
+  description: "A design mockup created in Adobe XD",
   source: "https://dummyimage.com/600x400/000/0011ff.png",
-  alt: "image nine alt",
-  category: "Design",
-  link: "#",
+  alt: "image eight alt",
+  category: "Mockups",
+  link: "https://www.youtube.com/watch?v=iUG96J3q8Zg",
 };
 
 const projectArray = [
-  ticTacToe,
-  calculator,
   battleship,
   onTask,
   weatherApp,
   scape95,
   resumeBuilder,
-  projectEight,
-  projectNine,
+  shoppingCart,
+  ticTacToe,
+  calculator,
+  restaurant,
+  roarBikes
 ];
 
 //Tech Info
