@@ -295,3 +295,5 @@ const locationInfo = {
 };
 
 const contactBoxArray = [phoneInfo, emailInfo, locationInfo];
+
+export { links, projectArray, techArray, carouselVidArray, formArray, article, contactBoxArray }

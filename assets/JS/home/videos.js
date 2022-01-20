@@ -1,3 +1,6 @@
+import { elementBuilder, carouselBuilder, sectionBuilder } from "../functions.js";
+import { carouselVidArray } from "../data.js";
+
 //Basic elements
 const vidElements = sectionBuilder("videos");
 const vidSection = vidElements[0];

@@ -1,3 +1,7 @@
+import { sectionBuilder, contactBoxBuilder, elementBuilder } from "./functions.js";
+import { contactBoxArray } from "./data.js";
+import { body } from "./nav.js";
+
 //FOOTER
 const footerElements = sectionBuilder("footer");
 const footerSection = footerElements[0];

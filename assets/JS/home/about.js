@@ -1,3 +1,5 @@
+import { elementBuilder, buttonBuilder, waveGenerator, sectionBuilder } from "../functions.js";
+
 const aboutSectionElements = sectionBuilder("about");
 const sectionAbout = aboutSectionElements[0];
 const aboutContainer = aboutSectionElements[1];

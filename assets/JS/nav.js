@@ -1,3 +1,6 @@
+import { elementBuilder, buttonBuilder, linkBuilder } from "./functions.js";
+import { links } from './data.js'
+
 const body = document.getElementsByTagName("body")[0];
 const nav = elementBuilder("nav", "navbar", body);
 const containerDiv = elementBuilder("div", "container", nav);
@@ -40,6 +43,8 @@ phoneButton.innerHTML = "+1 (000) 000-0000";
 
 const linkElementArray = linkBuilder(links, ul, "nav-item");
 
-for (i = 0; i < linkElementArray.length; i++) {
+for (let i = 0; i < linkElementArray.length; i++) {
   linkElementArray[i].classList.add("text-white");
 }
+
+export { body }

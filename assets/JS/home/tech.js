@@ -1,3 +1,6 @@
+import { elementBuilder, techBuilder, sectionBuilder } from "../functions.js";
+import { techArray } from '../data.js'
+
 const techElements = sectionBuilder("tech");
 const sectionTech = techElements[0];
 const techContainer = techElements[1];
@@ -13,4 +16,4 @@ const techContainer2 = elementBuilder("div", "tech-container", sectionTech);
 const rowTech2 = elementBuilder("div", "row", techContainer2);
 rowTech2.classList.add("tech-row", "mb-0", "pb-4");
 
-const techImageArray = techBuilder(techArray);
+const techImageArray = techBuilder(rowTech2, techArray);

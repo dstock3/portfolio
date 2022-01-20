@@ -1,3 +1,5 @@
+import { body } from './nav.js'
+
 function elementBuilder(elType, className, parent) {
   const newElement = document.createElement(elType);
   newElement.classList.add(className);
@@ -8,8 +10,8 @@ function elementBuilder(elType, className, parent) {
 function linkBuilder(linkArray, ulVar, className, openNewTab) {
   let linkElementArray = [];
   for (let i = 0; i < linkArray.length; i++) {
-    linkLi = elementBuilder("li", className, ulVar);
-    linkAnchor = elementBuilder("a", "nav-link", linkLi);
+    let linkLi = elementBuilder("li", className, ulVar);
+    let linkAnchor = elementBuilder("a", "nav-link", linkLi);
     linkAnchor.textContent = linkArray[i].name;
     linkAnchor.href = linkArray[i].link;
     if (openNewTab === true) {
@@ -40,7 +42,7 @@ function buttonBuilder(buttonClass, spanClass, parent) {
 
 function buttonBuilderJr(buttonArray, parent) {
   let buttonElementArray = [];
-  for (i = 0; i < buttonArray.length; i++) {
+  for (let i = 0; i < buttonArray.length; i++) {
     let projectButton = elementBuilder("button", "btn", parent);
     projectButton.type = "button";
     projectButton.classList.add("btn-outline-primary", "m-1");
@@ -116,7 +118,7 @@ function projectBoxBuilder(
 
 function projectIterator(projectArray, parent) {
   let projectElementsArray = [];
-  for (i = 0; i < projectArray.length; i++) {
+  for (let i = 0; i < projectArray.length; i++) {
     let newProject = projectArray[i];
     let newProjectElements = projectBoxBuilder(
       newProject.source,
@@ -134,7 +136,7 @@ function projectIterator(projectArray, parent) {
 
 function projectArraySorter(projectArray, category) {
   let newProjectArray = [];
-  for (i = 0; i < projectArray.length; i++)
+  for (let i = 0; i < projectArray.length; i++)
     if (category === projectArray[i].category) {
       newProjectArray.push(projectArray[i]);
     }
@@ -143,26 +145,26 @@ function projectArraySorter(projectArray, category) {
 
 function projectColRemover() {
   let existingProjectCols = document.getElementsByClassName("col-lg-4");
-  for (i = existingProjectCols.length - 1; i >= 0; i--) {
+  for (let i = existingProjectCols.length - 1; i >= 0; i--) {
     existingProjectCols[i].remove();
   }
 }
 
-function projectButtonListener(projectButton, projectArray) {
+function projectButtonListener(projectButton, projectArray, projBodyRow) {
   let newProjectArray = projectArraySorter(
     projectArray,
     projectButton.innerHTML
   );
   projectButton.addEventListener("click", () => {
     projectColRemover();
-    return projectIterator(newProjectArray, projectBodyRow);
+    return projectIterator(newProjectArray, projBodyRow);
   });
 }
 
-function allButtonListener(projectArray) {
-  allButton.addEventListener("click", () => {
+function allButtonListener(button, projectArray, projBodyRow) {
+  button.addEventListener("click", () => {
     projectColRemover();
-    return projectIterator(projectArray, projectBodyRow);
+    return projectIterator(projectArray, projBodyRow);
   });
 }
 
@@ -173,7 +175,7 @@ function formHelper(contactFormArray, parent) {
   let lastName = contactFormArray[1];
   let email = contactFormArray[2];
   let message = contactFormArray[3];
-  for (i = 0; i < contactFormArray.length; i++) {
+  for (let i = 0; i < contactFormArray.length; i++) {
     if (i <= 1) {
       let formInfoDiv = elementBuilder("div", "col-lg-6", parent);
       formInfoDiv.classList.add("col-md", "mb-3", "form-elements");
@@ -228,7 +230,7 @@ function formHelper(contactFormArray, parent) {
 /* Footer */
 
 function contactBoxBuilder(contactBoxArray, parent) {
-  for (i = 0; i < contactBoxArray.length; i++) {
+  for (let i = 0; i < contactBoxArray.length; i++) {
     let footerDiv = elementBuilder("div", "col-md-4", parent);
     footerDiv.classList.add(
       "col-lg-4",
@@ -259,10 +261,10 @@ function contactBoxBuilder(contactBoxArray, parent) {
 
 //Technologies Builder
 
-function techBuilder(techArray) {
+function techBuilder(rowTech, techArray) {
   let imageElementArray = [];
-  for (i = 0; i < techArray.length; i++) {
-    let techCol = elementBuilder("div", "col-md-4", rowTech2);
+  for (let i = 0; i < techArray.length; i++) {
+    let techCol = elementBuilder("div", "col-md-4", rowTech);
     techCol.classList.add("col-lg-1", "mx-auto");
     let techDiv = elementBuilder("div", "tech__logo-box", techCol);
     techDiv.classList.add("shadow-sm");
@@ -280,7 +282,7 @@ function techBuilder(techArray) {
 
 function carouselBuilder(carouselArray, parent) {
   let carouselElementArray = [];
-  for (i = 0; i < carouselArray.length; i++) {
+  for (let i = 0; i < carouselArray.length; i++) {
     let carousel = elementBuilder("div", "carousel-item", parent);
     if (i === 0) {
       carousel.classList.add("active");
@@ -304,3 +306,5 @@ function carouselBuilder(carouselArray, parent) {
   }
   return carouselElementArray;
 }
+
+export { elementBuilder, linkBuilder, sectionBuilder, buttonBuilder, buttonBuilderJr, waveGenerator, projectBoxBuilder, projectIterator, projectArraySorter, projectColRemover, projectButtonListener, allButtonListener, formHelper, contactBoxBuilder, techBuilder, carouselBuilder }

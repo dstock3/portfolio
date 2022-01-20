@@ -1,3 +1,6 @@
+import { sectionBuilder, elementBuilder, formHelper } from "../functions.js";
+import { formArray } from '../data.js'
+
 const contactElements = sectionBuilder("contact");
 const contactSection = contactElements[0];
 const contactSectionContainer = contactElements[1];

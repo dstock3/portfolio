@@ -1,3 +1,6 @@
+import { sectionBuilder, waveGenerator, elementBuilder } from "../functions.js";
+import { article } from '../data.js'
+
 //Blog Elements
 const blogElements = sectionBuilder("blog");
 const blogSection = blogElements[0];

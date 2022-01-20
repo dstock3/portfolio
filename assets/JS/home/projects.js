@@ -1,3 +1,6 @@
+import { elementBuilder, buttonBuilderJr, sectionBuilder, projectIterator, projectButtonListener, allButtonListener } from "../functions.js";
+import { projectArray } from "../data.js";
+
 const projectElements = sectionBuilder("projects");
 const sectionProject = projectElements[0];
 const projectContainer = projectElements[1];
@@ -25,7 +28,7 @@ const designButton = projectButtonElements[2];
 const mockupsButton = projectButtonElements[3];
 
 projectIterator(projectArray, projectBodyRow);
-projectButtonListener(websitesButton, projectArray);
-projectButtonListener(designButton, projectArray);
-projectButtonListener(mockupsButton, projectArray);
-allButtonListener(projectArray);
+projectButtonListener(websitesButton, projectArray, projectBodyRow);
+projectButtonListener(designButton, projectArray, projectBodyRow);
+projectButtonListener(mockupsButton, projectArray, projectBodyRow);
+allButtonListener(allButton, projectArray, projectBodyRow);
