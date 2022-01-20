@@ -6,8 +6,13 @@
   background-color: $gray-200;
 }
 
+#contact-icons {
+  a {
+    margin-left: 10px;
+  }
+}
+
 .cta-info {
-  //@include gradient;
   padding: 3rem;
   margin: 1rem 0;
 
@@ -45,6 +50,10 @@
 
     i {
       padding-left: 3%;
+    }
+
+    #plane-icon {
+      margin-left: 15px;
     }
   }
 }

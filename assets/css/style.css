@@ -10771,6 +10771,19 @@ textarea.form-control-lg {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
+#touch-span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+#back-to-top-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .display-2 {
   margin-bottom: 1rem;
   text-transform: capitalize;
@@ -11050,6 +11063,10 @@ textarea.form-control-lg {
   background-color: #e9ecef;
 }
 
+#contact-icons a {
+  margin-left: 10px;
+}
+
 .cta-info {
   padding: 3rem;
   margin: 1rem 0;
@@ -11084,6 +11101,9 @@ textarea.form-control-lg {
 }
 .form button i {
   padding-left: 3%;
+}
+.form button #plane-icon {
+  margin-left: 15px;
 }
 
 .footer {
