@@ -1,0 +1,32 @@
+@use "../custom" as *;
+
+.blog {
+  position: relative;
+
+  hr {
+    width: 100px;
+    height: 3px;
+    color: $white;
+  }
+
+  &__content {
+    padding: 0.25em;
+    margin-top: 0;
+
+    p {
+      font-size: 0.8rem;
+
+      @include media-breakpoint-up(lg) {
+        font-size: 1rem;
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      margin-top: 2rem;
+    }
+  }
+
+  &__pic {
+    max-width: 100%;
+  }
+}

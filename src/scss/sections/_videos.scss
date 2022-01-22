@@ -1,0 +1,49 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+.videos {
+  position: relative;
+  padding: 0;
+  @include gradient;
+
+  &__vid {
+    background-color: rgba($white, 0.8);
+    padding: 2rem 1.25rem;
+    border-radius: 0.625rem;
+    height: auto;
+    text-align: center;
+    width: 75%;
+
+    .vid-container {
+      width: 100%;
+    }
+
+    .vid-title {
+      padding-inline: 10%;
+      padding-bottom: 2%;
+    }
+
+    p {
+      padding-top: 2%;
+      padding-inline: 15%;
+    }
+  }
+
+  .button-container {
+    padding: 1.5%;
+
+    .fa-long-arrow-alt-left {
+      position: relative;
+      right: 0.25%;
+    }
+
+    .fa-long-arrow-alt-right {
+      position: relative;
+      left: 0.25%;
+    }
+
+    .btn {
+      padding: 15px;
+    }
+  }
+}
