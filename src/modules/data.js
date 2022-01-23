@@ -148,66 +148,77 @@ const projectArray = [
 
 const html = {
   source: htmlIcon,
+  title: "HTML",
   alt: `HTML logo`,
   id: `html`,
 };
 
 const css = {
   source: cssIcon,
+  title: "CSS",
   alt: `CSS logo`,
   id: `css`,
 };
 
 const linux = {
   source: linuxIcon,
+  title: "Linux",
   alt: `Linux logo`,
   id: `linux`,
 };
 
 const ubuntu = {
   source: ubuntuIcon,
+  title: "Ubuntu",
   alt: `Ubuntu logo`,
   id: `ubuntu`,
 };
 
 const python = {
   source: pythonIcon,
+  title: "Python",
   alt: `Python logo`,
   id: `python`,
 };
 
 const sass = {
   source: sassIcon,
+  title: "Sass",
   alt: `Sass logo`,
   id: `sass`,
 };
 
 const js = {
   source: jsIcon,
+  title: "JavaScript",
   alt: `Javascript logo`,
   id: `javascript`,
 };
 
 const bootstrap = {
   source: bootstrapIcon,
+  title: "Bootstrap",
   alt: `Bootstrap logo`,
   id: `bootstrap`,
 };
 
 const git = {
   source: gitIcon,
+  title: "Git",
   alt: `Git logo`,
   id: `git`,
 };
 
 const react = {
   source: reactIcon,
+  title: "React",
   alt: `React logo`,
   id: `react`,
 }
 
 const xd = {
   source: xdIcon,
+  title: "Adobe XD",
   alt: "Adobe XD logo",
   id: "xd",
 }

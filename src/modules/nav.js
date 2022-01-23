@@ -10,7 +10,6 @@ const nav = () => {
   logoAnchor.href = "#";
   const logoImage = elementBuilder("img", "logo", logoAnchor);
   logoImage.src = "#";
-  logoImage.alt ="dstock logo"
   
   const buttonArray = buttonBuilder(
     "navbar-toggler",

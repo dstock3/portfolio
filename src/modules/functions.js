@@ -264,15 +264,16 @@ function contactBoxBuilder(contactBoxArray, parent) {
 function techBuilder(rowTech, techArray) {
   let imageElementArray = [];
   for (let i = 0; i < techArray.length; i++) {
-    let techCol = elementBuilder("div", "col-md-4", rowTech);
-    techCol.classList.add("col-lg-1", "mx-auto");
+    let techCol = elementBuilder("div", "tech-item", rowTech);
+    techCol.classList.add("col-lg-2",  "col-md-4");
     let techDiv = elementBuilder("div", "tech__logo-box", techCol);
-    techDiv.classList.add("shadow-sm");
     let techImage = elementBuilder("img", "img-fluid", techDiv);
     techImage.setAttribute("src", `${techArray[i].source}`);
     techImage.setAttribute("alt", `${techArray[i].alt}`);
     techImage.setAttribute("id", `${techArray[i].id}`);
     imageElementArray.push(techImage);
+    let techDes = elementBuilder("div", "tech-des", techCol);
+    techDes.innerHTML = techArray[i].title;
   }
 
   return imageElementArray;

@@ -10977,6 +10977,16 @@ textarea.form-control-lg {
   background-color: #fff;
   padding: 0 0 5rem 0;
 }
+.tech .tech-item {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+}
+.tech .tech-item .tech-des {
+  margin-top: 25px;
+  text-align: center;
+  font-weight: bold;
+}
 .tech__logo-box {
   max-width: 100%;
   height: 3rem;
@@ -10984,9 +10994,6 @@ textarea.form-control-lg {
   padding: 0.5rem;
   text-align: center;
   position: relative;
-}
-.tech .tech-row {
-  padding-inline: 10%;
 }
 .tech img {
   min-width: 100px;

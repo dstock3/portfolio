@@ -5,6 +5,18 @@
   background-color: $white;
   padding: 0 0 5rem 0;
 
+  .tech-item {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+
+    .tech-des {
+      margin-top: 25px;
+      text-align: center;
+      font-weight: bold;
+    }
+  }
+
   &__logo-box {
     max-width: 100%;
     height: 3rem;
@@ -12,10 +24,6 @@
     padding: 0.5rem;
     text-align: center;
     position: relative;
-  }
-
-  .tech-row {
-    padding-inline: 10%;
   }
 
   img {
