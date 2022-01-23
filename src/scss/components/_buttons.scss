@@ -51,15 +51,11 @@
 }
 
 #email-button {
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
   display: flex;
   min-width: fit-content;
-}
-
-#email-button:hover {
-  .email-span svg {
-    height: 100px;
-
-  }
 }
 
 .email-span {

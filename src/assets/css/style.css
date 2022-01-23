@@ -10788,9 +10788,10 @@ textarea.form-control-lg {
   display: flex;
   min-width: fit-content;
 }
-
-#email-button:hover .email-span svg {
-  height: 100px;
+@media (max-width: 575.98px) {
+  #email-button {
+    display: none;
+  }
 }
 
 .email-span {
@@ -10879,10 +10880,6 @@ textarea.form-control-lg {
 
 .menu {
   background: linear-gradient(to right, rgba(28, 31, 187, 0.95), rgba(83, 22, 252, 0.95));
-}
-.menu #email-button {
-  display: flex;
-  width: fit-content;
 }
 .menu li {
   padding: 0 0.7rem;
