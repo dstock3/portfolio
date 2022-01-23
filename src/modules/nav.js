@@ -7,9 +7,10 @@ const nav = () => {
   const nav = elementBuilder("nav", "navbar", body);
   const containerDiv = elementBuilder("div", "container", nav);
   const logoAnchor = elementBuilder("a", "navbar-brand", containerDiv);
-  logoAnchor.href = "index.html";
+  logoAnchor.href = "#";
   const logoImage = elementBuilder("img", "logo", logoAnchor);
   logoImage.src = "#";
+  logoImage.alt ="dstock logo"
   
   const buttonArray = buttonBuilder(
     "navbar-toggler",
@@ -33,6 +34,7 @@ const nav = () => {
   );
   const navBar = elementBuilder("div", "collapse", containerDiv);
   navBar.classList.add("navbar-collapse", "justify-content-end");
+  navBar.id = "navbarNav"
   const ul = elementBuilder("ul", "navbar-nav", navBar);
   
   const emailButtonArray = buttonBuilder("rounded-pill", "span", containerDiv);
