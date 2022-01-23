@@ -4,6 +4,11 @@
 .menu {
   @include gradient;
 
+  #email-button {
+    display: flex;
+    width: fit-content;
+  }
+
   li {
     padding: 0 0.7rem;
 

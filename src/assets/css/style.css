@@ -10744,7 +10744,7 @@ textarea.form-control-lg {
   padding: 0.8375rem 4.375rem 0.8375rem 1.25rem;
   font-weight: 700;
   margin: 0;
-  border: 0.1rem solid rgba(255, 255, 255, 0.6);
+  border: 0.25rem solid rgba(255, 255, 255, 0.6);
   background-color: #fff;
   display: block;
 }
@@ -10782,6 +10782,22 @@ textarea.form-control-lg {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#email-button {
+  display: flex;
+  min-width: fit-content;
+}
+
+#email-button:hover .email-span svg {
+  height: 100px;
+}
+
+.email-span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }
 
 .display-2 {
@@ -10863,6 +10879,10 @@ textarea.form-control-lg {
 
 .menu {
   background: linear-gradient(to right, rgba(28, 31, 187, 0.95), rgba(83, 22, 252, 0.95));
+}
+.menu #email-button {
+  display: flex;
+  width: fit-content;
 }
 .menu li {
   padding: 0 0.7rem;

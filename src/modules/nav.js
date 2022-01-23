@@ -4,7 +4,6 @@ import { links } from './data.js'
 const body = document.getElementsByTagName("body")[0];
 
 const nav = () => {
-  
   const nav = elementBuilder("nav", "navbar", body);
   const containerDiv = elementBuilder("div", "container", nav);
   const logoAnchor = elementBuilder("a", "navbar-brand", containerDiv);
@@ -36,13 +35,17 @@ const nav = () => {
   navBar.classList.add("navbar-collapse", "justify-content-end");
   const ul = elementBuilder("ul", "navbar-nav", navBar);
   
-  const phoneButtonArray = buttonBuilder("rounded-pill", "span", containerDiv);
-  const phoneButton = phoneButtonArray[0];
-  phoneButton.classList.add("btn-rounded");
-  const phoneSpan = phoneButtonArray[1];
-  const icon = elementBuilder("i", "fas", phoneSpan);
-  icon.classList.add("fa-phone-alt");
-  phoneButton.innerHTML = "+1 (000) 000-0000";
+  const emailButtonArray = buttonBuilder("rounded-pill", "span", containerDiv);
+  const emailButton = emailButtonArray[0];
+  emailButton.classList.add("btn-rounded");
+  emailButton.id = "email-button"
+  const emailSpan = emailButtonArray[1];
+  emailSpan.classList.add("email-span");
+  const emailSpanContent = elementBuilder("div", "email-text", emailButton)
+  emailSpanContent.innerHTML = "dave@dstock.io";
+  const icon = elementBuilder("i", "fas", emailSpan);
+  icon.classList.add("fa-envelope-square");
+
   
   const linkElementArray = linkBuilder(links, ul, "nav-item");
   

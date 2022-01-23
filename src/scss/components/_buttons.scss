@@ -6,7 +6,7 @@
   padding: 0.8375rem 4.375rem 0.8375rem 1.25rem;
   font-weight: 700;
   margin: 0;
-  border: 0.1rem solid rgba($white, 0.6);
+  border: 0.25rem solid rgba($white, 0.6);
   background-color: $white;
   display: block;
 
@@ -48,4 +48,24 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#email-button {
+  display: flex;
+  min-width: fit-content;
+}
+
+#email-button:hover {
+  .email-span svg {
+    height: 100px;
+
+  }
+}
+
+.email-span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+
 }
