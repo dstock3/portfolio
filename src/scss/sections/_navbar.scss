@@ -24,3 +24,14 @@
   }
 }
   
+.email-link {
+  text-decoration: none;
+  color: black;
+
+}
+
+#email-button:hover {
+  .email-link {
+    color: white;
+  }
+}

@@ -10899,6 +10899,15 @@ textarea.form-control-lg {
   }
 }
 
+.email-link {
+  text-decoration: none;
+  color: black;
+}
+
+#email-button:hover .email-link {
+  color: white;
+}
+
 .about {
   background: linear-gradient(to right, rgba(28, 31, 187, 0.95), rgba(83, 22, 252, 0.95));
   padding: 10rem 0 0 0;

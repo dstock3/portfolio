@@ -40,10 +40,12 @@ const nav = () => {
   const emailButton = emailButtonArray[0];
   emailButton.classList.add("btn-rounded");
   emailButton.id = "email-button"
+  const emailLink = elementBuilder("a", "email-link", emailButton)
+  emailLink.href = "mailto:dstock3@gmail.com"
   const emailSpan = emailButtonArray[1];
   emailSpan.classList.add("email-span");
-  const emailSpanContent = elementBuilder("div", "email-text", emailButton)
-  emailSpanContent.innerHTML = "dave@dstock.io";
+  const emailSpanContent = elementBuilder("div", "email-text", emailLink)
+  emailSpanContent.innerHTML = "dstock3@gmail.com";
   const icon = elementBuilder("i", "fas", emailSpan);
   icon.classList.add("fa-envelope-square");
 
