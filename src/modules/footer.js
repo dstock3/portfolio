@@ -8,7 +8,7 @@ const footer = () => {
   const footerSection = footerElements[0];
   const footerSectionContainer = footerElements[1];
   const footerRow = footerElements[2];
-  contactBoxBuilder(contactBoxArray, footerRow);
+  //contactBoxBuilder(contactBoxArray, footerRow);
 
   const social = elementBuilder("div", "footer-sm", footerRow);
   const socialContainer = elementBuilder("div", "container", social);
@@ -18,26 +18,33 @@ const footer = () => {
   socialCol.classList.add("col-md-5", "mb-3", "mb-0");
   socialCol.innerHTML = "Connect with Me on Social Media";
   const socialIcons = elementBuilder("div", "col-lg-6", socialRow);
+  socialIcons.id = "social-media"
 
+  /*
   const facebookAnchor = elementBuilder("a", "social-media-links", socialIcons);
   facebookAnchor.href = ""; //Need to enter my facebook when complete
   const facebookIcon = elementBuilder("i", "fab", facebookAnchor);
   facebookIcon.classList.add("fa-facebook");
 
-  const githubAnchor = elementBuilder("a", "social-media-links", socialIcons);
-  githubAnchor.href = "https://github.com/dstock3"; //Need to enter my github when complete
-  const githubIcon = elementBuilder("i", "fab", githubAnchor);
-  githubIcon.classList.add("fa-github");
-
-  const linkedAnchor = elementBuilder("a", "social-media-links", socialIcons);
-  linkedAnchor.href = "https://www.linkedin.com/in/stockdale/"; //Need to enter my linkedin when complete
-  const linkedIcon = elementBuilder("i", "fab", linkedAnchor);
-  linkedIcon.classList.add("fa-linkedin");
-
   const youtubeAnchor = elementBuilder("a", "social-media-links", socialIcons);
   youtubeAnchor.href = ""; //Need to enter my linkedin when complete
   const youtubeIcon = elementBuilder("i", "fab", youtubeAnchor);
   youtubeIcon.classList.add("fa-youtube");
+  */
+
+  const githubAnchor = elementBuilder("a", "social-media-links", socialIcons);
+  githubAnchor.href = "https://github.com/dstock3";
+  githubAnchor.rel = "noreferrer noopener";
+  githubAnchor.target = "blank";
+  const githubIcon = elementBuilder("i", "fab", githubAnchor);
+  githubIcon.classList.add("fa-github", "fa-2x");
+
+  const linkedAnchor = elementBuilder("a", "social-media-links", socialIcons);
+  linkedAnchor.href = "https://www.linkedin.com/in/stockdale/";
+  linkedAnchor.rel = "noreferrer noopener";
+  linkedAnchor.target = "blank";
+  const linkedIcon = elementBuilder("i", "fab", linkedAnchor);
+  linkedIcon.classList.add("fa-linkedin", "fa-2x");
 
   const copyrightDiv = elementBuilder("div", "footer-bottom", body);
   copyrightDiv.classList.add("pt-5", "pb-5");
@@ -61,7 +68,6 @@ const footer = () => {
   topButtonAnchor.href = "#";
   const topButtonIcon = elementBuilder("i", "fas", topButtonAnchor);
   topButtonIcon.classList.add("fa-chevron-up");
-
 }
 
 export { footer }

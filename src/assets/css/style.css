@@ -11234,6 +11234,14 @@ textarea.form-control-lg {
   transform: translate(-50%, -50%);
 }
 
+#social-media {
+  display: flex;
+  justify-content: center;
+}
+#social-media .social-media-links {
+  margin-right: 15px;
+}
+
 .blog-page hr {
   width: 200px;
   height: 4px;

@@ -95,3 +95,13 @@
     @include absoluteCenter;
   }
 }
+
+
+#social-media {
+  display: flex;
+  justify-content: center;
+
+  .social-media-links {
+    margin-right: 15px;
+  }
+}
