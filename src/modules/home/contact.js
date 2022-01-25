@@ -29,13 +29,22 @@ const contact = () => {
     "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum cupiditate quasi corporis cumque, nisi enim quam sed magni voluptas assumenda voluptatum.";
   const contactHead3 = elementBuilder("h3", "display-3--brief", contactInfo);
   contactHead3.innerHTML = "Next Steps";
-  const contactList = elementBuilder("ul", "cta-info__list", contactInfo);
+  const contactList = elementBuilder("ul", "contact-list", contactInfo);
   const listItem = elementBuilder("li", "list-item", contactList);
-  listItem.innerHTML = "We'll prepare a proposal for your review.";
+  const checkOne = elementBuilder("i", "fas", listItem);
+  checkOne.classList.add("fa-check");
+  const itemOneContent = elementBuilder("span", "list-item-contact", listItem)
+  itemOneContent.innerHTML = "We'll prepare a proposal for your review.";
   const listItem2 = elementBuilder("li", "list-item", contactList);
-  listItem2.innerHTML = "We'll discuss it together.";
+  const checkTwo = elementBuilder("i", "fas", listItem2);
+  checkTwo.classList.add("fa-check");
+  const itemTwoContent = elementBuilder("span", "list-item-contact", listItem2)
+  itemTwoContent.innerHTML = "We'll discuss it together.";
   const listItem3 = elementBuilder("li", "list-item", contactList);
-  listItem3.innerHTML = "Let's get going!";
+  const checkThree = elementBuilder("i", "fas", listItem3);
+  checkThree.classList.add("fa-check");
+  const itemThreeContent = elementBuilder("span", "list-item-contact", listItem3)
+  itemThreeContent.innerHTML = "Let's get going!";
   
   //Form
   const contactCol2 = elementBuilder("div", "col-12", contactRow2);

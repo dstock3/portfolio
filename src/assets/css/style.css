@@ -11163,6 +11163,13 @@ textarea.form-control-lg {
   padding-left: 3%;
 }
 
+.contact-list {
+  list-style-type: none;
+}
+.contact-list .list-item .list-item-contact {
+  margin-left: 15px;
+}
+
 .footer {
   padding-top: 1rem;
   background-color: #0f0d1b;
