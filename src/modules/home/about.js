@@ -9,6 +9,7 @@ const about = () => {
   rowAbout.classList.add("align-item-center", "text-white");
   const colAbout1 = elementBuilder("div", "col-md-6", rowAbout);
   colAbout1.classList.add("intros", "text-start");
+  colAbout1.id = "intro-text"
   const aboutHead = elementBuilder("h1", "display-2", colAbout1);
   const headSpan = elementBuilder("span", "display-2--intro", aboutHead);
   const header = "Hi, I'm Dave!";
