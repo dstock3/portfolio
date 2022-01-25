@@ -23,6 +23,7 @@ const projects = {
   link: "index.html#projects",
 };
 
+/*
 const videos = {
   name: "Videos",
   link: "index.html#videos",
@@ -32,13 +33,13 @@ const blog = {
   name: "Blog",
   link: "index.html#blog",
 };
-
+*/
 const contact = {
   name: "Contact",
   link: "index.html#contact",
 };
 
-const links = [about, projects, videos, blog, contact];
+const links = [about, projects, /*videos, blog,*/ contact];
 
 //Video Illus
 const vidData = {
