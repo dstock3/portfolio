@@ -9,12 +9,13 @@ import reactIcon from '../assets/images/tech/react.svg'
 import sassIcon from '../assets/images/tech/Sass.svg'
 import ubuntuIcon from '../assets/images/tech/ubuntu.png'
 import xdIcon from '../assets/images/tech/xd.svg'
+import vidIllus from '../assets/images/illus.png'
 
 //Nav Info
 
 const about = {
   name: "About",
-  link: "/index.html#about",
+  link: "index.html#about",
 };
 
 const projects = {
@@ -24,20 +25,27 @@ const projects = {
 
 const videos = {
   name: "Videos",
-  link: "/index.html#videos",
+  link: "index.html#videos",
 };
 
 const blog = {
   name: "Blog",
-  link: "/blog.html",
+  link: "index.html#blog",
 };
 
 const contact = {
   name: "Contact",
-  link: "/index.html#contact",
+  link: "index.html#contact",
 };
 
 const links = [about, projects, videos, blog, contact];
+
+//Video Illus
+const vidData = {
+  source: vidIllus,
+  alt: "coder illustration"
+
+}
 
 //Project Info
 
@@ -319,4 +327,4 @@ const locationInfo = {
 
 const contactBoxArray = [phoneInfo, emailInfo, locationInfo];
 
-export { links, projectArray, techArray, carouselVidArray, formArray, article, contactBoxArray }
+export { links, projectArray, vidData, techArray, carouselVidArray, formArray, article, contactBoxArray }
