@@ -45,7 +45,9 @@
   }
   &:hover {
     img {
-      transform: scale(1.3);
+      transform: scale(1.25);
+      opacity: .5;
+      filter: sepia(100%) saturate(150%) brightness(20%) hue-rotate(90deg);
       @include transitionProperty;
     }
     .project-info {

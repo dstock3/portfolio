@@ -10,6 +10,12 @@ import sassIcon from '../assets/images/tech/Sass.svg'
 import ubuntuIcon from '../assets/images/tech/ubuntu.png'
 import xdIcon from '../assets/images/tech/xd.svg'
 import vidIllus from '../assets/images/illus.png'
+import battleshipImg from '../assets/images/portfolio/battleship.png'
+import ontaskImg from '../assets/images/portfolio/ontask.png'
+import scapeImg from '../assets/images/portfolio/scape.png'
+import weatherImg from '../assets/images/portfolio/myweather.png'
+import resumeImg from '../assets/images/portfolio/resume.png'
+import cartImg from '../assets/images/portfolio/cart.png'
 
 //Nav Info
 
@@ -80,8 +86,8 @@ const restaurant = {
 const battleship = {
   title: "Battleship",
   description: "A web-based Battleship game built in JavaScript with a focus on unit testing",
-  source: "https://dummyimage.com/600x400/000/0011ff.png",
-  alt: "image three alt",
+  source: battleshipImg,
+  alt: "A screenshot from my Battleship application",
   category: "Vanilla JS",
   link: "https://dstock3.github.io/battleship/",
 };
@@ -89,8 +95,8 @@ const battleship = {
 const onTask = {
   title: "OnTask",
   description: "A Project Management Application built entirely in JavaScript",
-  source: "https://dummyimage.com/600x400/000/0011ff.png",
-  alt: "image four alt",
+  source: ontaskImg,
+  alt: "A screenshot from OnTask, a project management application",
   category: "Vanilla JS",
   link: "https://dstock3.github.io/toDoList/",
 };
@@ -98,8 +104,8 @@ const onTask = {
 const weatherApp = {
   title: "Weather App",
   description: "A weather forecasting app that connects to the OpenWeatherMap API",
-  source: "https://dummyimage.com/600x400/000/0011ff.png",
-  alt: "image five alt",
+  source: weatherImg,
+  alt: "A screenshot from MyWeather, a basic weather forecasting application",
   category: "Vanilla JS",
   link: "https://dstock3.github.io/weatherApp/",
 };
@@ -107,8 +113,8 @@ const weatherApp = {
 const scape95 = {
   title: "Scape 95",
   description: "A Windows 95 nostalgia trip built in React primarily using functional components and custom hooks",
-  source: "https://dummyimage.com/600x400/000/0011ff.png",
-  alt: "image six alt",
+  source: scapeImg,
+  alt: "A screenshot from Scape-95, a Windows 95 emulator",
   category: "React",
   link: "https://dstock3.github.io/scape-95/",
 };
@@ -116,8 +122,8 @@ const scape95 = {
 const resumeBuilder = {
   title: "Resume Builder",
   description: "A resume application built using class-based components in React",
-  source: "https://dummyimage.com/600x400/000/0011ff.png",
-  alt: "image seven alt",
+  source: resumeImg,
+  alt: "A screenshot from my resume creator application",
   category: "React",
   link: "https://dstock3.github.io/cv-app/",
 };
@@ -125,8 +131,8 @@ const resumeBuilder = {
 const shoppingCart = {
   title: "Shopping Cart",
   description: "A simple shopping cart demo built using router and custom hooks in React",
-  source: "https://dummyimage.com/600x400/000/0011ff.png",
-  alt: "image eight alt",
+  source: cartImg,
+  alt: "A screenshot from my shopping cart application",
   category: "React",
   link: "https://dstock3.github.io/shopping-cart/",
 };
