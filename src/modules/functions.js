@@ -221,7 +221,7 @@ function formHelper(contactFormArray, parent) {
   contactButtonDiv.classList.add("d-grid", "mt-1");
   let contactButton = elementBuilder("button", "btn", contactButtonDiv);
   contactButton.type = "button";
-  contactButton.classList.add("btn-primary", "rounded-pill", "pt-3", "pb-3");
+  contactButton.classList.add("btn-primary", "rounded-pill", "pt-3", "pb-3", "contact-button");
   contactButton.innerHTML = "Send Message";
   let contactButtonIcon = elementBuilder("i", "fas", contactButton);
   contactButtonIcon.classList.add("fa-paper-plane");

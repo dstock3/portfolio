@@ -63,5 +63,15 @@
   justify-content: center;
   align-items: center;
   color: white;
+}
 
+.contact-button {
+  margin: auto;
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+
+  @include media-breakpoint-down(md) {
+    width: 100%;
+  }
 }
