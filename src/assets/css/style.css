@@ -10911,6 +10911,9 @@ textarea.form-control-lg {
 
 @media (max-width: 767.98px) {
   #intro-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 15px;
   }
 }
