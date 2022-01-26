@@ -17,8 +17,38 @@ const about = () => {
   headSpan.innerHTML = header;
   const headSpan2 = elementBuilder("span", "display-2--description", aboutHead);
   headSpan2.classList.add("lh-base");
-  const description = "description description description";
-  headSpan2.innerHTML = description;
+
+  const interests = `👀 I’m interested in Web Development`
+  const learn = `🌱 I’m currently learning MongoDB`
+  const ask = `💬 Ask me about Front-end Development`
+  const collab = `🔥 I’m looking to collaborate on React projects`
+  const pronouns = `😀 Pronouns: He/Him`
+  const contact = `📫 How to reach me: dstock3@gmail.com`
+
+
+  const descArray = [interests, ask, learn, collab, pronouns, contact]
+
+  function descriptionBuilder(descArray) {
+    let description = elementBuilder("article", "color-bg-subtle", headSpan2);
+    description.classList.add("rounded-bottom-1", "py-2");
+    for (let i = 0; i < descArray.length; i++) {
+      let descItem = descArray[i]
+      let flexDiv = elementBuilder("div", "d-flex", description);
+      flexDiv.classList.add("flex-items-center", "desc-div")
+      let span = elementBuilder("span", "desc-span", flexDiv)
+      span.classList.add("pl-0")
+      let pre = elementBuilder("pre", "lh-condensed-ultra", flexDiv)
+      pre.innerHTML =  descItem
+
+    }
+
+  }
+
+  descriptionBuilder(descArray)
+
+
+  
+
   const touchAnchor = elementBuilder("a", "get-in-touch", colAbout1);
   touchAnchor.href = "#contact";
   const touchButtonArray = buttonBuilder("rounded-pill", "span", touchAnchor);

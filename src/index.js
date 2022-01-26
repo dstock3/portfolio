@@ -30,13 +30,3 @@ tech()
 //videos()
 contact()
 footer()
-  
-
-
-  
-
-
-
-
-
-  

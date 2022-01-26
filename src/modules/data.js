@@ -16,6 +16,8 @@ import scapeImg from '../assets/images/portfolio/scape.png'
 import weatherImg from '../assets/images/portfolio/myweather.png'
 import resumeImg from '../assets/images/portfolio/resume.png'
 import cartImg from '../assets/images/portfolio/cart.png'
+import calcImg from '../assets/images/portfolio/calc.png'
+import ticTacImg from '../assets/images/portfolio/tictac.png'
 
 //Nav Info
 
@@ -59,8 +61,8 @@ const vidData = {
 const ticTacToe = {
   title: "Tic Tac Toe",
   description: "One of my first exercises using Vanilla JS.",
-  source: "https://dummyimage.com/600x400/000/0011ff.png",
-  alt: "image one alt",
+  source: ticTacImg,
+  alt: "A screenshot from my tic-tac-toe application",
   category: "Vanilla JS",
   link: "https://dstock3.github.io/ticTacToe/",
 };
@@ -68,8 +70,8 @@ const ticTacToe = {
 const calculator = {
   title: "Calculator",
   description: "A simple calculator application made in JavaScript.",
-  source: "https://dummyimage.com/600x400/000/0011ff.png",
-  alt: "image two alt",
+  source: calcImg,
+  alt: "A screenshot from my calculator app",
   category: "Vanilla JS",
   link: "https://dstock3.github.io/calc/",
 };
