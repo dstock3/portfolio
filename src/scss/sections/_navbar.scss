@@ -1,6 +1,10 @@
 @use "../custom" as *;
 @use "../components/mixins" as *;
 
+.navbar {
+  min-height: 100px;
+}
+
 .menu {
   @include gradient;
 
@@ -19,8 +23,15 @@
 }
 
 .logo {
-  filter: sepia(0%) saturate(150%) brightness(115%) hue-rotate(15deg);
-  max-width: 65px;
+  filter: sepia(15%) saturate(125%) brightness(315%) hue-rotate(9deg);
+  max-width: 55px;
+  transition: 250ms;
+
+}
+
+.logo:hover {
+  filter: sepia(33%) saturate(125%) brightness(325%) hue-rotate(5deg);
+  max-width: 62px;
 
 }
 
