@@ -18,6 +18,7 @@ import resumeImg from '../assets/images/portfolio/resume.png'
 import cartImg from '../assets/images/portfolio/cart.png'
 import calcImg from '../assets/images/portfolio/calc.png'
 import ticTacImg from '../assets/images/portfolio/tictac.png'
+import pizzaImg from '../assets/images/portfolio/pizza.png'
 
 //Nav Info
 
@@ -41,13 +42,13 @@ const blog = {
   name: "Blog",
   link: "index.html#blog",
 };
-*/
+
 const contact = {
   name: "Contact",
   link: "index.html#contact",
 };
-
-const links = [about, projects, /*videos, blog,*/ contact];
+*/
+const links = [about, projects, /*videos, blog, contact */];
 
 //Video Illus
 const vidData = {
@@ -55,6 +56,15 @@ const vidData = {
   alt: "coder illustration"
 
 }
+
+const interests = `👀 I’m interested in functional programming`
+const learn = `🌱 I’m currently learning MongoDB`
+const ask = `💬 Ask me about Front-end Development`
+const collab = `🔥 I’m looking to collaborate on React projects`
+const pronouns = `😀 Pronouns: He/Him`
+const contactInfo = `📫 How to reach me: dstock3@gmail.com`
+
+const descArray = [interests, ask, learn, collab, pronouns, contactInfo]
 
 //Project Info
 
@@ -79,8 +89,8 @@ const calculator = {
 const restaurant = {
   title: "Chef Vito's Pizzeria",
   description: "A restaurant page built using ES6 modules in JavaScript",
-  source: "https://dummyimage.com/600x400/000/0011ff.png",
-  alt: "image two alt",
+  source: pizzaImg,
+  alt: "A screenshot from my restaurant page",
   category: "Vanilla JS",
   link: "https://dstock3.github.io/restaurant/",
 }
@@ -336,4 +346,4 @@ const locationInfo = {
 
 const contactBoxArray = [phoneInfo, emailInfo, locationInfo];
 
-export { links, projectArray, vidData, techArray, carouselVidArray, formArray, article, contactBoxArray }
+export { links, projectArray, descArray, vidData, techArray, carouselVidArray, formArray, article, contactBoxArray }

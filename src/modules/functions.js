@@ -52,6 +52,22 @@ function buttonBuilderJr(buttonArray, parent) {
   return buttonElementArray;
 }
 
+function descriptionBuilder(descArray, parent) {
+  let description = elementBuilder("article", "color-bg-subtle", parent);
+  description.classList.add("rounded-bottom-1", "py-2");
+  for (let i = 0; i < descArray.length; i++) {
+    let descItem = descArray[i]
+    let flexDiv = elementBuilder("div", "d-flex", description);
+    flexDiv.classList.add("flex-items-center", "desc-div")
+    let span = elementBuilder("span", "desc-span", flexDiv)
+    span.classList.add("pl-0")
+    let pre = elementBuilder("pre", "lh-condensed-ultra", flexDiv)
+    pre.innerHTML =  descItem
+
+  }
+
+}
+
 //Wave Border Generator
 
 function waveGenerator(dPath, fillColor, parent) {
@@ -308,4 +324,4 @@ function carouselBuilder(carouselArray, parent) {
   return carouselElementArray;
 }
 
-export { elementBuilder, linkBuilder, sectionBuilder, buttonBuilder, buttonBuilderJr, waveGenerator, projectBoxBuilder, projectIterator, projectArraySorter, projectColRemover, projectButtonListener, allButtonListener, formHelper, contactBoxBuilder, techBuilder, carouselBuilder }
+export { elementBuilder, linkBuilder, sectionBuilder, buttonBuilder, buttonBuilderJr, descriptionBuilder, waveGenerator, projectBoxBuilder, projectIterator, projectArraySorter, projectColRemover, projectButtonListener, allButtonListener, formHelper, contactBoxBuilder, techBuilder, carouselBuilder }

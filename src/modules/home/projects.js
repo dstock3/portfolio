@@ -12,8 +12,7 @@ const projects = () => {
   projectHead.innerHTML = "Latest Work";
   const headLine = elementBuilder("div", "heading-line", projectRow);
   const paraProject = elementBuilder("p", "lead", projectRow);
-  paraProject.innerHTML =
-    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid quo vitae impedit.";
+  paraProject.innerHTML = "Check out my most recent projects.";
   
   const buttonRow = elementBuilder("div", "row", projectContainer);
   buttonRow.classList.add("text-center", "mt-3", "mb-4");

@@ -1,5 +1,5 @@
-import { elementBuilder, buttonBuilder, waveGenerator, sectionBuilder } from "../functions.js";
-import { vidData } from "../data.js";
+import { elementBuilder, buttonBuilder, descriptionBuilder, waveGenerator, sectionBuilder } from "../functions.js";
+import { vidData, descArray } from "../data.js";
 
 const about = () => {
   const aboutSectionElements = sectionBuilder("about");
@@ -13,44 +13,14 @@ const about = () => {
   colAbout1.id = "intro-text"
   const aboutHead = elementBuilder("h1", "display-2", colAbout1);
   const headSpan = elementBuilder("span", "display-2--intro", aboutHead);
-  const header = "Hi, I'm Dave!";
+  const header = "Hey there, I'm Dave!";
   headSpan.innerHTML = header;
   const headSpan2 = elementBuilder("span", "display-2--description", aboutHead);
   headSpan2.classList.add("lh-base");
-
-  const interests = `👀 I’m interested in Web Development`
-  const learn = `🌱 I’m currently learning MongoDB`
-  const ask = `💬 Ask me about Front-end Development`
-  const collab = `🔥 I’m looking to collaborate on React projects`
-  const pronouns = `😀 Pronouns: He/Him`
-  const contact = `📫 How to reach me: dstock3@gmail.com`
-
-
-  const descArray = [interests, ask, learn, collab, pronouns, contact]
-
-  function descriptionBuilder(descArray) {
-    let description = elementBuilder("article", "color-bg-subtle", headSpan2);
-    description.classList.add("rounded-bottom-1", "py-2");
-    for (let i = 0; i < descArray.length; i++) {
-      let descItem = descArray[i]
-      let flexDiv = elementBuilder("div", "d-flex", description);
-      flexDiv.classList.add("flex-items-center", "desc-div")
-      let span = elementBuilder("span", "desc-span", flexDiv)
-      span.classList.add("pl-0")
-      let pre = elementBuilder("pre", "lh-condensed-ultra", flexDiv)
-      pre.innerHTML =  descItem
-
-    }
-
-  }
-
-  descriptionBuilder(descArray)
-
-
-  
+  descriptionBuilder(descArray, headSpan2)
 
   const touchAnchor = elementBuilder("a", "get-in-touch", colAbout1);
-  touchAnchor.href = "#contact";
+  touchAnchor.href = "mailto:dstock3@gmail.com";
   const touchButtonArray = buttonBuilder("rounded-pill", "span", touchAnchor);
   const touchButton = touchButtonArray[0];
   const touchText = document.createTextNode("Get In Touch");
