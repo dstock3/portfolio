@@ -19,6 +19,7 @@ import cartImg from '../assets/images/portfolio/cart.png'
 import calcImg from '../assets/images/portfolio/calc.png'
 import ticTacImg from '../assets/images/portfolio/tictac.png'
 import pizzaImg from '../assets/images/portfolio/pizza.png'
+import spacetimeImg from '../assets/images/portfolio/spacetime.png'
 
 //Nav Info
 
@@ -151,12 +152,21 @@ const shoppingCart = {
 
 const roarBikes = {
   title: "Roar Bikes",
-  description: "A design mockup created in Adobe XD",
+  description: "A design mockup for a bike store created in Adobe XD",
   source: "https://dummyimage.com/600x400/000/0011ff.png",
-  alt: "image eight alt",
+  alt: "A screenshot from my design mockup",
   category: "Mockups",
   link: "https://www.youtube.com/watch?v=iUG96J3q8Zg",
 };
+
+const spacetime = {
+  title: "SpaceTime",
+  description: "A design mockup for a science news aggregator created using Adobe XD",
+  source: spacetimeImg,
+  alt: "the spactime logo",
+  category: "Mockups",
+  link: "https://www.youtube.com/watch?v=SAdV6R3QgQ8",
+}
 
 const projectArray = [
   battleship,
@@ -168,7 +178,8 @@ const projectArray = [
   ticTacToe,
   calculator,
   restaurant,
-  roarBikes
+  roarBikes,
+  spacetime
 ];
 
 //Tech Info

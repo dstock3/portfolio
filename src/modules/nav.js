@@ -1,5 +1,6 @@
 import { elementBuilder, buttonBuilder, linkBuilder } from "./functions.js";
 import { links } from './data.js'
+import logo from '../assets/images/d.png'
 
 const body = document.getElementsByTagName("body")[0];
 
@@ -9,7 +10,7 @@ const nav = () => {
   const logoAnchor = elementBuilder("a", "navbar-brand", containerDiv);
   logoAnchor.href = "#";
   const logoImage = elementBuilder("img", "logo", logoAnchor);
-  logoImage.src = "#";
+  logoImage.src = logo;
   
   const buttonArray = buttonBuilder(
     "navbar-toggler",

@@ -18,6 +18,12 @@
   }
 }
 
+.logo {
+  filter: sepia(0%) saturate(150%) brightness(115%) hue-rotate(15deg);
+  max-width: 65px;
+
+}
+
 .nav-item {
   @include media-breakpoint-down(md) {
     margin-top: 15px;
