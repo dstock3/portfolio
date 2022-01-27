@@ -155,7 +155,7 @@ const roarBikes = {
   description: "A design mockup for a bike store created in Adobe XD",
   source: "https://dummyimage.com/600x400/000/0011ff.png",
   alt: "A screenshot from my design mockup",
-  category: "Mockups",
+  category: "Designs",
   link: "https://www.youtube.com/watch?v=iUG96J3q8Zg",
 };
 
@@ -164,7 +164,7 @@ const spacetime = {
   description: "A design mockup for a science news aggregator created using Adobe XD",
   source: spacetimeImg,
   alt: "the spactime logo",
-  category: "Mockups",
+  category: "Designs",
   link: "https://www.youtube.com/watch?v=SAdV6R3QgQ8",
 }
 

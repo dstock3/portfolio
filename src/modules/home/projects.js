@@ -20,7 +20,7 @@ const projects = () => {
   
   const projectBodyRow = elementBuilder("div", "row", projectContainer);
   
-  const projectButtonArray = ["All", "Vanilla JS", "React", "Mockups"];
+  const projectButtonArray = ["All", "Vanilla JS", "React", "Designs"];
   const projectButtonElements = buttonBuilderJr(projectButtonArray, buttonCol);
   const allButton = projectButtonElements[0];
   const websitesButton = projectButtonElements[1];
