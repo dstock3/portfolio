@@ -63,7 +63,7 @@ const learn = `🌱 I’m currently learning MongoDB`
 const ask = `💬 Ask me about Front-end Development`
 const collab = `🔥 I’m looking to collaborate on React projects`
 const pronouns = `😀 Pronouns: He/Him`
-const contactInfo = `📫 How to reach me: dstock3@gmail.com`
+const contactInfo = `📫 How to reach me: dave@dstock.biz`
 
 const descArray = [interests, ask, learn, collab, pronouns, contactInfo]
 

@@ -17,10 +17,17 @@ import { tech } from './modules/home/tech'
 import { videos } from './modules/home/videos'
 import { footer } from './modules/footer'
 import { nav } from './modules/nav'
+import favicon from './assets/images/favicon.png'
 
 library.add(fas, far, fab) 
 
 dom.i2svg() 
+
+const head = document.getElementsByTagName("head")[0]
+const link = document.createElement("link")
+link.rel ="shortcut icon"
+link.href = favicon
+head.appendChild(link)
 
 nav()
 about()
