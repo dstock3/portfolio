@@ -9,6 +9,7 @@ import reactIcon from '../assets/images/tech/react.svg'
 import sassIcon from '../assets/images/tech/Sass.svg'
 import ubuntuIcon from '../assets/images/tech/ubuntu.png'
 import xdIcon from '../assets/images/tech/xd.svg'
+import webpackIcon from '../assets/images/tech/webpack.png'
 import vidIllus from '../assets/images/illus.png'
 import battleshipImg from '../assets/images/portfolio/battleship.png'
 import ontaskImg from '../assets/images/portfolio/ontask.png'
@@ -20,6 +21,9 @@ import calcImg from '../assets/images/portfolio/calc.png'
 import ticTacImg from '../assets/images/portfolio/tictac.png'
 import pizzaImg from '../assets/images/portfolio/pizza.png'
 import spacetimeImg from '../assets/images/portfolio/spacetime.png'
+import gtsImg from '../assets/images/portfolio/gts.png'
+import nmmcImg from '../assets/images/portfolio/nmmc.png'
+
 
 //Nav Info
 
@@ -68,6 +72,24 @@ const contactInfo = `📫 How to reach me: dave@dstock.biz`
 const descArray = [interests, ask, learn, collab, pronouns, contactInfo]
 
 //Project Info
+
+const nmmc = {
+  title: "Nightmare Masterclass",
+  description: "A website for the Nightmare Masterclass YouTube channel",
+  source: nmmcImg,
+  alt: "A screenshot from the Nightmare Masterclass website",
+  category: "Vanilla JS",
+  link: "https://nmmc.video/",
+}
+
+const gts = {
+  title: "GTS Podcast",
+  description: "A website for the GTS Podcast",
+  source: gtsImg,
+  alt: "A screenshot from the GTS Podcast website",
+  category: "Vanilla JS",
+  link: "https://dstock3.github.io/GTS/",
+}
 
 const ticTacToe = {
   title: "Tic Tac Toe",
@@ -169,6 +191,8 @@ const spacetime = {
 }
 
 const projectArray = [
+  nmmc,
+  gts,
   battleship,
   onTask,
   weatherApp,
@@ -261,7 +285,14 @@ const xd = {
   id: "xd",
 }
 
-const techArray = [html, css, js, react, sass, bootstrap, linux, ubuntu, python, git, xd];
+const webpack = {
+  source: webpackIcon,
+  title: "Webpack",
+  alt: "Webpack logo",
+  id: "webpack"
+}
+
+const techArray = [html, css, js, react, sass, bootstrap, linux, ubuntu, python, git, xd, webpack];
 
 //Video Carousel
 
