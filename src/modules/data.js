@@ -88,7 +88,7 @@ const gts = {
   source: gtsImg,
   alt: "A screenshot from the GTS Podcast website",
   category: "Vanilla JS",
-  link: "https://dstock3.github.io/GTS/",
+  link: "https://garagetalksports.com/",
 }
 
 const ticTacToe = {
