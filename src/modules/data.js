@@ -23,6 +23,7 @@ import pizzaImg from '../assets/images/portfolio/pizza.png'
 import spacetimeImg from '../assets/images/portfolio/spacetime.png'
 import gtsImg from '../assets/images/portfolio/gts.png'
 import nmmcImg from '../assets/images/portfolio/nmmc.png'
+import writingImg from '../assets/images/portfolio/writing.png'
 
 
 //Nav Info
@@ -72,6 +73,15 @@ const contactInfo = `📫 How to reach me: dave@dstock.biz`
 const descArray = [interests, ask, learn, collab, pronouns, contactInfo]
 
 //Project Info
+
+const writing = {
+  title: "Writing Portfolio",
+  description: "A writing portfolio created using React",
+  source: writingImg,
+  alt: "A screenshot from my writing portfolio",
+  category: "React",
+  link: "https://dstock3.github.io/k-portfolio/",
+}
 
 const nmmc = {
   title: "Nightmare Masterclass",
@@ -191,6 +201,7 @@ const spacetime = {
 }
 
 const projectArray = [
+  writing,
   nmmc,
   gts,
   battleship,
