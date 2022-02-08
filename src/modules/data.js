@@ -24,6 +24,7 @@ import spacetimeImg from '../assets/images/portfolio/spacetime.png'
 import gtsImg from '../assets/images/portfolio/gts.png'
 import nmmcImg from '../assets/images/portfolio/nmmc.png'
 import writingImg from '../assets/images/portfolio/writing.png'
+import roarImg from '../assets/images/portfolio/roar.png'
 
 
 //Nav Info
@@ -185,7 +186,7 @@ const shoppingCart = {
 const roarBikes = {
   title: "Roar Bikes",
   description: "A design mockup for a bike store created in Adobe XD",
-  source: "https://dummyimage.com/600x400/000/0011ff.png",
+  source: roarImg,
   alt: "A screenshot from my design mockup",
   category: "Designs",
   link: "https://www.youtube.com/watch?v=iUG96J3q8Zg",
