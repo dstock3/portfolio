@@ -11288,6 +11288,7 @@ pre {
   bottom: 1.875rem;
   z-index: 9999;
   border: 2px solid #d6e6f8;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.534);
 }
 .back-to-top i {
   color: #d6e6f8;
@@ -11296,6 +11297,9 @@ pre {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.back-to-top:hover {
+  border: 2px solid #d6e6f8;
 }
 
 #social-media {

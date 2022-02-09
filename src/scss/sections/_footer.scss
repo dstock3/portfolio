@@ -46,6 +46,7 @@
     }
   }
 }
+
 .footer-sm {
   a {
     color: $white;
@@ -92,14 +93,18 @@
   bottom: 1.875rem;
   z-index: 9999;
   border: 2px solid $white;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.534);
 
   i {
     color: $white;
     font-size: 1rem;
     @include absoluteCenter;
   }
-}
 
+  &:hover {
+    border: 2px solid $white;
+  }
+}
 
 #social-media {
   display: flex;

@@ -62,9 +62,9 @@ const footer = () => {
 
   //BACK TO TOP BUTTON
 
-  const topButtonAnchor = elementBuilder("a", "shadow", body);
+  const topButtonAnchor = elementBuilder("a", "btn-primary", body);
   topButtonAnchor.id = "back-to-top-button" 
-  topButtonAnchor.classList.add("btn-primary", "rounded-circle", "back-to-top");
+  topButtonAnchor.classList.add("rounded-circle", "back-to-top");
   topButtonAnchor.href = "#";
   const topButtonIcon = elementBuilder("i", "fas", topButtonAnchor);
   topButtonIcon.classList.add("fa-chevron-up");
