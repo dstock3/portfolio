@@ -1,9 +1,10 @@
-$blue: #1c1fbb;
-$purple: #5316fc;
-$purple-light: #9686f3;
-$footer: #0f0d1b;
+$main: #00234b;
+$sec: #003f88;
+$text: #d6e6f8;
+$footer: #00234b;
+$bkg: #ffffff;
 
-$white: #fff;
+$white: $text;
 $gray-100: #f8f9fa;
 $gray-200: #e9ecef;
 $gray-300: #dee2e6;
@@ -15,7 +16,7 @@ $gray-800: #343a40;
 $gray-900: #212529;
 $black: #000;
 
-$primary: $blue;
-$secondary: $purple;
+$primary: $main;
+$secondary: $sec;
 
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";

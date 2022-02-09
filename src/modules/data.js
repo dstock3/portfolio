@@ -10,7 +10,7 @@ import sassIcon from '../assets/images/tech/Sass.svg'
 import ubuntuIcon from '../assets/images/tech/ubuntu.png'
 import xdIcon from '../assets/images/tech/xd.svg'
 import webpackIcon from '../assets/images/tech/webpack.png'
-import vidIllus from '../assets/images/illus.png'
+import vidIllus from '../assets/images/illus_blue.png'
 import battleshipImg from '../assets/images/portfolio/battleship.png'
 import ontaskImg from '../assets/images/portfolio/ontask.png'
 import scapeImg from '../assets/images/portfolio/scape.png'
@@ -25,7 +25,7 @@ import gtsImg from '../assets/images/portfolio/gts.png'
 import nmmcImg from '../assets/images/portfolio/nmmc.png'
 import writingImg from '../assets/images/portfolio/writing.png'
 import roarImg from '../assets/images/portfolio/roar.png'
-
+import linodeIcon from '../assets/images/tech/linode.png'
 
 //Nav Info
 
@@ -33,6 +33,11 @@ const about = {
   name: "About",
   link: "index.html#about",
 };
+
+const tech = {
+  name: "Tech",
+  link: "index.html#tech"
+}
 
 const projects = {
   name: "Projects",
@@ -55,7 +60,7 @@ const contact = {
   link: "index.html#contact",
 };
 */
-const links = [about, projects, /*videos, blog, contact */];
+const links = [about, tech, projects, /*videos, blog, contact */];
 
 //Video Illus
 const vidData = {
@@ -95,7 +100,7 @@ const nmmc = {
 
 const gts = {
   title: "GTS Podcast",
-  description: "A website for the GTS Podcast",
+  description: "A website for the GTS Podcast. Built using ES6 modules and Sass.",
   source: gtsImg,
   alt: "A screenshot from the GTS Podcast website",
   category: "Vanilla JS",
@@ -304,7 +309,14 @@ const webpack = {
   id: "webpack"
 }
 
-const techArray = [html, css, js, react, sass, bootstrap, linux, ubuntu, python, git, xd, webpack];
+const linode = {
+  source: linodeIcon,
+  title: "Linode",
+  alt: "Linode logo",
+  id: "linode"
+}
+
+const techArray = [html, css, js, react, sass, bootstrap, linux, ubuntu, python, git, xd, webpack, linode];
 
 //Video Carousel
 

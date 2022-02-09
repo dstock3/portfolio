@@ -13,7 +13,7 @@ const about = () => {
   colAbout1.id = "intro-text"
   const aboutHead = elementBuilder("h1", "display-2", colAbout1);
   const headSpan = elementBuilder("span", "display-2--intro", aboutHead);
-  const header = "Hey there, I'm Dave!";
+  const header = "Hi, I'm Dave!";
   headSpan.innerHTML = header;
   const headSpan2 = elementBuilder("span", "display-2--description", aboutHead);
   headSpan2.classList.add("lh-base");

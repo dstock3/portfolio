@@ -4,6 +4,8 @@
 .footer {
   padding-top: 1rem;
   background-color: $footer;
+
+  font-weight: bold;
 }
 
 .contact-box {
@@ -47,6 +49,7 @@
 .footer-sm {
   a {
     color: $white;
+    transition: 500ms;
 
     i {
       font-size: 1rem;
@@ -57,7 +60,7 @@
       }
     }
     &:hover {
-      color: $primary;
+      color: white;
     }
   }
 }
@@ -72,10 +75,10 @@
     a {
       color: $white;
       text-decoration: none;
+      transition: 500ms;
 
       &:hover {
-        color: $primary;
-        text-decoration: underline;
+        color: white;
       }
     }
   }
@@ -88,6 +91,7 @@
   right: 1.875rem;
   bottom: 1.875rem;
   z-index: 9999;
+  border: 2px solid $white;
 
   i {
     color: $white;

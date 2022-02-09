@@ -2,8 +2,8 @@
 @use "../components/mixins" as *;
 
 .tech {
-  background-color: $white;
-  padding: 0 0 5rem 0;
+  background-color: $bkg;
+  padding: 7rem 0 5rem 0;
 
   .tech-item {
     display: flex;
