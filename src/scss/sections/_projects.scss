@@ -3,10 +3,14 @@
 
 .projects {
   padding: 4rem 0;
-  font-weight: bold;
   background: $bkg;
 
+  .lead {
+    font-weight: bold;
+  }
+  
   button {
+    font-weight: bold;
     box-shadow: 3px 3px 5px $primary;
   }
 }
@@ -19,7 +23,6 @@
   margin-bottom: 1.2rem;
   border-top: 1rem solid $primary;
   
-
   @include media-breakpoint-down(md) {
     min-width: 150;
     min-height: 100px;
