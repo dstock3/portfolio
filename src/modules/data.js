@@ -94,7 +94,7 @@ const nmmc = {
   description: "A website for the Nightmare Masterclass YouTube channel",
   source: nmmcImg,
   alt: "A screenshot from the Nightmare Masterclass website",
-  category: "Vanilla JS",
+  category: "JavaScript",
   link: "https://nmmc.video/",
 }
 
@@ -103,7 +103,7 @@ const gts = {
   description: "A website for the GTS Podcast. Built using ES6 modules and Sass.",
   source: gtsImg,
   alt: "A screenshot from the GTS Podcast website",
-  category: "Vanilla JS",
+  category: "JavaScript",
   link: "https://garagetalksports.com/",
 }
 
@@ -112,7 +112,7 @@ const ticTacToe = {
   description: "One of my first exercises using Vanilla JS.",
   source: ticTacImg,
   alt: "A screenshot from my tic-tac-toe application",
-  category: "Vanilla JS",
+  category: "JavaScript",
   link: "https://dstock3.github.io/ticTacToe/",
 };
 
@@ -121,7 +121,7 @@ const calculator = {
   description: "A simple calculator application made in JavaScript.",
   source: calcImg,
   alt: "A screenshot from my calculator app",
-  category: "Vanilla JS",
+  category: "JavaScript",
   link: "https://dstock3.github.io/calc/",
 };
 
@@ -130,7 +130,7 @@ const restaurant = {
   description: "A restaurant page built using ES6 modules in JavaScript",
   source: pizzaImg,
   alt: "A screenshot from my restaurant page",
-  category: "Vanilla JS",
+  category: "JavaScript",
   link: "https://dstock3.github.io/restaurant/",
 }
 
@@ -139,7 +139,7 @@ const battleship = {
   description: "A web-based Battleship game built in JavaScript with a focus on unit testing",
   source: battleshipImg,
   alt: "A screenshot from my Battleship application",
-  category: "Vanilla JS",
+  category: "JavaScript",
   link: "https://dstock3.github.io/battleship/",
 };
 
@@ -148,7 +148,7 @@ const onTask = {
   description: "A Project Management Application built entirely in JavaScript",
   source: ontaskImg,
   alt: "A screenshot from OnTask, a project management application",
-  category: "Vanilla JS",
+  category: "JavaScript",
   link: "https://dstock3.github.io/toDoList/",
 };
 
@@ -157,7 +157,7 @@ const weatherApp = {
   description: "A weather forecasting app that connects to the OpenWeatherMap API",
   source: weatherImg,
   alt: "A screenshot from MyWeather, a basic weather forecasting application",
-  category: "Vanilla JS",
+  category: "JavaScript",
   link: "https://dstock3.github.io/weatherApp/",
 };
 
