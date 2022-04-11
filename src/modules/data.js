@@ -26,6 +26,7 @@ import nmmcImg from '../assets/images/portfolio/nmmc.png'
 import writingImg from '../assets/images/portfolio/writing.png'
 import roarImg from '../assets/images/portfolio/roar.png'
 import linodeIcon from '../assets/images/tech/linode.png'
+import stockImg from '../assets/images/portfolio/stockApp.png'
 
 //Nav Info
 
@@ -69,7 +70,7 @@ const vidData = {
 
 }
 
-const interests = `👀 I’m interested in functional programming`
+const interests = `👀 I’m interested in fullstack web development`
 const learn = `🌱 I’m currently learning MongoDB`
 const ask = `💬 Ask me about Front-end Development`
 const collab = `🔥 I’m looking to collaborate on React projects`
@@ -79,6 +80,15 @@ const contactInfo = `📫 How to reach me: dave@dstock.biz`
 const descArray = [interests, ask, learn, collab, pronouns, contactInfo]
 
 //Project Info
+
+const stockApp = {
+  title: "Market Quest",
+  description: "A stock market application",
+  source: stockImg,
+  alt: "A screenshot from Market Quest",
+  category: "React",
+  link: "https://dstock3.github.io/stockApp/",
+}
 
 const writing = {
   title: "Writing Portfolio",
@@ -207,6 +217,7 @@ const spacetime = {
 }
 
 const projectArray = [
+  stockApp,
   writing,
   nmmc,
   gts,
