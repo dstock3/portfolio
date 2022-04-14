@@ -27,6 +27,7 @@ import writingImg from '../assets/images/portfolio/writing.png'
 import roarImg from '../assets/images/portfolio/roar.png'
 import linodeIcon from '../assets/images/tech/linode.png'
 import stockImg from '../assets/images/portfolio/stockApp.png'
+import invImg from '../assets/images/portfolio/invApp.png'
 
 //Nav Info
 
@@ -81,9 +82,18 @@ const descArray = [interests, ask, learn, collab, pronouns, contactInfo]
 
 //Project Info
 
+const invApp = {
+  title: "Product Tracker",
+  description: "An Inventory Management Application",
+  source: invImg,
+  alt: "A screenshot from my Inventory Management App",
+  category: "Express",
+  link: "https://inventory-app-2022.herokuapp.com/products",
+}
+
 const stockApp = {
-  title: "Market Quest",
-  description: "A stock market application",
+  title: "MarketQuest",
+  description: "A Stock Market Application",
   source: stockImg,
   alt: "A screenshot from Market Quest",
   category: "React",
@@ -217,6 +227,7 @@ const spacetime = {
 }
 
 const projectArray = [
+  invApp,
   stockApp,
   writing,
   nmmc,
