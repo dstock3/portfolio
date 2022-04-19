@@ -28,6 +28,7 @@ import roarImg from '../assets/images/portfolio/roar.png'
 import linodeIcon from '../assets/images/tech/linode.png'
 import stockImg from '../assets/images/portfolio/stockApp.png'
 import invImg from '../assets/images/portfolio/invApp.png'
+import nodeIcon from '../assets/images/tech/node.svg'
 
 //Nav Info
 
@@ -338,7 +339,14 @@ const linode = {
   id: "linode"
 }
 
-const techArray = [html, css, js, react, sass, bootstrap, linux, ubuntu, python, git, xd, webpack, linode];
+const node = {
+  source: nodeIcon,
+  title: "Node.js",
+  alt: "Node logo",
+  id: "node"
+}
+
+const techArray = [html, css, js, react, sass, bootstrap, linux, ubuntu, python, git, xd, webpack, node, linode];
 
 //Video Carousel
 
