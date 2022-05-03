@@ -89,7 +89,7 @@ const invApp = {
   source: invImg,
   alt: "A screenshot from my Inventory Management App",
   category: "Express",
-  link: "https://frozen-gorge-89821.herokuapp.com/products",
+  link: "https://inv-app22.herokuapp.com/",
 }
 
 const stockApp = {
