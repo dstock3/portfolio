@@ -29,6 +29,7 @@ import linodeIcon from '../assets/images/tech/linode.png'
 import stockImg from '../assets/images/portfolio/stockApp.png'
 import invImg from '../assets/images/portfolio/invApp.png'
 import nodeIcon from '../assets/images/tech/node.svg'
+import mongoIcon from '../assets/images/tech/mongo.png'
 
 //Nav Info
 
@@ -346,7 +347,14 @@ const node = {
   id: "node"
 }
 
-const techArray = [html, css, js, react, sass, bootstrap, linux, ubuntu, python, git, xd, webpack, node, linode];
+const mongo = {
+  source: mongoIcon,
+  title: "MongoDB",
+  alt: "MongoDB logo",
+  id: "mongo"
+}
+
+const techArray = [html, css, js, react, sass, bootstrap, linux, ubuntu, python, git, xd, webpack, node, linode, mongo];
 
 //Video Carousel
 
