@@ -30,6 +30,7 @@ import stockImg from '../assets/images/portfolio/stockApp.png'
 import invImg from '../assets/images/portfolio/invApp.png'
 import nodeIcon from '../assets/images/tech/node.svg'
 import mongoIcon from '../assets/images/tech/mongo.png'
+import erNpcImg from '../assets/images/portfolio/erNPC.png'
 
 //Nav Info
 
@@ -83,6 +84,15 @@ const contactInfo = `📫 How to reach me: dave@dstock.biz`
 const descArray = [interests, ask, learn, collab, pronouns, contactInfo]
 
 //Project Info
+
+const erNpc = {
+  title: "Elden Ring NPC Guide",
+  description: "A Guide to Non-Player Characters in Elden Ring",
+  source: erNpcImg,
+  alt: "A screenshot from my Elden Ring NPC Guide App",
+  category: "Express",
+  link: "https://er-npc.herokuapp.com/npc",
+}
 
 const invApp = {
   title: "Product Tracker",
@@ -229,6 +239,7 @@ const spacetime = {
 }
 
 const projectArray = [
+  erNpc,
   invApp,
   stockApp,
   writing,
