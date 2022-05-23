@@ -74,11 +74,11 @@ const vidData = {
 }
 
 const interests = `👀 I’m interested in fullstack web development`
-const learn = `🌱 I’m currently learning MongoDB`
-const ask = `💬 Ask me about Front-end Development`
-const collab = `🔥 I’m looking to collaborate on React projects`
+const learn = `🌱 I’m currently learning Express`
+const ask = `💬 Ask me about front-end development`
+const collab = `🔥 I’m looking to collaborate on open source projects`
 const pronouns = `😀 Pronouns: He/Him`
-const contactInfo = `📫 How to reach me: dave@dstock.biz`
+const contactInfo = `📫 How to reach me: dstock3@gmail.com`
 
 const descArray = [interests, ask, learn, collab, pronouns, contactInfo]
 
