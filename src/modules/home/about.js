@@ -20,7 +20,7 @@ const about = () => {
   descriptionBuilder(descArray, headSpan2)
 
   const touchAnchor = elementBuilder("a", "get-in-touch", colAbout1);
-  touchAnchor.href = "mailto:dave@dstock.biz";
+  touchAnchor.href = "mailto:dstock3@gmail.com";
   const touchButtonArray = buttonBuilder("rounded-pill", "span", touchAnchor);
   const touchButton = touchButtonArray[0];
   const touchText = document.createTextNode("Get In Touch");

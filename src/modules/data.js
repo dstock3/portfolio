@@ -71,7 +71,6 @@ const links = [about, tech, projects, /*videos, blog, contact */];
 const vidData = {
   source: vidIllus,
   alt: "coder illustration"
-
 }
 
 const interests = `👀 I’m interested in fullstack web development`
