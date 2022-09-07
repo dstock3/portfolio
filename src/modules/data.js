@@ -31,6 +31,7 @@ import invImg from '../assets/images/portfolio/invApp.png'
 import nodeIcon from '../assets/images/tech/node.svg'
 import mongoIcon from '../assets/images/tech/mongo.png'
 import erNpcImg from '../assets/images/portfolio/erNPC.png'
+import blogImg from '../assets/images/portfolio/blog.png'
 
 //Nav Info
 
@@ -83,6 +84,15 @@ const contactInfo = `📫 How to reach me: dstock3@gmail.com`
 const descArray = [interests, ask, learn, collab, pronouns, contactInfo]
 
 //Project Info
+
+const blogDog = {
+  title: "BlogDog",
+  description: "A simple content management system using MongoDB, Node, Express, and React.",
+  source: blogImg,
+  alt: "A screenshot from my content managerment app.",
+  category: "Express",
+  link: "https://dstock3.github.io/blog-dog/",
+}
 
 const erNpc = {
   title: "Elden Ring NPC Guide",
@@ -238,6 +248,7 @@ const spacetime = {
 }
 
 const projectArray = [
+  blogDog,
   erNpc,
   invApp,
   stockApp,
