@@ -87,7 +87,7 @@ const descArray = [interests, ask, learn, collab, pronouns, contactInfo]
 
 const blogDog = {
   title: "BlogDog",
-  description: "A simple content management system using MongoDB, Node, Express, and React.",
+  description: "A simple content management system using MongoDB, Node, Express, and React",
   source: blogImg,
   alt: "A screenshot from my content managerment app.",
   category: "Express",
@@ -96,7 +96,7 @@ const blogDog = {
 
 const erNpc = {
   title: "Elden Ring NPC Guide",
-  description: "A Guide to Non-Player Characters in Elden Ring",
+  description: "A Guide to Non-Player Characters in Elden Ring using Node and Express",
   source: erNpcImg,
   alt: "A screenshot from my Elden Ring NPC Guide App",
   category: "Express",
@@ -105,7 +105,7 @@ const erNpc = {
 
 const invApp = {
   title: "Product Tracker",
-  description: "An Inventory Management Application",
+  description: "An Inventory Management Application using Node and Express",
   source: invImg,
   alt: "A screenshot from my Inventory Management App",
   category: "Express",
@@ -114,7 +114,7 @@ const invApp = {
 
 const stockApp = {
   title: "MarketQuest",
-  description: "A Stock Market Application",
+  description: "A Stock Market Application using React",
   source: stockImg,
   alt: "A screenshot from Market Quest",
   category: "React",
@@ -150,7 +150,7 @@ const gts = {
 
 const ticTacToe = {
   title: "Tic Tac Toe",
-  description: "One of my first exercises using Vanilla JS.",
+  description: "One of my first exercises using JavaScript.",
   source: ticTacImg,
   alt: "A screenshot from my tic-tac-toe application",
   category: "JavaScript",
@@ -186,7 +186,7 @@ const battleship = {
 
 const onTask = {
   title: "OnTask",
-  description: "A Project Management Application built entirely in JavaScript",
+  description: "A Project Management Application built using JavaScript",
   source: ontaskImg,
   alt: "A screenshot from OnTask, a project management application",
   category: "JavaScript",
