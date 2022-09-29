@@ -32,6 +32,7 @@ import nodeIcon from '../assets/images/tech/node.svg'
 import mongoIcon from '../assets/images/tech/mongo.png'
 import erNpcImg from '../assets/images/portfolio/erNPC.png'
 import blogImg from '../assets/images/portfolio/blog.png'
+import mineImg from '../assets/images/portfolio/mineScreen.png'
 
 //Nav Info
 
@@ -84,6 +85,15 @@ const contactInfo = `📫 How to reach me: dstock3@gmail.com`
 const descArray = [interests, ask, learn, collab, pronouns, contactInfo]
 
 //Project Info
+
+const minesweeper = {
+  title: "Minesweeper",
+  description: "A Minesweeper application built using React",
+  source: mineImg,
+  alt: "A screenshot from my minesweeper app.",
+  category: "React",
+  link: "https://dstock3.github.io/minesweeper/",
+}
 
 const blogDog = {
   title: "BlogDog",
@@ -248,6 +258,7 @@ const spacetime = {
 }
 
 const projectArray = [
+  minesweeper,
   blogDog,
   erNpc,
   invApp,
