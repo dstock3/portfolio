@@ -33,6 +33,7 @@ import mongoIcon from '../assets/images/tech/mongo.png'
 import erNpcImg from '../assets/images/portfolio/erNPC.png'
 import blogImg from '../assets/images/portfolio/blog.png'
 import mineImg from '../assets/images/portfolio/mineScreen.png'
+import tsIcon from '../assets/images/tech/Typescript.svg'
 
 //Nav Info
 
@@ -386,7 +387,14 @@ const mongo = {
   id: "mongo"
 }
 
-const techArray = [html, css, js, react, sass, bootstrap, linux, ubuntu, python, git, xd, webpack, node, linode, mongo];
+const typescript = {
+  source: tsIcon,
+  title: "TypeScript",
+  alt: "TypeScript logo",
+  id: "typescript"
+}
+
+const techArray = [html, css, js, react, sass, bootstrap, linux, ubuntu, python, git, xd, webpack, node, linode, mongo, typescript];
 
 //Video Carousel
 
