@@ -141,15 +141,6 @@ const writing = {
   link: "https://dstock3.github.io/k-portfolio/",
 }
 
-const nmmc = {
-  title: "Nightmare Masterclass",
-  description: "A website for the Nightmare Masterclass YouTube channel",
-  source: nmmcImg,
-  alt: "A screenshot from the Nightmare Masterclass website",
-  category: "JavaScript",
-  link: "https://nmmc.video/",
-}
-
 const gts = {
   title: "GTS Podcast",
   description: "A website for the GTS Podcast. Built using ES6 modules and Sass.",
@@ -157,33 +148,6 @@ const gts = {
   alt: "A screenshot from the GTS Podcast website",
   category: "JavaScript",
   link: "https://garagetalksports.com/",
-}
-
-const ticTacToe = {
-  title: "Tic Tac Toe",
-  description: "One of my first exercises using JavaScript.",
-  source: ticTacImg,
-  alt: "A screenshot from my tic-tac-toe application",
-  category: "JavaScript",
-  link: "https://dstock3.github.io/ticTacToe/",
-};
-
-const calculator = {
-  title: "Calculator",
-  description: "A simple calculator application made in JavaScript.",
-  source: calcImg,
-  alt: "A screenshot from my calculator app",
-  category: "JavaScript",
-  link: "https://dstock3.github.io/calc/",
-};
-
-const restaurant = {
-  title: "Chef Vito's Pizzeria",
-  description: "A restaurant page built using ES6 modules in JavaScript",
-  source: pizzaImg,
-  alt: "A screenshot from my restaurant page",
-  category: "JavaScript",
-  link: "https://dstock3.github.io/restaurant/",
 }
 
 const battleship = {
@@ -222,24 +186,6 @@ const scape95 = {
   link: "https://dstock3.github.io/scape-95/",
 };
 
-const resumeBuilder = {
-  title: "Resume Builder",
-  description: "A resume application built using class-based components in React",
-  source: resumeImg,
-  alt: "A screenshot from my resume creator application",
-  category: "React",
-  link: "https://dstock3.github.io/cv-app/",
-};
-
-const shoppingCart = {
-  title: "Shopping Cart",
-  description: "A simple shopping cart demo built using router and custom hooks in React",
-  source: cartImg,
-  alt: "A screenshot from my shopping cart application",
-  category: "React",
-  link: "https://dstock3.github.io/shopping-cart/",
-};
-
 const roarBikes = {
   title: "Roar Bikes",
   description: "A design mockup for a bike store created in Adobe XD",
@@ -265,17 +211,11 @@ const projectArray = [
   invApp,
   stockApp,
   writing,
-  nmmc,
   gts,
   battleship,
   onTask,
   weatherApp,
   scape95,
-  resumeBuilder,
-  shoppingCart,
-  ticTacToe,
-  calculator,
-  restaurant,
   roarBikes,
   spacetime
 ];
@@ -396,6 +336,14 @@ const typescript = {
 
 const techArray = [html, css, js, react, sass, bootstrap, linux, ubuntu, python, git, xd, webpack, node, linode, mongo, typescript];
 
+//Profile
+
+const profileData = {
+  introduction: "My name is Dave. I'm a highly motivated and passionate web developer. I began my journey into the tech industry during the pandemic, when I realized that web development was my true calling. I have since dedicated myself to learning and honing my skills in various technologies and frameworks, including JavaScript, React, and Express.",
+  strengths: "I am excited to bring my strong work ethic and dedication to problem-solving to a team and am eager to continue growing and learning in the field. I am confident that my skills and enthusiasm will make me a valuable asset to any organization.",
+  goal: "I look forward to the opportunity to collaborate with like-minded individuals and make a positive impact through my work in web development. Thank you for your consideration."
+};
+
 //Video Carousel
 
 const vidOne = {
@@ -490,4 +438,4 @@ const locationInfo = {
 
 const contactBoxArray = [phoneInfo, emailInfo, locationInfo];
 
-export { links, projectArray, descArray, vidData, techArray, carouselVidArray, formArray, article, contactBoxArray }
+export { links, projectArray, descArray, vidData, techArray, profileData, carouselVidArray, formArray, article, contactBoxArray }

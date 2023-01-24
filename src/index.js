@@ -14,6 +14,7 @@ import { blog } from './modules/home/blog'
 import { contact } from './modules/home/contact'
 import { projects } from './modules/home/projects'
 import { tech } from './modules/home/tech'
+import { profile } from './modules/home/profile'
 import { videos } from './modules/home/videos'
 import { footer } from './modules/footer'
 import { nav } from './modules/nav'
@@ -32,8 +33,10 @@ head.appendChild(link)
 nav()
 about()
 tech()
+profile()
 projects()
 //blog()
 //videos()
 //contact()
 footer()
+
