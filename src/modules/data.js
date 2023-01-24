@@ -339,7 +339,7 @@ const techArray = [html, css, js, react, sass, bootstrap, linux, ubuntu, python,
 //Profile
 
 const profileData = {
-  introduction: "My name is Dave. I'm a highly motivated and passionate web developer. I began my journey into the tech industry during the pandemic, when I realized that web development was my true calling. I have since dedicated myself to learning and honing my skills in various technologies and frameworks, including JavaScript, React, and Express.",
+  introduction: "Hi, my name is Dave. I'm a web developer on a mission to turn the internet into a more beautiful and functional place, one pixel at a time. I began my journey during the pandemic when I realized that if I couldn't go outside, I might as well learn how to build websites. I have since dedicated myself to learning and honing my skills in various technologies and frameworks, including JavaScript, React, and Express.",
   strengths: "I am excited to bring my strong work ethic and dedication to problem-solving to a team and am eager to continue growing and learning in the field. I am confident that my skills and enthusiasm will make me a valuable asset to any organization.",
   goal: "I look forward to the opportunity to collaborate with like-minded individuals and make a positive impact through my work in web development. Thank you for your consideration."
 };
