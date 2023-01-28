@@ -10856,6 +10856,26 @@ textarea.form-control-lg {
   background-color: #00234b;
 }
 
+.profile-line::before {
+  content: "";
+  width: 10rem;
+  height: 0.1rem;
+  display: block;
+  margin: 0 auto;
+  background-color: #d6e6f8;
+}
+
+.profile-line::after {
+  content: "";
+  width: 2rem;
+  padding-top: 0.5rem;
+  height: 0.2rem;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  background-color: #d6e6f8;
+}
+
 .display-3 {
   font-family: "Poppins", sans-serif;
 }
