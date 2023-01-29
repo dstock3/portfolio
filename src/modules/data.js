@@ -34,6 +34,7 @@ import erNpcImg from '../assets/images/portfolio/erNPC.png'
 import blogImg from '../assets/images/portfolio/blog.png'
 import mineImg from '../assets/images/portfolio/mineScreen.png'
 import tsIcon from '../assets/images/tech/Typescript.svg'
+import billImg from '../assets/images/portfolio/billsadv.png'
 
 //Nav Info
 
@@ -77,7 +78,7 @@ const vidData = {
 }
 
 const interests = `👀 I’m interested in fullstack web development`
-const learn = `🌱 I’m currently learning Express`
+const learn = `🌱 I’m currently learning Flask`
 const ask = `💬 Ask me about front-end development`
 const collab = `🔥 I’m looking to collaborate on open source projects`
 const pronouns = `😀 Pronouns: He/Him`
@@ -86,6 +87,15 @@ const contactInfo = `📫 How to reach me: dstock3@gmail.com`
 const descArray = [interests, ask, learn, collab, pronouns, contactInfo]
 
 //Project Info
+
+const billsAdventure = {
+  title: "Bill's Adventure",
+  description: "A Choose Your Own Adventure game built using React",
+  source: billImg,
+  alt: "A screenshot from Bill's Adventure.",
+  category: "React",
+  link: "https://dstock3.github.io/bills-portal/",
+}
 
 const minesweeper = {
   title: "Minesweeper",
@@ -205,6 +215,7 @@ const spacetime = {
 }
 
 const projectArray = [
+  billsAdventure,
   minesweeper,
   blogDog,
   erNpc,
