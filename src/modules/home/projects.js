@@ -20,18 +20,20 @@ const projects = () => {
   
   const projectBodyRow = elementBuilder("div", "row", projectContainer);
   
-  const projectButtonArray = ["All", "JavaScript", "React", "Express", "Designs"];
+  const projectButtonArray = ["All", "JavaScript", "React", "Express", "Python", "Designs"];
   const projectButtonElements = buttonBuilderJr(projectButtonArray, buttonCol);
   const allButton = projectButtonElements[0];
   const javascriptButton = projectButtonElements[1];
   const reactButton = projectButtonElements[2];
   const expressButton = projectButtonElements[3];
   const designsButton = projectButtonElements[4];
+  const pythonButton = projectButtonElements[5];
   
   projectIterator(projectArray, projectBodyRow);
   projectButtonListener(javascriptButton, projectArray, projectBodyRow);
   projectButtonListener(reactButton, projectArray, projectBodyRow);
   projectButtonListener(expressButton, projectArray, projectBodyRow);
+  projectButtonListener(pythonButton, projectArray, projectBodyRow);
   projectButtonListener(designsButton, projectArray, projectBodyRow);
   allButtonListener(allButton, projectArray, projectBodyRow);
 }

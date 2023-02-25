@@ -35,6 +35,7 @@ import blogImg from '../assets/images/portfolio/blog.png'
 import mineImg from '../assets/images/portfolio/mineScreen.png'
 import tsIcon from '../assets/images/tech/Typescript.svg'
 import billImg from '../assets/images/portfolio/billsadv.png'
+import spaceRaceImg from '../assets/images/portfolio/spacerace.png'
 
 //Nav Info
 
@@ -87,6 +88,14 @@ const contactInfo = `📫 How to reach me: dstock3@gmail.com`
 const descArray = [interests, ask, learn, collab, pronouns, contactInfo]
 
 //Project Info
+
+const spaceRace = {
+  title: "History of the Space Race",
+  description: "A website about the Space Race built using Flask",
+  source: spaceRaceImg,
+  category: "Python",
+  link: "https://spacerace-dstock3.vercel.app/"
+}
 
 const billsAdventure = {
   title: "Bill's Adventure",
@@ -215,6 +224,7 @@ const spacetime = {
 }
 
 const projectArray = [
+  spaceRace,
   billsAdventure,
   minesweeper,
   blogDog,
